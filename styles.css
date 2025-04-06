@@ -9,7 +9,7 @@ body {
     background: linear-gradient(135deg, #1a4c6e, #2e8b57);
     color: #fff;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container {
@@ -20,6 +20,7 @@ body {
     align-items: center;
     padding: 2rem;
     position: relative;
+    overflow-y: auto;
 }
 
 .content {
@@ -207,6 +208,7 @@ li i {
     
     .content {
         padding: 1.5rem;
+        margin: 1rem;
     }
     
     .profile {
@@ -216,5 +218,21 @@ li i {
     .tagline {
         font-size: 1rem;
         padding: 0 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+        align-items: flex-start;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .instagram, .email {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
     }
 } 
