@@ -1,0 +1,27 @@
+{
+  "name": "oceantoearth.life",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch --style=compressed --source-map css/styles.scss:css/styles.css css/_aboutus.scss:css/aboutus.css",
+    "serve": "live-server",
+    "dev": "concurrently \"npm run sass\" \"npm run serve\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AthayaLass/oceantoearthlife.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AthayaLass/oceantoearthlife/issues"
+  },
+  "homepage": "https://github.com/AthayaLass/oceantoearthlife#readme",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2",
+    "sass": "^1.69.5"
+  }
+}

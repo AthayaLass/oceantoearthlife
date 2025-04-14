@@ -1,3 +1,23 @@
+// Import navigation styles
+@import '_navigation';
+
+// Import about page styles
+@import '_aboutus';
+
+// Base styles
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
 * {
     margin: 0;
     padding: 0;
