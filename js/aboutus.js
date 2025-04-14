@@ -57,4 +57,32 @@ function populateCurriculums() {
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     populateCurriculums();
+    const profileTitles = document.querySelectorAll('.profile-title');
+    
+    profileTitles.forEach(title => {
+        title.addEventListener('click', () => {
+            // Toggle active class on clicked title
+            title.classList.toggle('active');
+            
+            // Get the associated profile image
+            const profileColumn = title.closest('.profile-column');
+            const profileImage = profileColumn.querySelector('.profile-image');
+            
+            // Toggle visibility of profile image
+            if (title.classList.contains('active')) {
+                profileImage.style.maxHeight = '250px';
+            } else {
+                profileImage.style.maxHeight = '0';
+            }
+            
+            // Close other open sections
+            profileTitles.forEach(otherTitle => {
+                if (otherTitle !== title && otherTitle.classList.contains('active')) {
+                    otherTitle.classList.remove('active');
+                    const otherColumn = otherTitle.closest('.profile-column');
+                    otherColumn.querySelector('.profile-image').style.maxHeight = '0';
+                }
+            });
+        });
+    });
 }); 

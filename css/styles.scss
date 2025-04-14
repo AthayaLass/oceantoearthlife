@@ -1,23 +1,10 @@
 // Import navigation styles
-@import '_navigation';
+@import 'navigation';
 
 // Import about page styles
-@import '_aboutus';
+@import 'aboutus';
 
 // Base styles
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f5f5f5;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -47,33 +34,36 @@ body {
     text-align: center;
     z-index: 1;
     max-width: 1000px;
+    width: 100%;
     padding: 2rem;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
 }
 
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     margin-bottom: 1rem;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     margin-bottom: 1.5rem;
     color: #a8e6cf;
 }
 
 .tagline {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     margin-bottom: 2rem;
     color: #dff6f0;
     line-height: 1.6;
     font-weight: 300;
+    padding: 0 1rem;
 }
 
 .about-us {
@@ -88,6 +78,7 @@ h2 {
     flex: 1;
     min-width: 280px;
     max-width: 400px;
+    width: 100%;
 }
 
 .profile-content {
@@ -97,6 +88,7 @@ h2 {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    height: 100%;
 }
 
 .profile-content:before {
@@ -116,7 +108,7 @@ h2 {
 
 h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
     margin-bottom: 1.2rem;
     color: #a8e6cf;
 }
@@ -131,7 +123,7 @@ li {
     margin: 0.8rem 0;
     position: relative;
     padding-left: 2rem;
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     display: flex;
     align-items: center;
 }
@@ -147,7 +139,7 @@ li i {
     margin-top: 1.5rem;
     font-style: italic;
     color: #dff6f0;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
     position: relative;
     padding-top: 1rem;
 }
@@ -180,6 +172,9 @@ li i {
     border-radius: 25px;
     font-weight: 600;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
 }
 
 .instagram {
@@ -217,42 +212,71 @@ li i {
     }
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
+// Responsive breakpoints
+@media (max-width: 1200px) {
+    .container {
+        padding: 1.5rem;
     }
     
     .content {
         padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        align-items: flex-start;
+    }
+    
+    .content {
+        padding: 1rem;
         margin: 1rem;
+    }
+    
+    .about-us {
+        gap: 1.5rem;
     }
     
     .profile {
         min-width: 100%;
     }
     
-    .tagline {
-        font-size: 1rem;
-        padding: 0 1rem;
-    }
-
-    .container {
-        padding: 1rem;
-        align-items: flex-start;
-    }
-
     .social-links {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
     }
+}
 
-    .instagram, .email {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
+@media (max-width: 480px) {
+    .container {
+        padding: 0.5rem;
+    }
+    
+    .content {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .profile-content {
+        padding: 1.2rem;
+    }
+    
+    li {
+        font-size: 0.9rem;
     }
 } 

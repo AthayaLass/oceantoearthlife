@@ -1,10 +1,10 @@
 {
   "name": "oceantoearth.life",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ocean To Earth Life Website",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch --style=compressed --source-map css/styles.scss:css/styles.css css/_aboutus.scss:css/aboutus.css",
+    "sass": "sass --watch css:css --style compressed",
     "serve": "live-server",
     "dev": "concurrently \"npm run sass\" \"npm run serve\""
   },
@@ -22,6 +22,9 @@
   "devDependencies": {
     "concurrently": "^9.1.2",
     "live-server": "^1.2.2",
+    "sass": "^1.69.5"
+  },
+  "dependencies": {
     "sass": "^1.69.5"
   }
 }

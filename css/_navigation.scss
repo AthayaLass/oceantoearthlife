@@ -195,6 +195,24 @@
             }
         }
     }
+
+    @media (max-width: 768px) {
+        height: 100px;
+        
+        .nav-content {
+            padding: 0 1rem;
+        }
+        
+        .nav-logo {
+            height: 100px;
+            width: 100px;
+            padding: 5px;
+        }
+        
+        .nav-links {
+            display: none;
+        }
+    }
 }
 
 // Responsive navigation
