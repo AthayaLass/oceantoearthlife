@@ -1,0 +1,579 @@
+/* Main color scheme */
+:root {
+  --main: #5CA9B3;
+  --accent: #7DA57A;
+  --highlight: #F4B183;
+  --background: #F6FAF9;
+  --ocean: #5CA9B3;
+  --earth: #7DA57A;
+  --text: #23313A;
+}
+
+/* General body styles */
+body {
+  background: var(--background), repeating-radial-gradient(circle at 20% 20%, #5ca9b31a, #fff0 80px);
+  color: var(--text);
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Artistic, organic SVG background inspired by OceanToEarth.Life.png */
+body::before {
+  content: '';
+  position: fixed;
+  z-index: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  opacity: 0.25;
+  background: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 700 Q300 800 600 700 T1200 700 V900 H0 Z" fill="%235CA9B3"/><ellipse cx="250" cy="200" rx="180" ry="90" fill="%23F4B183"/><ellipse cx="1000" cy="120" rx="160" ry="80" fill="%237DA57A"/><path d="M900 600 Q950 650 1100 600" stroke="%2323313A" stroke-width="6" fill="none"/><path d="M200 100 Q220 80 250 100 Q270 120 300 100" stroke="%2323313A" stroke-width="4" fill="none"/><path d="M900 300 Q950 250 1000 300 Q1050 350 1100 300" stroke="%2323313A" stroke-width="3" fill="none"/><path d="M800 200 Q820 180 850 200 Q870 220 900 200" stroke="%2323313A" stroke-width="2" fill="none"/><path d="M600 100 Q620 80 650 100 Q670 120 700 100" stroke="%2323313A" stroke-width="2" fill="none"/><path d="M1000 400 Q1020 380 1050 400 Q1070 420 1100 400" stroke="%2323313A" stroke-width="2" fill="none"/><path d="M900 500 Q950 450 1000 500 Q1050 550 1100 500" stroke="%2323313A" stroke-width="2" fill="none"/><path d="M300 300 Q350 250 400 300 Q450 350 500 300" stroke="%2323313A" stroke-width="2" fill="none"/><path d="M100 800 Q200 850 400 800" stroke="%2323313A" stroke-width="4" fill="none"/><path d="M900 800 Q1000 850 1200 800" stroke="%2323313A" stroke-width="4" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body, .container, header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section blocks for ocean and earth */
+.section-ocean, .section-earth {
+  color: #fff;
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.section-ocean {
+  background: rgba(92, 169, 179, 0.85);
+}
+
+.section-earth {
+  background: rgba(125, 165, 122, 0.85);
+}
+
+/* Text readability for all content in sections */
+.section-ocean *, .section-earth * {
+  text-shadow: 
+    -1px -1px 0 rgba(0, 0, 0, 0.5),
+    1px -1px 0 rgba(0, 0, 0, 0.5),
+    -1px 1px 0 rgba(0, 0, 0, 0.5),
+    1px 1px 0 rgba(0, 0, 0, 0.5),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Abstract, multi-color header background */
+header {
+  background: linear-gradient(120deg, var(--main) 0%, var(--main) 40%, var(--accent) 60%, var(--highlight) 100%);
+  position: relative;
+  padding: 1rem 0 2.5rem 0;
+  overflow: hidden;
+}
+
+/* Organic blob overlay for header */
+header::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" viewBox="0 0 1200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 120 Q200 60 400 120 T800 120 Q1000 180 1200 120 V200 H0 Z" fill="%235CA9B3"/><ellipse cx="1000" cy="60" rx="132" ry="44" fill="%237DA57A"/><ellipse cx="200" cy="40" rx="81" ry="27" fill="%23F4B183"/></svg>');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header > * {
+  position: relative;
+  z-index: 1;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--highlight);
+}
+
+/* Logo styles */
+.logo-link {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+  margin-right: 0;
+}
+.logo-link:focus {
+  outline: 2px solid var(--main);
+  outline-offset: 4px;
+}
+.logo-link:hover .logo {
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 8px 24px #5ca9b355, 0 0 0 8px #5ca9b308;
+  filter: brightness(0.97) saturate(1.1);
+}
+
+/* Default: large screens */
+.logo {
+  width: 138px !important;
+  height: 138px !important;
+  display: block;
+  margin: 0;
+  border-radius: 50%;
+  border: 6px solid var(--main);
+  box-shadow: 0 4px 16px #5ca9b355;
+  background: #fff;
+  object-fit: cover;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+  object-position: center 45%;
+}
+
+/* Medium screens (Bootstrap md: <992px) */
+@media (max-width: 991.98px) {
+  .logo {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+
+/* Small screens (Bootstrap sm: <576px, or keep your 700px custom) */
+@media (max-width: 700px) {
+  .logo {
+    width: 74px !important;
+    height: 74px !important;
+    padding: 4px;
+    border-width: 3px;
+  }
+}
+
+/* Gentle overlay filter for the logo */
+.logo::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(120deg, #f6faf9cc 60%, #fff0 100%);
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Footer styles */
+footer {
+  background: var(--main);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Utility classes */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff8;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px #5ca9b322;
+  position: relative;
+  overflow: hidden;
+}
+
+h1, h2, h3 {
+  color: var(--main);
+}
+
+.button {
+  background: linear-gradient(90deg, var(--accent) 60%, var(--highlight) 100%);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px #7da57a22;
+}
+.button:hover {
+  background: linear-gradient(90deg, var(--highlight) 60%, var(--accent) 100%);
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 4px 16px #f4b18355;
+}
+
+/* Joyful section headers */
+.section-ocean h2, .section-earth h2 {
+  font-family: 'Segoe UI Rounded', 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    0 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+
+/* Add playful colored dots in section backgrounds */
+.section-ocean::after, .section-earth::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--highlight);
+  opacity: 0.18;
+  top: 10px;
+  right: 30px;
+  z-index: 0;
+}
+.section-earth::after {
+  left: 30px;
+  right: auto;
+  background: var(--main);
+}
+
+/* About page card layout */
+.about-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+}
+.card {
+  flex: 1 1 0;
+  min-width: 280px;
+  max-width: 420px;
+  margin: 0;
+}
+
+/* Card title color (orange) */
+.card h2 {
+  color: var(--highlight);
+}
+
+/* Remove text-center from logo-link in header */
+.logo-link {
+  margin-right: 0;
+}
+
+/* Global styles */
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Keep header font unchanged */
+header, 
+header *,
+.navbar,
+.navbar * {
+  font-family: inherit;
+}
+
+/* Gallery page specific override */
+.gallery-page body {
+  font-family: inherit;
+}
+
+/* About Page Styles */
+
+/* Card spacing for mobile devices */
+@media (max-width: 767px) {
+  .row.g-4 {
+    gap: 3rem !important;
+  }
+}
+
+/* Toggle button styles */
+.toggle-button {
+  position: absolute;
+  top: 1rem;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  background: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  transform: scale(1.1);
+  color: #000 !important;
+  border-color: rgba(255,255,255,0.6) !important;
+}
+
+/* About page card styles */
+.about-card {
+  height: auto !important;
+  min-height: fit-content !important;
+  display: block !important;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.about-card .card-header {
+  height: auto !important;
+  min-height: fit-content !important;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Ocean Explorer card specific styles */
+.section-ocean:hover {
+  background: rgba(92, 169, 179, 0.95) !important;
+}
+
+.section-ocean .toggle-button {
+  right: 1rem;
+}
+
+/* Earth Whisperer card specific styles */
+.section-earth:hover {
+  background: rgba(125, 165, 122, 0.95) !important;
+}
+
+.section-earth .toggle-button {
+  left: 1rem;
+}
+
+/* Card content styles */
+.about-card .card-content {
+  margin-top: 1rem;
+}
+
+.about-card .card-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-card .card-content blockquote {
+  font-style: italic;
+  margin-top: 1rem;
+  color: #fff;
+  text-shadow: 
+    -1px -1px 0 rgba(0, 0, 0, 0.5),
+    1px -1px 0 rgba(0, 0, 0, 0.5),
+    -1px 1px 0 rgba(0, 0, 0, 0.5),
+    1px 1px 0 rgba(0, 0, 0, 0.5),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile image styles */
+.about-card img {
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 180px;
+  width: 180px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+/* Card title styles */
+.about-card h2 {
+  margin: 0;
+  flex: 1;
+  color: white;
+}
+
+/* Blog Page Styles */
+.blog-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.blog-header h1 {
+  margin: 0;
+}
+
+.tag-filters {
+  display: flex;
+  gap: 1rem;
+}
+
+.tag-filter {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.tag-filter:hover {
+  transform: scale(1.1);
+}
+
+.tag-filter.active .tag {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px currentColor;
+}
+
+.tag-filter .tag {
+  transition: all 0.2s ease;
+}
+
+.articles-container {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.article-item {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.article-item.hidden {
+  display: none;
+}
+
+.article-item:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.article-header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.article-header:hover {
+  background: #f8f9fa;
+}
+
+.article-title {
+  flex: 1;
+}
+
+.article-title h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.article-tags {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.tag.ocean {
+  background: var(--ocean);
+}
+
+.tag.earth {
+  background: var(--earth);
+}
+
+.tag.life {
+  background: var(--highlight);
+}
+
+.toggle-article {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.toggle-article:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: scale(1.1);
+}
+
+.toggle-article i {
+  transition: all 0.3s ease;
+}
+
+.article-item.active .toggle-article {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.article-content {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.article-content.active {
+  padding: 1.5rem;
+  max-height: 1000px;
+}
+
+.article-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.article-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Rotate arrow when article is expanded */
+.article-item.active .toggle-article i {
+  transform: rotate(90deg);
+}
+
+.toggle-article i {
+  transition: transform 0.3s ease;
+} 
