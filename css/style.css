@@ -737,6 +737,11 @@ header *,
   object-position: center;
 }
 
+/* Specific image adjustments */
+.carousel-item:nth-child(4) .carousel-image {
+  object-position: center 30%; /* Adjusts the vertical position of vero_02.jpg */
+}
+
 .carousel-caption-container {
   padding: 1.5rem;
   text-align: center;
