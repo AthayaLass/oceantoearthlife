@@ -15,21 +15,6 @@ let posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
 let currentPage = 1;
 
 
-// Create and insert the delete mode toggle button
-const deleteToggleBtn = document.createElement('button');
-deleteToggleBtn.textContent = 'Enable Delete Mode';
-deleteToggleBtn.className = 'button mb-3';
-deleteToggleBtn.style.background = '#e74c3c';
-deleteToggleBtn.style.color = '#fff';
-deleteToggleBtn.onclick = function() {
-  deleteMode = !deleteMode;
-  deleteToggleBtn.textContent = deleteMode ? 'Disable Delete Mode' : 'Enable Delete Mode';
-  renderPosts();
-};
-if (blogPosts && blogPosts.parentNode) {
-  blogPosts.parentNode.insertBefore(deleteToggleBtn, blogPosts);
-}
-
 // Track active filters
 let activeFilters = new Set();
 
