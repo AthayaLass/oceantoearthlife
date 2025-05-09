@@ -685,6 +685,9 @@ header *,
   padding: 1rem;
   text-align: center;
   border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .carousel-caption p {
@@ -692,6 +695,8 @@ header *,
   font-size: 1rem;
   line-height: 1.4;
   color: white;
+  text-align: center;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
