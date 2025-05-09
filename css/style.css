@@ -16,6 +16,8 @@ body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
   padding: 0;
+  padding-top: 160px; /* Initial header height */
+  transition: padding-top 0.3s ease;
 }
 
 /* Artistic, organic SVG background inspired by OceanToEarth.Life.png */
@@ -64,9 +66,14 @@ body, .container, header, main, footer {
 /* Abstract, multi-color header background */
 header {
   background: linear-gradient(120deg, var(--main) 0%, var(--main) 40%, var(--accent) 60%, var(--highlight) 100%);
-  position: relative;
-  padding: 1rem 0 2.5rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 0;
   overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
 /* Organic blob overlay for header */
@@ -867,4 +874,31 @@ header *,
   .poetic-intro h1 {
     font-size: 2rem;
   }
+}
+
+/* Shrunk header state */
+header.shrunk {
+  padding: 0.5rem 0;
+}
+
+body.header-shrunk {
+  padding-top: 100px; /* Reduced header height */
+}
+
+/* Shrunk logo state */
+header.shrunk .logo {
+  width: 80px !important;
+  height: 80px !important;
+  padding: 6px;
+  border-width: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Shrunk navigation state */
+header.shrunk nav {
+  margin-top: 0.5rem;
+}
+
+header.shrunk .navbar-nav {
+  font-size: 0.9rem;
 } 
