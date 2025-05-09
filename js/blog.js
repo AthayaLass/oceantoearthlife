@@ -3,7 +3,7 @@
 // Number of posts per page
 const POSTS_PER_PAGE = 5;
 
-// Get references to DOM elements
+// Get references to DOM elements for blog
 const blogForm = document.getElementById('blogForm');
 const postTitle = document.getElementById('postTitle');
 const postContent = document.getElementById('postContent');
