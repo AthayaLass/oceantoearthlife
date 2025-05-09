@@ -678,8 +678,8 @@ header *,
 
 .carousel-caption {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: -80px;
   background-color: rgba(41, 49, 51, 0.7);
   padding: 1rem;
@@ -687,7 +687,6 @@ header *,
   border-radius: 8px;
   width: 100%;
   max-width: 800px;
-  margin: 0 auto;
 }
 
 .carousel-caption p {
@@ -696,7 +695,6 @@ header *,
   line-height: 1.4;
   color: white;
   text-align: center;
-  width: 100%;
 }
 
 @media (max-width: 768px) {
