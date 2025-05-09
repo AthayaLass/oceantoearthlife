@@ -48,21 +48,17 @@ body, .container, header, main, footer {
 }
 
 .section-ocean {
-  background: rgba(92, 169, 179, 0.85);
+  background: #5CA9B3;
 }
 
 .section-earth {
-  background: rgba(125, 165, 122, 0.85);
+  background: #7DA57A;
 }
 
 /* Text readability for all content in sections */
 .section-ocean *, .section-earth * {
-  text-shadow: 
-    -1px -1px 0 rgba(0, 0, 0, 0.5),
-    1px -1px 0 rgba(0, 0, 0, 0.5),
-    -1px 1px 0 rgba(0, 0, 0, 0.5),
-    1px 1px 0 rgba(0, 0, 0, 0.5),
-    0 1px 2px rgba(0, 0, 0, 0.2);
+  color: #23313A;
+  font-weight: 500;
 }
 
 /* Abstract, multi-color header background */
@@ -329,6 +325,15 @@ header *,
   border-color: rgba(255,255,255,0.6) !important;
 }
 
+.toggle-button i {
+  color: var(--highlight);
+  text-shadow: 
+    -1px -1px 0 #23313A,
+    1px -1px 0 #23313A,
+    -1px 1px 0 #23313A,
+    1px 1px 0 #23313A;
+}
+
 /* About page card styles */
 .about-card {
   height: auto !important;
@@ -371,22 +376,45 @@ header *,
   margin-top: 1rem;
 }
 
+.about-card .card-content p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #23313A;
+  text-shadow: none;
+  font-weight: 500;
+}
+
 .about-card .card-content ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 1rem 0;
+}
+
+.about-card .card-content li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-weight: 500;
+  color: #23313A;
+}
+
+.about-card .card-content li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--highlight);
 }
 
 .about-card .card-content blockquote {
   font-style: italic;
-  margin-top: 1rem;
-  color: #fff;
-  text-shadow: 
-    -1px -1px 0 rgba(0, 0, 0, 0.5),
-    1px -1px 0 rgba(0, 0, 0, 0.5),
-    -1px 1px 0 rgba(0, 0, 0, 0.5),
-    1px 1px 0 rgba(0, 0, 0, 0.5),
-    0 1px 2px rgba(0, 0, 0, 0.2);
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-left: 3px solid var(--highlight);
+  background: rgba(35, 49, 58, 0.1);
+  border-radius: 0 8px 8px 0;
+  font-weight: 500;
+  color: #23313A;
 }
 
 /* Profile image styles */
@@ -397,6 +425,52 @@ header *,
   width: 180px;
   object-fit: cover;
   aspect-ratio: 1;
+  transition: all 0.3s ease;
+}
+
+.dynamic-bubble {
+  position: relative;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Add delay to the second bubble */
+.section-earth .dynamic-bubble {
+  animation-delay: 4s;
+}
+
+.dynamic-bubble::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--highlight), var(--main));
+  opacity: 0.3;
+  z-index: -1;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.4;
+  }
 }
 
 /* Card title styles */
