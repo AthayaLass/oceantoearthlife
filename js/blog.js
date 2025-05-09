@@ -223,66 +223,38 @@ function toggleCard(card) {
   }
 }
 
-/**
- * Initialize and handle carousel pause/play functionality
- */
-function initCarousel() {
-  const carousel = document.querySelector('#welcomeCarousel');
-  if (!carousel) {
-    console.log('Carousel not found');
-    return;
-  }
-
-  // Create and add the pause/play button
-  const pausePlayBtn = document.createElement('button');
-  pausePlayBtn.id = 'carouselPausePlay';
-  pausePlayBtn.className = 'btn btn-light position-absolute top-0 end-0 m-3';
-  pausePlayBtn.style.zIndex = '10'; // Ensure button is above carousel
-  pausePlayBtn.setAttribute('aria-label', 'Pause carousel');
-  pausePlayBtn.innerHTML = '<i class="fas fa-pause"></i>';
-  
-  // Add button to carousel container
-  const carouselContainer = carousel.querySelector('.carousel-inner');
-  if (carouselContainer) {
-    carouselContainer.appendChild(pausePlayBtn);
-  } else {
-    carousel.appendChild(pausePlayBtn);
-  }
-
-  // Initialize carousel state
-  let isPaused = false;
-  const bsCarousel = new bootstrap.Carousel(carousel, {
-    interval: 4000,
-    wrap: true
-  });
-
-  // Handle pause/play button click
-  pausePlayBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    
-    if (isPaused) {
-      bsCarousel.cycle();
-      pausePlayBtn.innerHTML = '<i class="fas fa-pause"></i>';
-      pausePlayBtn.setAttribute('aria-label', 'Pause carousel');
-    } else {
-      bsCarousel.pause();
-      pausePlayBtn.innerHTML = '<i class="fas fa-play"></i>';
-      pausePlayBtn.setAttribute('aria-label', 'Play carousel');
-    }
-    isPaused = !isPaused;
-  });
-
-  // Maintain pause state when slides change
-  carousel.addEventListener('slid.bs.carousel', function() {
-    if (isPaused) {
-      bsCarousel.pause();
-    }
-  });
-}
-
-// Initialize carousel when DOM is loaded
+// Initialize carousel
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('DOM loaded, initializing carousel...');
-  initCarousel();
+  const carousel = document.getElementById('welcomeCarousel');
+  if (carousel) {
+    const carouselInstance = new bootstrap.Carousel(carousel, {
+      interval: 7000,
+      wrap: true,
+      keyboard: true,
+      pause: 'hover'
+    });
+
+    // Handle window resize for responsive images
+    function handleResize() {
+      const images = document.querySelectorAll('.carousel-image');
+      images.forEach(img => {
+        const container = img.closest('.carousel-image-container');
+        if (container) {
+          const containerWidth = container.offsetWidth;
+          img.style.width = containerWidth + 'px';
+        }
+      });
+    }
+
+    // Initial resize
+    handleResize();
+
+    // Add resize listener
+    window.addEventListener('resize', handleResize);
+
+    // Handle carousel slide events
+    carousel.addEventListener('slid.bs.carousel', function() {
+      handleResize();
+    });
+  }
 }); 
