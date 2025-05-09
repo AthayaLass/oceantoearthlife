@@ -14,8 +14,6 @@ const pagination = document.getElementById('pagination');
 let posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
 let currentPage = 1;
 
-// Add a delete mode toggle
-let deleteMode = false;
 
 // Create and insert the delete mode toggle button
 const deleteToggleBtn = document.createElement('button');
