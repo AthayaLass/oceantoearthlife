@@ -27,4 +27,8 @@ yarn-error.log
 # Build files
 dist/
 build/
-*.log 
+*.log
+
+# CSS files
+css/*.css
+css/*.css.map
