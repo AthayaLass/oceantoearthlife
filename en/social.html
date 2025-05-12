@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Posts - Ocean to Earth Life</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header with logo and navigation -->
+  <header class="py-3 bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light container-fluid px-3">
+      <a href="home.html" class="logo-link d-flex align-items-center me-3">
+        <img src="../assets/logo.png" alt="Ocean to Earth Life Logo" class="logo img-fluid" style="width: 138px; height: 138px;" srcset="../assets/logo.png 1x, ../assets/logo.png 2x">
+      </a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+        <ul class="navbar-nav mb-2 mb-lg-0 flex-wrap">
+          <li class="nav-item"><a href="home.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><i class="fas fa-users"></i> About Us</a></li>
+          <li class="nav-item"><a href="vision.html" class="nav-link"><i class="fas fa-seedling"></i> Vision & Projects</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact & Collaborate</a></li>
+          <li class="nav-item"><a href="social.html" class="nav-link"><i class="fas fa-hashtag"></i> Social Posts</a></li>
+        </ul>
+        <!-- Language Selector -->
+        <div class="language-selector ms-3">
+          <select class="form-select" onchange="changeLanguage(this.value)">
+            <option value="en" selected>English</option>
+            <option value="fr">Français</option>
+            <option value="it">Italiano</option>
+            <option value="de">Deutsch</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Social Posts</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <section class="card section-ocean h-100">
+          <h2 style="color:var(--highlight);">Instagram</h2>
+          <!-- Placeholder for Instagram posts -->
+          <div id="instagram-feed" style="min-height:120px;display:flex;align-items:center;justify-content:center;background:#fff3;border-radius:16px;">
+            <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+            <script src="https://static.elfsight.com/platform/platform.js" async></script>
+            <div class="elfsight-app-b4f5b6de-a74a-49f0-bf31-c107ba8515a5" data-elfsight-app-lazy></div>
+          </div>
+        </section>
+      </div>
+      <div class="col-md-6 mb-4">
+        <section class="card section-earth h-100">
+          <h2 style="color:var(--highlight);">LinkedIn</h2>
+          <!-- Placeholder for LinkedIn posts -->
+          <div id="linkedin-feed" style="min-height:120px;display:flex;align-items:center;justify-content:center;background:#fff3;border-radius:16px;">
+            <!-- Elfsight LinkedIn Feed | Untitled LinkedIn Feed -->
+            <script src="https://static.elfsight.com/platform/platform.js" async></script>
+            <div class="elfsight-app-d63ec758-33e1-40e5-b056-26dccecdfcc3" data-elfsight-app-lazy></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-white text-center py-3 mt-4 shadow-sm">
+    &copy; 2025 ocean to earth.life. All rights reserved.
+  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="../js/blog.js"></script>
+  <script src="../js/header.js"></script>
+  <script>
+    function changeLanguage(lang) {
+      const currentPath = window.location.pathname;
+      const currentPage = currentPath.split('/').pop();
+      window.location.href = `/${lang}/${currentPage}`;
+    }
+  </script>
+</body>
+</html> 

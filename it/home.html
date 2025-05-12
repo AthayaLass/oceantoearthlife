@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ocean to earth.life - Benvenuto</title>
+  <!-- Link to main stylesheet -->
+  <link rel="stylesheet" href="../css/style.css?v=1.0.1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="py-3 bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light container-fluid px-3">
+      <a href="home.html" class="logo-link d-flex align-items-center me-3">
+        <img src="../assets/logo.png" alt="Ocean to Earth Life Logo" class="logo img-fluid" style="width: 138px; height: 138px;" srcset="../assets/logo.png 1x, ../assets/logo.png 2x">
+      </a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+        <ul class="navbar-nav mb-2 mb-lg-0 flex-wrap">
+          <li class="nav-item"><a href="home.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><i class="fas fa-users"></i> Chi Siamo</a></li>
+          <li class="nav-item"><a href="vision.html" class="nav-link"><i class="fas fa-seedling"></i> Visione & Progetti</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contatti & Collaborazione</a></li>
+          <li class="nav-item"><a href="social.html" class="nav-link"><i class="fas fa-hashtag"></i> Post Social</a></li>
+        </ul>
+        <!-- Language Selector -->
+        <div class="language-selector ms-3">
+          <select class="form-select" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="it" selected>Italiano</option>
+            <option value="de">Deutsch</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container bg-white">
+    <div class="row">
+      <div class="col-12">
+        <!-- intro -->
+        <div class="poetic-intro text-center">
+          <h1>ocean to earth.life</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 mb-4">
+        <!-- Personal message section -->
+        <section class="section-message h-100 p-3 rounded shadow-sm">
+          <h2 class="text-center mb-3"><a href="about.html" style="color: white; text-decoration: none; pointer-events: none;">Ciao! 👋</a></h2>
+          <p class="lead text-center mb-3">
+            Siamo Veronica e Antoine, e siamo entusiasti di condividere il nostro viaggio con voi! Questo sito è il nostro piccolo angolo di internet dove uniamo il nostro amore per il pianeta, che - per noi - potrebbe essere riassunto in tre parole: <strong>Oceano</strong>, <strong>Terra</strong>, e <strong>Vita</strong>.<br> I nostri contenuti sono un mix delle nostre esperienze personali, dei nostri progetti e dei nostri pensieri sulla vita marina, la scienza delle piante e il benessere.
+          </p>
+          <p class="text-center mb-3">
+            Stiamo ancora modellando e sviluppando questo spazio, aggiungendo nuove funzionalità e contenuti man mano. Pensatelo come il nostro giardino digitale che cresce e si evolve costantemente. Ci piacerebbe che esploriate ciò che abbiamo costruito finora, e se avete idee, suggerimenti o volete semplicemente dire ciao, siamo qui ad ascoltare! Il vostro feedback è molto importante per noi e ci aiuta a migliorare questo spazio.
+          </p>
+          <p class="text-center mb-4">
+            Ogni grande viaggio inizia con un singolo passo, e siamo grati di avervi con noi!
+          </p>
+        </section>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <!-- Bootstrap Carousel -->
+        <h2 class="text-center mb-4 mt-5">Introduzione Rapida</h2>
+        <div id="welcomeCarousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="7000">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#welcomeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#welcomeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#welcomeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#welcomeCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#welcomeCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carousel-content">
+                <div class="carousel-image-container">
+                  <img src="../assets/undewaterOm.jpeg" class="carousel-image" alt="Benvenuto">
+                </div>
+                <div class="carousel-caption-container">
+                  <p>Ciao! 🌱✨ Benvenuti nel nostro piccolo angolo dove la scienza incontra la consapevolezza, dove l'oceano incontra la terra. Prendete il vostro tè preferito, ed esploriamo insieme!</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-content">
+                <div class="carousel-image-container">
+                  <img src="../assets/vero_06.jpeg" class="carousel-image" alt="Veronica">
+                </div>
+                <div class="carousel-caption-container">
+                  <p>Non è affascinante come le piante comunicano e prosperano nel loro mondo? Come scienziata delle piante, sono costantemente meravigliata dalla loro intelligenza. Vuoi saperne di più su questa bellissima connessione? 🌿</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-content">
+                <div class="carousel-image-container">
+                  <img src="../assets/antoine_02.jpeg" class="carousel-image" alt="Antoine">
+                </div>
+                <div class="carousel-caption-container">
+                  <p>Ciao! 👋 Sono quel ragazzo che si entusiasma troppo per la vita marina. Quando non sto facendo immersioni, probabilmente sto pensando alle immersioni. L'oceano ha questo incredibile modo di farti sentire sia piccolo che connesso a qualcosa di molto più grande. 🌊</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-content">
+                <div class="carousel-image-container">
+                  <img src="../assets/vero_02.jpeg" class="carousel-image" alt="Veronica">
+                </div>
+                <div class="carousel-caption-container">
+                  <p>Sapevi che prendersi solo 5 minuti per respirare ed essere presenti può cambiare l'intera giornata? Adoro condividere pratiche semplici che ci aiutano a riconnetterci con noi stessi e la natura. 🧘‍♀️✨</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-content">
+                <div class="carousel-image-container">
+                  <img src="../assets/vero_04.jpeg" class="carousel-image" alt="Veronica">
+                </div>
+                <div class="carousel-caption-container">
+                  <p>Sai cosa è incredibile? Come tutto nella natura sia connesso. L'oceano non è solo un posto - è un sistema vivente e respirante di cui facciamo tutti parte. Proteggiamo insieme il nostro pianeta blu! 🌍🤿</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#welcomeCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Precedente</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#welcomeCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Successivo</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center mt-4">
+        <a href="contact.html" class="button">Segui Il Nostro Viaggio</a>
+        <a href="contact.html" class="button" style="margin-left:1rem; background:var(--highlight);">Contattaci</a>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-white text-center py-3 mt-4 shadow-sm">
+    &copy; 2025 ocean to earth.life. Tutti i diritti riservati.
+  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="../js/blog.js"></script>
+  <script src="../js/header.js"></script>
+  <script>
+    function changeLanguage(lang) {
+      const currentPath = window.location.pathname;
+      const currentPage = currentPath.split('/').pop();
+      window.location.href = `/${lang}/${currentPage}`;
+    }
+  </script>
+</body>
+</html> 

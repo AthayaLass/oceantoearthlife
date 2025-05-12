@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Ocean to Earth Life</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header with logo and navigation -->
+  <header class="py-3 bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light container-fluid px-3">
+      <a href="home.html" class="logo-link d-flex align-items-center me-3">
+        <img src="../assets/logo.png" alt="Ocean to Earth Life Logo" class="logo img-fluid" style="width: 138px; height: 138px;" srcset="../assets/logo.png 1x, ../assets/logo.png 2x">
+      </a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+        <ul class="navbar-nav mb-2 mb-lg-0 flex-wrap">
+          <li class="nav-item"><a href="home.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><i class="fas fa-users"></i> About Us</a></li>
+          <li class="nav-item"><a href="vision.html" class="nav-link"><i class="fas fa-seedling"></i> Vision & Projects</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact & Collaborate</a></li>
+          <li class="nav-item"><a href="social.html" class="nav-link"><i class="fas fa-hashtag"></i> Social Posts</a></li>
+        </ul>
+        <!-- Language Selector -->
+        <div class="language-selector ms-3">
+          <select class="form-select" onchange="changeLanguage(this.value)">
+            <option value="en" selected>English</option>
+            <option value="fr">Français</option>
+            <option value="it">Italiano</option>
+            <option value="de">Deutsch</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="blog-header">
+      <h1>Blog</h1>
+      <div class="tag-filters">
+        <button class="tag-filter ocean" onclick="toggleTagFilter('ocean')">
+          <span class="tag ocean">ocean</span>
+        </button>
+        <button class="tag-filter earth" onclick="toggleTagFilter('earth')">
+          <span class="tag earth">earth</span>
+        </button>
+        <button class="tag-filter life" onclick="toggleTagFilter('life')">
+          <span class="tag life">life</span>
+        </button>
+      </div>
+    </div>
+    <div class="articles-container">
+      <!-- Story -->
+      <article class="article-item">
+        <div class="article-header" onclick="toggleArticle(this)">
+          <div class="article-title">
+            <h2>When Ocean Meets Earth: Our Journey of Conservation and Mindfulness</h2>
+            <div class="article-tags">
+              <span class="tag ocean">ocean</span>
+              <span class="tag earth">earth</span>
+              <span class="tag life">life</span>
+            </div>
+          </div>
+          <button class="toggle-article">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <div class="article-content">
+          <p>Welcome to our little corner of the internet! We're a couple in our 30s who fell in love with each other and with the incredible world around us. We're here to share our passion for the ocean's mysteries, the earth's wisdom, and the beautiful intersection of science and mindfulness.</p>
+
+          <p>Have you ever wondered about the secret language of plants? Or been mesmerized by the dance of bioluminescent creatures in the deep sea? These are the kinds of wonders that keep us up at night, excited to learn more and share our discoveries with you. We're not just science enthusiasts – we're storytellers who believe that the most complex scientific concepts can be shared in ways that spark wonder and curiosity.</p>
+
+          <p>Our journey with Ocean to Earth Life is just beginning, and we're starting with what we know best: making science accessible and engaging. We're diving into scientific papers (sometimes quite literally!) and transforming them into stories that everyone can understand and enjoy. From the fascinating ways plants communicate through their root networks to the mysterious behaviors of deep-sea creatures, we're here to bridge the gap between research and everyday understanding.</p>
+
+          <p>But we're not stopping at science communication. We're also passionate about the practices that help us connect more deeply with nature – whether that's through yoga, meditation, or the ancient wisdom of ayurveda. We believe that understanding our environment goes hand in hand with understanding ourselves, and we're excited to explore these connections together.</p>
+
+          <p>Here's what we're working on right now:</p>
+
+          <ul>
+            <li>Breaking down complex scientific papers into engaging, easy-to-understand content</li>
+            <li>Creating visual stories that bring the wonders of nature to life</li>
+            <li>Sharing our personal experiences with mindfulness and conservation</li>
+            <li>Developing guided meditations and yoga practices inspired by nature</li>
+            <li>Building a community of curious minds and nature lovers</li>
+          </ul>
+
+          <p>We have big dreams for where this journey might take us – from interactive workshops to immersive experiences that combine science, conservation, and mindfulness. But we're taking it one step at a time, starting with the basics: sharing knowledge, sparking curiosity, and building connections.</p>
+
+          <p>We'd love for you to join us on this adventure! Whether you're a fellow science enthusiast, a nature lover, a yoga practitioner, someone interested in mindfulness, or just curious about the world around us, there's a place for you here. Follow along as we explore the depths of the ocean, the wonders of plant communication, and the transformative power of mindful living.</p>
+
+          <p>Together, we can create something special – a community that celebrates the beauty of science, the wisdom of nature, and the joy of learning. So, what do you say? Ready to dive in?</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="bg-white text-center py-3 mt-4 shadow-sm">
+    &copy; 2025 Ocean to Earth Life. All rights reserved.
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="../js/blog.js"></script>
+  <script src="../js/header.js"></script>
+  <script>
+    function changeLanguage(lang) {
+      const currentPath = window.location.pathname;
+      const currentPage = currentPath.split('/').pop();
+      window.location.href = `/${lang}/${currentPage}`;
+    }
+  </script>
+</body>
+</html> 

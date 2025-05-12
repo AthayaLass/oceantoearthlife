@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über Uns - Ocean to Earth Life</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header with logo and navigation -->
+  <header class="py-3 bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light container-fluid px-3">
+      <a href="home.html" class="logo-link d-flex align-items-center me-3">
+        <img src="../assets/logo.png" alt="Ocean to Earth Life Logo" class="logo img-fluid" style="width: 138px; height: 138px;" srcset="../assets/logo.png 1x, ../assets/logo.png 2x">
+      </a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+        <ul class="navbar-nav mb-2 mb-lg-0 flex-wrap">
+          <li class="nav-item"><a href="home.html" class="nav-link"><i class="fas fa-home"></i> Startseite</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><i class="fas fa-users"></i> Über Uns</a></li>
+          <li class="nav-item"><a href="vision.html" class="nav-link"><i class="fas fa-seedling"></i> Vision & Projekte</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Kontakt & Zusammenarbeit</a></li>
+          <li class="nav-item"><a href="social.html" class="nav-link"><i class="fas fa-hashtag"></i> Soziale Beiträge</a></li>
+        </ul>
+        <!-- Language Selector -->
+        <div class="language-selector ms-3">
+          <select class="form-select" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="it">Italiano</option>
+            <option value="de" selected>Deutsch</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <h1>Über Uns</h1>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6">
+        <!-- Ocean Explorer Card -->
+        <section class="about-card section-ocean" id="ocean-card">
+          <button class="toggle-button" type="button" id="toggle-ocean" onclick="toggleCard('ocean')"><i class="fas fa-moon"></i></button>
+          <div class="card-header">
+            <img src="../assets/antoine_01.JPG" alt="Foto von Antoine" class="dynamic-bubble">
+            <h2>Der Ozeanforscher</h2>
+          </div>
+          <div class="card-content" id="ocean-content">
+            <p>Hallo! Ich bin Antoine, und ich habe mich schon immer unter den Wellen am wohlsten gefühlt. Als Meeresbiologe und professioneller Taucher habe ich unzählige Stunden damit verbracht, die verborgenen Wunder des Ozeans zu erforschen. Es ist etwas Magisches dabei, ein Korallenriff beim Erwachen zu beobachten oder eine neugierige Meeresschildkröte in ihrem natürlichen Lebensraum zu treffen.</p>
+            <p>In meinem Alltag arbeite ich als Ingenieur im Bereich der natürlichen Ressourcen und trage dazu bei, die Lücke zwischen Naturschutz und praktischen Lösungen zu schließen. Während ich gerne unsere Tauchabenteuer teile, liegt mir besonders daran, die Meereswissenschaft für alle zugänglicher zu machen. Zu oft bleiben faszinierende Forschungen in akademischen Artikeln verborgen. Ich möchte das ändern, indem ich ansprechende Inhalte erstelle, die Menschen helfen, unsere Ozeane zu verstehen und zu lieben.</p>
+            <p>Mein Traum? Ein Tauchlehrer zu werden, der nicht nur Tauchtechniken vermittelt, sondern auch eine neue Generation von Ozeanwächtern inspiriert. Denn der Schutz unserer Meere ist nicht nur eine Frage der Wissenschaft – es geht darum, eine Verbindung zwischen Menschen und der Unterwasserwelt herzustellen.</p>
+            <ul>
+              <li>Hüter des Meereslebens</li>
+              <li>Umweltbewahrer</li>
+              <li>Abenteuersucher</li>
+              <li>Unterwasserforscher</li>
+            </ul>
+            <blockquote>"Die Meere mit Nachhaltigkeit verbinden"</blockquote>
+          </div>
+        </section>
+      </div>
+      <div class="col-md-6">
+        <!-- Earth Whisperer Card -->
+        <section class="about-card section-earth" id="earth-card">
+          <button class="toggle-button" type="button" id="toggle-earth" onclick="toggleCard('earth')"><i class="fas fa-moon"></i></button>
+          <div class="card-header">
+            <img src="../assets/vero_01.jpg" alt="Foto von Vero" class="dynamic-bubble">
+            <h2>Die Erdflüsterin</h2>
+          </div>
+          <div class="card-content" id="earth-content">
+            <p>Hallo! Ich bin Veronica. Meine Reise mit Pflanzen begann im Garten meines Großvaters, wo ich zum ersten Mal die stille Magie erlebte, wie Samen keimen und Blumen blühen. Heute, als Pflanzenwissenschaftlerin, bin ich immer noch fasziniert von den komplexen Wegen, wie Pflanzen kommunizieren und sich an ihre Umgebung anpassen. Es ist etwas zutiefst Berührendes, zu verstehen, wie diese stillen Wesen unsere Welt gestalten.</p>
+            <p>Auf der wissenschaftlichen Seite liegt meine Leidenschaft in der Transformation unseres Ansatzes zur Landwirtschaft. Ich glaube, wir befinden uns an einem entscheidenden Punkt, an dem wir traditionelle Weisheit mit moderner Wissenschaft verbinden können, um Agrarsysteme zu schaffen, die sowohl Menschen als auch den Planeten nähren. Durch Praktiken wie Agroforstwirtschaft und konservierende Landwirtschaft entdecken wir, dass die Arbeit mit den Rhythmen der Natur zu widerstandsfähigeren und produktiveren Systemen führen kann.</p>
+            <p>Neben meiner wissenschaftlichen Arbeit finde ich Ausgleich durch Yoga und Achtsamkeitspraktiken. Ich fühle mich besonders vom ganzheitlichen Ansatz des Ayurveda zum Wohlbefinden angezogen, der die Zyklen und Muster der Natur wunderbar widerspiegelt. Durch meine Fotografie und die Erstellung von Inhalten hoffe ich, diese Verbindungen zwischen Wissenschaft, Natur und persönlichem Wohlbefinden zu teilen und andere einzuladen, ihre eigene Beziehung zur natürlichen Welt zu entdecken.</p>
+            <ul>
+              <li>Erforscherin der Pflanzenbiologie</li>
+              <li>Hingebungsvolle Naturstudentin</li>
+              <li>Führerin auf dem Weg der Achtsamkeit</li>
+              <li>Schöpferin von Yoga-Flows</li>
+            </ul>
+            <blockquote>"Geister mit dem Rhythmus der Natur verbinden"</blockquote>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-white text-center py-3 mt-4 shadow-sm">
+    &copy; 2025 Ocean to Earth Life. Alle Rechte vorbehalten.
+  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="../js/blog.js"></script>
+  <script src="../js/header.js"></script>
+  <script>
+    function changeLanguage(lang) {
+      const currentPath = window.location.pathname;
+      const currentPage = currentPath.split('/').pop();
+      window.location.href = `/${lang}/${currentPage}`;
+    }
+  </script>
+</body>
+</html> 

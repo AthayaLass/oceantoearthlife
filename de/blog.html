@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Ocean to Earth Life</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header with logo and navigation -->
+  <header class="py-3 bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light container-fluid px-3">
+      <a href="home.html" class="logo-link d-flex align-items-center me-3">
+        <img src="../assets/logo.png" alt="Ocean to Earth Life Logo" class="logo img-fluid" style="width: 138px; height: 138px;" srcset="../assets/logo.png 1x, ../assets/logo.png 2x">
+      </a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+        <ul class="navbar-nav mb-2 mb-lg-0 flex-wrap">
+          <li class="nav-item"><a href="home.html" class="nav-link"><i class="fas fa-home"></i> Startseite</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><i class="fas fa-users"></i> Über Uns</a></li>
+          <li class="nav-item"><a href="vision.html" class="nav-link"><i class="fas fa-seedling"></i> Vision & Projekte</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Kontakt & Zusammenarbeit</a></li>
+          <li class="nav-item"><a href="social.html" class="nav-link"><i class="fas fa-hashtag"></i> Soziale Beiträge</a></li>
+        </ul>
+        <!-- Language Selector -->
+        <div class="language-selector ms-3">
+          <select class="form-select" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="it">Italiano</option>
+            <option value="de" selected>Deutsch</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="blog-header">
+      <h1>Blog</h1>
+      <div class="tag-filters">
+        <button class="tag-filter ocean" onclick="toggleTagFilter('ocean')">
+          <span class="tag ocean">ozean</span>
+        </button>
+        <button class="tag-filter earth" onclick="toggleTagFilter('earth')">
+          <span class="tag earth">erde</span>
+        </button>
+        <button class="tag-filter life" onclick="toggleTagFilter('life')">
+          <span class="tag life">leben</span>
+        </button>
+      </div>
+    </div>
+    <div class="articles-container">
+      <!-- Story -->
+      <article class="article-item">
+        <div class="article-header" onclick="toggleArticle(this)">
+          <div class="article-title">
+            <h2>Wenn Ozean auf Erde trifft: Unsere Reise der Erhaltung und Achtsamkeit</h2>
+            <div class="article-tags">
+              <span class="tag ocean">ozean</span>
+              <span class="tag earth">erde</span>
+              <span class="tag life">leben</span>
+            </div>
+          </div>
+          <button class="toggle-article">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <div class="article-content">
+          <p>Willkommen in unserer kleinen Ecke des Internets! Wir sind ein Paar in den Dreißigern, das sich ineinander und in die unglaubliche Welt um uns herum verliebt hat. Wir sind hier, um unsere Leidenschaft für die Geheimnisse des Ozeans, die Weisheit der Erde und die wunderschöne Schnittstelle zwischen Wissenschaft und Achtsamkeit zu teilen.</p>
+
+          <p>Haben Sie sich jemals über die geheime Sprache der Pflanzen gewundert? Oder waren Sie fasziniert vom Tanz der biolumineszierenden Kreaturen in der Tiefsee? Dies sind die Arten von Wundern, die uns nachts wach halten, begeistert, mehr zu lernen und unsere Entdeckungen mit Ihnen zu teilen. Wir sind nicht nur Wissenschaftsenthusiasten – wir sind Geschichtenerzähler, die glauben, dass die komplexesten wissenschaftlichen Konzepte auf eine Weise geteilt werden können, die Staunen und Neugier weckt.</p>
+
+          <p>Unsere Reise mit Ocean to Earth Life beginnt gerade erst, und wir starten mit dem, was wir am besten können: Wissenschaft zugänglich und ansprechend zu machen. Wir tauchen in wissenschaftliche Artikel ein (manchmal buchstäblich!) und verwandeln sie in Geschichten, die jeder verstehen und genießen kann. Von den faszinierenden Wegen, wie Pflanzen durch ihre Wurzelnetzwerke kommunizieren, bis zu den mysteriösen Verhaltensweisen der Tiefseekreaturen – wir sind hier, um die Lücke zwischen Forschung und alltäglichem Verständnis zu schließen.</p>
+
+          <p>Aber wir beschränken uns nicht auf Wissenschaftskommunikation. Wir sind auch leidenschaftlich an den Praktiken interessiert, die uns helfen, uns tiefer mit der Natur zu verbinden – sei es durch Yoga, Meditation oder die alte Weisheit des Ayurveda. Wir glauben, dass das Verstehen unserer Umwelt Hand in Hand mit dem Verstehen unserer selbst geht, und wir freuen uns darauf, diese Verbindungen gemeinsam zu erkunden.</p>
+
+          <p>Hier ist, woran wir gerade arbeiten:</p>
+
+          <ul>
+            <li>Komplexe wissenschaftliche Artikel in ansprechende, leicht verständliche Inhalte umwandeln</li>
+            <li>Visuelle Geschichten erstellen, die die Wunder der Natur zum Leben erwecken</li>
+            <li>Unsere persönlichen Erfahrungen mit Achtsamkeit und Erhaltung teilen</li>
+            <li>Geführte Meditationen und Yoga-Praktiken entwickeln, die von der Natur inspiriert sind</li>
+            <li>Eine Gemeinschaft neugieriger Geister und Naturliebhaber aufbauen</li>
+          </ul>
+
+          <p>Wir haben große Träume für diese Reise – von interaktiven Workshops bis hin zu immersiven Erlebnissen, die Wissenschaft, Erhaltung und Achtsamkeit verbinden. Aber wir gehen es Schritt für Schritt an, beginnend mit den Grundlagen: Wissen teilen, Neugier wecken und Verbindungen aufbauen.</p>
+
+          <p>Wir würden uns freuen, wenn Sie uns auf diesem Abenteuer begleiten würden! Ob Sie ein Wissenschaftsenthusiast, ein Naturliebhaber, ein Yoga-Praktizierender, jemand mit Interesse an Achtsamkeit oder einfach nur neugierig auf die Welt um uns herum sind – hier ist ein Platz für Sie. Folgen Sie uns, während wir die Tiefen des Ozeans, die Wunder der Pflanzenkommunikation und die transformative Kraft des achtsamen Lebens erkunden.</p>
+
+          <p>Gemeinsam können wir etwas Besonderes schaffen – eine Gemeinschaft, die die Schönheit der Wissenschaft, die Weisheit der Natur und die Freude am Lernen feiert. Also, was sagen Sie? Bereit zum Eintauchen?</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="bg-white text-center py-3 mt-4 shadow-sm">
+    &copy; 2025 Ocean to Earth Life. Alle Rechte vorbehalten.
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="../js/blog.js"></script>
+  <script src="../js/header.js"></script>
+  <script>
+    function changeLanguage(lang) {
+      const currentPath = window.location.pathname;
+      const currentPage = currentPath.split('/').pop();
+      window.location.href = `/${lang}/${currentPage}`;
+    }
+  </script>
+</body>
+</html> 
