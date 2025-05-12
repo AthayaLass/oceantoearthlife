@@ -901,4 +901,15 @@ header.shrunk nav {
 
 header.shrunk .navbar-nav {
   font-size: 0.9rem;
+}
+
+.slide-counter {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
 } 
