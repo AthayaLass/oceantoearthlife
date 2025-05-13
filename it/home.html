@@ -39,6 +39,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  
+  <!-- PWA Meta Tags -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Ocean to Earth Life">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
 </head>
 <body>
   <header class="py-3 bg-white shadow-sm">
@@ -184,6 +191,27 @@
   <script src="../js/blog.js"></script>
   <script src="../js/header.js"></script>
   <script>
+    // Language detection and redirection
+    function detectAndRedirectLanguage() {
+      // Get user's preferred languages
+      const userLanguage = navigator.language || navigator.userLanguage;
+      const languageCode = userLanguage.split('-')[0]; // Get primary language code
+      
+      // Check if we're already on the correct language version
+      const currentPath = window.location.pathname;
+      const currentLang = currentPath.split('/')[1]; // Get current language from URL
+      
+      // If we're not on the correct language version and it's a supported language
+      if (currentLang !== languageCode && ['en', 'fr', 'it', 'de'].includes(languageCode)) {
+        const currentPage = currentPath.split('/').pop();
+        window.location.href = `/${languageCode}/${currentPage}`;
+      }
+    }
+
+    // Run language detection on page load
+    document.addEventListener('DOMContentLoaded', detectAndRedirectLanguage);
+
+    // Language selector function
     function changeLanguage(lang) {
       const currentPath = window.location.pathname;
       const currentPage = currentPath.split('/').pop();

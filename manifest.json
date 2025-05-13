@@ -1,0 +1,32 @@
+{
+  "name": "Ocean to Earth Life",
+  "short_name": "O2E Life",
+  "description": "Connecting Ocean, Earth, and Life through marine conservation, plant science, and wellness",
+  "start_url": "/en/home.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/assets/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "lang": "en",
+  "dir": "ltr",
+  "orientation": "portrait",
+  "categories": ["nature", "science", "wellness", "environment"],
+  "screenshots": [
+    {
+      "src": "/assets/undewaterOm.jpeg",
+      "sizes": "800x600",
+      "type": "image/jpeg"
+    }
+  ]
+} 
