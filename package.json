@@ -6,7 +6,9 @@
   "scripts": {
     "sass": "sass --watch css:css --style compressed",
     "serve": "live-server",
-    "dev": "concurrently \"npm run sass\" \"npm run serve\""
+    "dev": "concurrently \"npm run sass\" \"npm run serve\"",
+    "optimize-images": "node optimize-images.js",
+    "build": "npm run optimize-images && npm run sass"
   },
   "repository": {
     "type": "git",
@@ -21,8 +23,9 @@
   "homepage": "https://github.com/AthayaLass/oceantoearthlife#readme",
   "devDependencies": {
     "concurrently": "^9.1.2",
-    "live-server": "^1.2.2",
-    "sass": "^1.69.5"
+    "live-server": "^1.2.0",
+    "sass": "^1.69.5",
+    "sharp": "^0.33.2"
   },
   "dependencies": {
     "sass": "^1.69.5"
