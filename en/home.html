@@ -3,7 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ocean to earth.life - Welcome</title>
+  <title>Ocean to Earth Life - Connecting Ocean, Earth, and Life</title>
+  <meta name="description" content="Join Veronica and Antoine on their journey exploring marine life, plant science, and wellness. Discover the fascinating connection between ocean, earth, and life.">
+  <meta name="keywords" content="marine life, plant science, wellness, ocean conservation, sustainable living, mindfulness, nature connection">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://oceantoearth.life/en/home.html">
+  
+  <!-- Language Alternates -->
+  <link rel="alternate" hreflang="fr" href="https://oceantoearth.life/fr/home.html">
+  <link rel="alternate" hreflang="it" href="https://oceantoearth.life/it/home.html">
+  <link rel="alternate" hreflang="de" href="https://oceantoearth.life/de/home.html">
+  <link rel="alternate" hreflang="en" href="https://oceantoearth.life/en/home.html">
+  <link rel="alternate" hreflang="x-default" href="https://oceantoearth.life/en/home.html">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://oceantoearth.life/en/home.html">
+  <meta property="og:title" content="Ocean to Earth Life - Connecting Ocean, Earth, and Life">
+  <meta property="og:description" content="Join Veronica and Antoine on their journey exploring marine life, plant science, and wellness. Discover the fascinating connection between ocean, earth, and life.">
+  <meta property="og:image" content="https://oceantoearth.life/assets/logo.png">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ocean to Earth Life - Connecting Ocean, Earth, and Life">
+  <meta name="twitter:description" content="Join Veronica and Antoine on their journey exploring marine life, plant science, and wellness. Discover the fascinating connection between ocean, earth, and life.">
+  <meta name="twitter:image" content="https://oceantoearth.life/assets/logo.png">
+  
   <!-- Link to main stylesheet -->
   <link rel="stylesheet" href="../css/style.css?v=1.0.1">
   <!-- Bootstrap CSS -->
@@ -163,6 +189,37 @@
       const currentPage = currentPath.split('/').pop();
       window.location.href = `/${lang}/${currentPage}`;
     }
+  </script>
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Ocean to Earth Life",
+    "url": "https://oceantoearth.life",
+    "description": "A platform exploring the connection between ocean, earth, and life through marine conservation, plant science, and wellness.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://oceantoearth.life/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ocean to Earth Life",
+    "url": "https://oceantoearth.life",
+    "logo": "https://oceantoearth.life/assets/logo.png",
+    "sameAs": [
+      "https://www.instagram.com/oceantoearth.life",
+      "https://www.facebook.com/oceantoearth.life",
+      "https://twitter.com/oceantoearthlife"
+    ]
+  }
   </script>
 </body>
 </html> 

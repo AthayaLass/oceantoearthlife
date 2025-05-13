@@ -3,7 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ocean to earth.life - Bienvenue</title>
+  <title>Ocean to Earth Life - Connecter l'Océan, la Terre et la Vie</title>
+  <meta name="description" content="Rejoignez Veronica et Antoine dans leur voyage explorant la vie marine, la science des plantes et le bien-être. Découvrez la fascinante connexion entre l'océan, la terre et la vie.">
+  <meta name="keywords" content="vie marine, science des plantes, bien-être, conservation marine, vie durable, pleine conscience, connexion nature">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://oceantoearth.life/fr/home.html">
+  
+  <!-- Language Alternates -->
+  <link rel="alternate" hreflang="fr" href="https://oceantoearth.life/fr/home.html">
+  <link rel="alternate" hreflang="it" href="https://oceantoearth.life/it/home.html">
+  <link rel="alternate" hreflang="de" href="https://oceantoearth.life/de/home.html">
+  <link rel="alternate" hreflang="en" href="https://oceantoearth.life/en/home.html">
+  <link rel="alternate" hreflang="x-default" href="https://oceantoearth.life/en/home.html">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://oceantoearth.life/fr/home.html">
+  <meta property="og:title" content="Ocean to Earth Life - Connecter l'Océan, la Terre et la Vie">
+  <meta property="og:description" content="Rejoignez Veronica et Antoine dans leur voyage explorant la vie marine, la science des plantes et le bien-être. Découvrez la fascinante connexion entre l'océan, la terre et la vie.">
+  <meta property="og:image" content="https://oceantoearth.life/assets/logo.png">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ocean to Earth Life - Connecter l'Océan, la Terre et la Vie">
+  <meta name="twitter:description" content="Rejoignez Veronica et Antoine dans leur voyage explorant la vie marine, la science des plantes et le bien-être. Découvrez la fascinante connexion entre l'océan, la terre et la vie.">
+  <meta name="twitter:image" content="https://oceantoearth.life/assets/logo.png">
+  
   <!-- Link to main stylesheet -->
   <link rel="stylesheet" href="../css/style.css?v=1.0.1">
   <!-- Bootstrap CSS -->
@@ -163,6 +189,37 @@
       const currentPage = currentPath.split('/').pop();
       window.location.href = `/${lang}/${currentPage}`;
     }
+  </script>
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Ocean to Earth Life",
+    "url": "https://oceantoearth.life",
+    "description": "Une plateforme explorant la connexion entre l'océan, la terre et la vie à travers la conservation marine, la science des plantes et le bien-être.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://oceantoearth.life/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ocean to Earth Life",
+    "url": "https://oceantoearth.life",
+    "logo": "https://oceantoearth.life/assets/logo.png",
+    "sameAs": [
+      "https://www.instagram.com/oceantoearth.life",
+      "https://www.facebook.com/oceantoearth.life",
+      "https://twitter.com/oceantoearthlife"
+    ]
+  }
   </script>
 </body>
 </html> 

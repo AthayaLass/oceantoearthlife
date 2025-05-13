@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- English Pages -->
+  <url>
+    <loc>https://oceantoearth.life/en/home.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://oceantoearth.life/fr/home.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://oceantoearth.life/it/home.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oceantoearth.life/de/home.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oceantoearth.life/en/home.html"/>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://oceantoearth.life/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://oceantoearth.life/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://oceantoearth.life/it/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oceantoearth.life/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oceantoearth.life/en/about.html"/>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oceantoearth.life/en/vision.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://oceantoearth.life/fr/vision.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://oceantoearth.life/it/vision.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oceantoearth.life/de/vision.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oceantoearth.life/en/vision.html"/>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oceantoearth.life/en/blog.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://oceantoearth.life/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://oceantoearth.life/it/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oceantoearth.life/de/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oceantoearth.life/en/blog.html"/>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://oceantoearth.life/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://oceantoearth.life/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://oceantoearth.life/it/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oceantoearth.life/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oceantoearth.life/en/contact.html"/>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://oceantoearth.life/en/social.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://oceantoearth.life/fr/social.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://oceantoearth.life/it/social.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://oceantoearth.life/de/social.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oceantoearth.life/en/social.html"/>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset> 
