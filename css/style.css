@@ -628,26 +628,39 @@ header *,
 }
 
 .article-content {
-  padding: 0 1.5rem;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s ease;
-  background: #fff;
+  transition: max-height 0.3s ease-out;
+  padding: 0 1rem;
+  opacity: 0;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
 }
 
 .article-content.active {
-  padding: 1.5rem;
-  max-height: 1000px;
+  max-height: none;
+  opacity: 1;
+  padding: 1rem;
 }
 
 .article-content p {
   margin-bottom: 1rem;
   line-height: 1.6;
-  color: var(--text);
+  font-size: 1rem;
 }
 
-.article-content p:last-child {
-  margin-bottom: 0;
+@media (max-width: 768px) {
+  .article-content {
+    padding: 0 0.5rem;
+  }
+  
+  .article-content.active {
+    padding: 0.5rem;
+  }
+  
+  .article-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
 }
 
 /* Rotate arrow when article is expanded */
