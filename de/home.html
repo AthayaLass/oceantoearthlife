@@ -193,6 +193,11 @@
   <script>
     // Language detection and redirection
     function detectAndRedirectLanguage() {
+      // Check if user has already made a language choice
+      if (localStorage.getItem('userLanguageChoice')) {
+        return;
+      }
+
       // Get user's preferred languages
       const userLanguage = navigator.language || navigator.userLanguage;
       const languageCode = userLanguage.split('-')[0]; // Get primary language code
@@ -213,6 +218,8 @@
 
     // Language selector function
     function changeLanguage(lang) {
+      // Store the user's language choice
+      localStorage.setItem('userLanguageChoice', lang);
       const currentPath = window.location.pathname;
       const currentPage = currentPath.split('/').pop();
       window.location.href = `/${lang}/${currentPage}`;
