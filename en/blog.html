@@ -45,6 +45,16 @@
     </nav>
   </header>
 
+  <nav aria-label="Article navigation" class="container mt-3 mb-3">
+    <h3>On this page:</h3>
+    <ul class="nav nav-pills flex-column flex-sm-row">
+      <li class="nav-item">
+        <a class="nav-link active" href="#welcome!">When Ocean Meets Earth: Our Journey of Conservation and Mindfulness</a>
+      </li>
+      <!-- TODO: When adding a new article, add a new <li class="nav-item">...</li> here with the link to the new article ID and its title -->
+    </ul>
+  </nav>
+
   <main class="container">
     <div class="blog-header">
       <h1>Blog</h1>
@@ -60,11 +70,18 @@
         </button>
       </div>
     </div>
+
+    <!-- INFO: To add a new blog post, copy the entire <article>...</article> structure below.
+         Each new article will need a unique ID and updated share links.
+         See comments within the article structure for details.
+    -->
     <div class="articles-container">
-      <!-- Story -->
-      <article class="article-item">
+      <!-- ARTICLE START (Copy this whole block for a new article) -->
+      <!-- TODO for new article: Change "welcome!" to a unique ID (e.g., "new-article-slug") -->
+      <article id="welcome!" class="article-item active">
         <div class="article-header" onclick="toggleArticle(this)">
           <div class="article-title">
+            <!-- TODO for new article: Update the H2 title below -->
             <h2>When Ocean Meets Earth: Our Journey of Conservation and Mindfulness</h2>
             <div class="article-tags">
               <span class="tag ocean">ocean</span>
@@ -73,10 +90,10 @@
             </div>
           </div>
           <button class="toggle-article">
-            <i class="fas fa-plus"></i>
+            <i class="fas fa-minus"></i>
           </button>
         </div>
-        <div class="article-content">
+        <div class="article-content active">
           <p>Welcome to our little corner of the internet! We're a couple in our 30s who fell in love with each other and with the incredible world around us. We're here to share our passion for the ocean's mysteries, the earth's wisdom, and the beautiful intersection of science and mindfulness.</p>
 
           <p>Have you ever wondered about the secret language of plants? Or been mesmerized by the dance of bioluminescent creatures in the deep sea? These are the kinds of wonders that keep us up at night, excited to learn more and share our discoveries with you. We're not just science enthusiasts – we're storytellers who believe that the most complex scientific concepts can be shared in ways that spark wonder and curiosity.</p>
@@ -101,7 +118,18 @@
 
           <p>Together, we can create something special – a community that celebrates the beauty of science, the wisdom of nature, and the joy of learning. So, what do you say? Ready to dive in?</p>
         </div>
+        <!-- TODO for new article:
+             1. Update the article ID in all share URLs (e.g., #new-article-slug).
+             2. Update the article title in all 'text', 'quote', 'title', and 'summary' parameters.
+                Ensure the title is correctly URL-encoded.
+        -->
+        <div class="social-share-buttons" style="text-align: right; margin-top: 10px;">
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Fen%2Fblog.html%23welcome!&text=When%20Ocean%20Meets%20Earth%3A%20Our%20Journey%20of%20Conservation%20and%20Mindfulness" target="_blank" title="Share on Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fen%2Fblog.html%23welcome!&quote=When%20Ocean%20Meets%20Earth%3A%20Our%20Journey%20of%20Conservation%20and%20Mindfulness" target="_blank" title="Share on Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fen%2Fblog.html%23welcome!&title=When%20Ocean%20Meets%20Earth%3A%20Our%20Journey%20of%20Conservation%20and%20Mindfulness&summary=Our%20Journey%20of%20Conservation%20and%20Mindfulness" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
       </article>
+      <!-- ARTICLE END -->
     </div>
   </main>
 

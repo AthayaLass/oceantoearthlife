@@ -45,6 +45,16 @@
     </nav>
   </header>
 
+  <nav aria-label="Artikelnavigation" class="container mt-3 mb-3">
+    <h3>Auf dieser Seite:</h3>
+    <ul class="nav nav-pills flex-column flex-sm-row">
+      <li class="nav-item">
+        <a class="nav-link active" href="#welcome!">Wenn Ozean auf Erde trifft: Unsere Reise der Erhaltung und Achtsamkeit</a>
+      </li>
+      <!-- TODO: Wenn Sie einen neuen Artikel hinzufügen, fügen Sie hier ein neues <li class="nav-item">...</li> mit dem Link zur neuen Artikel-ID und dem Titel hinzu -->
+    </ul>
+  </nav>
+
   <main class="container">
     <div class="blog-header">
       <h1>Blog</h1>
@@ -60,11 +70,18 @@
         </button>
       </div>
     </div>
+
+    <!-- INFO: Um einen neuen Blog-Beitrag hinzuzufügen, kopieren Sie die gesamte <article>...</article>-Struktur unten.
+         Jeder neue Artikel benötigt eine eindeutige ID und aktualisierte Share-Links.
+         Siehe Kommentare innerhalb der Artikelstruktur für Details.
+    -->
     <div class="articles-container">
-      <!-- Story -->
-      <article class="article-item">
+      <!-- ARTIKEL START (Kopieren Sie diesen gesamten Block für einen neuen Artikel) -->
+      <!-- TODO für neuen Artikel: Ändern Sie "welcome!" in eine eindeutige ID (z.B. "neuer-artikel-slug") -->
+      <article id="welcome!" class="article-item active">
         <div class="article-header" onclick="toggleArticle(this)">
           <div class="article-title">
+            <!-- TODO für neuen Artikel: Aktualisieren Sie den H2-Titel unten -->
             <h2>Wenn Ozean auf Erde trifft: Unsere Reise der Erhaltung und Achtsamkeit</h2>
             <div class="article-tags">
               <span class="tag ocean">ozean</span>
@@ -73,10 +90,10 @@
             </div>
           </div>
           <button class="toggle-article">
-            <i class="fas fa-plus"></i>
+            <i class="fas fa-minus"></i>
           </button>
         </div>
-        <div class="article-content">
+        <div class="article-content active">
           <p>Willkommen in unserer kleinen Ecke des Internets! Wir sind ein Paar in den Dreißigern, das sich ineinander und in die unglaubliche Welt um uns herum verliebt hat. Wir sind hier, um unsere Leidenschaft für die Geheimnisse des Ozeans, die Weisheit der Erde und die wunderschöne Schnittstelle zwischen Wissenschaft und Achtsamkeit zu teilen.</p>
 
           <p>Haben Sie sich jemals über die geheime Sprache der Pflanzen gewundert? Oder waren Sie fasziniert vom Tanz der biolumineszierenden Kreaturen in der Tiefsee? Dies sind die Arten von Wundern, die uns nachts wach halten, begeistert, mehr zu lernen und unsere Entdeckungen mit Ihnen zu teilen. Wir sind nicht nur Wissenschaftsenthusiasten – wir sind Geschichtenerzähler, die glauben, dass die komplexesten wissenschaftlichen Konzepte auf eine Weise geteilt werden können, die Staunen und Neugier weckt.</p>
@@ -101,7 +118,18 @@
 
           <p>Gemeinsam können wir etwas Besonderes schaffen – eine Gemeinschaft, die die Schönheit der Wissenschaft, die Weisheit der Natur und die Freude am Lernen feiert. Also, was sagen Sie? Bereit zum Eintauchen?</p>
         </div>
+        <!-- TODO für neuen Artikel:
+             1. Aktualisieren Sie die Artikel-ID in allen Share-URLs (z.B. #neuer-artikel-slug).
+             2. Aktualisieren Sie den Artikeltitel in allen Parametern 'text', 'quote', 'title' und 'summary'.
+                Stellen Sie sicher, dass der Titel korrekt URL-kodiert ist.
+        -->
+        <div class="social-share-buttons" style="text-align: right; margin-top: 10px;">
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23welcome!&text=Wenn%20Ozean%20auf%20Erde%20trifft%3A%20Unsere%20Reise%20der%20Erhaltung%20und%20Achtsamkeit" target="_blank" title="Auf Twitter teilen" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23welcome!&quote=Wenn%20Ozean%20auf%20Erde%20trifft%3A%20Unsere%20Reise%20der%20Erhaltung%20und%20Achtsamkeit" target="_blank" title="Auf Facebook teilen" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23welcome!&title=Wenn%20Ozean%20auf%20Erde%20trifft%3A%20Unsere%20Reise%20der%20Erhaltung%20und%20Achtsamkeit&summary=Unsere%20Reise%20der%20Erhaltung%20und%20Achtsamkeit" target="_blank" title="Auf LinkedIn teilen"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
       </article>
+      <!-- ARTIKEL ENDE -->
     </div>
   </main>
 

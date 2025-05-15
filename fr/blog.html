@@ -45,6 +45,16 @@
     </nav>
   </header>
 
+  <nav aria-label="Navigation des articles" class="container mt-3 mb-3">
+    <h3>Sur cette page :</h3>
+    <ul class="nav nav-pills flex-column flex-sm-row">
+      <li class="nav-item">
+        <a class="nav-link active" href="#welcome!">Quand l'Océan Rencontre la Terre : Notre Voyage de Conservation et de Pleine Conscience</a>
+      </li>
+      <!-- TODO: Lors de l'ajout d'un nouvel article, ajoutez un nouveau <li class="nav-item">...</li> ici avec le lien vers le nouvel ID d'article et son titre -->
+    </ul>
+  </nav>
+
   <main class="container">
     <div class="blog-header">
       <h1>Blog</h1>
@@ -60,11 +70,18 @@
         </button>
       </div>
     </div>
+
+    <!-- INFO: Pour ajouter un nouvel article de blog, copiez toute la structure <article>...</article> ci-dessous.
+         Chaque nouvel article nécessitera un ID unique et des liens de partage mis à jour.
+         Consultez les commentaires dans la structure de l'article pour plus de détails.
+    -->
     <div class="articles-container">
-      <!-- Story -->
-      <article class="article-item">
+      <!-- DÉBUT DE L'ARTICLE (Copiez tout ce bloc pour un nouvel article) -->
+      <!-- TODO pour un nouvel article: Changez "welcome!" par un ID unique (par ex., "nouveau-slug-article") -->
+      <article id="welcome!" class="article-item active">
         <div class="article-header" onclick="toggleArticle(this)">
           <div class="article-title">
+            <!-- TODO pour un nouvel article: Mettez à jour le titre H2 ci-dessous -->
             <h2>Quand l'Océan Rencontre la Terre : Notre Voyage de Conservation et de Pleine Conscience</h2>
             <div class="article-tags">
               <span class="tag ocean">océan</span>
@@ -73,10 +90,10 @@
             </div>
           </div>
           <button class="toggle-article">
-            <i class="fas fa-plus"></i>
+            <i class="fas fa-minus"></i>
           </button>
         </div>
-        <div class="article-content">
+        <div class="article-content active">
           <p>Bienvenue dans notre petit coin d'internet ! Nous sommes un couple dans la trentaine qui est tombé amoureux l'un de l'autre et du monde incroyable qui nous entoure. Nous sommes ici pour partager notre passion pour les mystères de l'océan, la sagesse de la terre et la belle intersection entre la science et la pleine conscience.</p>
 
           <p>Vous êtes-vous déjà demandé à propos du langage secret des plantes ? Ou avez-vous été fasciné par la danse des créatures bioluminescentes dans les profondeurs de la mer ? Ce sont ces types de merveilles qui nous tiennent éveillés la nuit, impatients d'en apprendre davantage et de partager nos découvertes avec vous. Nous ne sommes pas seulement des passionnés de science – nous sommes des conteurs qui croient que les concepts scientifiques les plus complexes peuvent être partagés d'une manière qui suscite l'émerveillement et la curiosité.</p>
@@ -101,7 +118,18 @@
 
           <p>Ensemble, nous pouvons créer quelque chose de spécial – une communauté qui célèbre la beauté de la science, la sagesse de la nature et la joie d'apprendre. Alors, qu'en dites-vous ? Prêt à plonger ?</p>
         </div>
+        <!-- TODO pour un nouvel article:
+             1. Mettez à jour l'ID de l'article dans toutes les URL de partage (par ex., #nouveau-slug-article).
+             2. Mettez à jour le titre de l'article dans tous les paramètres 'text', 'quote', 'title' et 'summary'.
+                Assurez-vous que le titre est correctement encodé pour une URL.
+        -->
+        <div class="social-share-buttons" style="text-align: right; margin-top: 10px;">
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&text=Quand%20l%27Oc%C3%A9an%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Partager sur Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&quote=Quand%20l%27Oc%C3%A9an%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Partager sur Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&title=Quand%20l%27Oc%C3%A9an%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience&summary=Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Partager sur LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
       </article>
+      <!-- FIN DE L'ARTICLE -->
     </div>
   </main>
 
