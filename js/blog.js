@@ -208,6 +208,58 @@ function toggleCard(card) {
   }
 }
 
+/**
+ * Update social media share links for all articles on the page.
+ */
+function updateShareLinks() {
+  const articles = document.querySelectorAll('.article-item');
+  // Assuming the base URL structure from the existing HTML.
+  // This might need adjustment if the site structure or domain changes.
+  const sitePageBaseUrl = 'https://www.oceantoearth.life/en/blog.html';
+
+  articles.forEach(article => {
+    const articleId = article.id;
+    if (!articleId) {
+      console.warn('Article found without an ID, cannot generate share links for it.', article);
+      return;
+    }
+
+    const titleElement = article.querySelector('.article-title h2');
+    if (!titleElement) {
+      console.warn(`Article with ID "${articleId}" is missing an H2 title, cannot generate share links.`, article);
+      return;
+    }
+    const articleTitle = titleElement.textContent.trim();
+    const encodedArticleTitle = encodeURIComponent(articleTitle);
+
+    const articleUrl = `${sitePageBaseUrl}#${articleId}`;
+    const encodedArticleUrl = encodeURIComponent(articleUrl);
+
+    const shareButtonsContainer = article.querySelector('.social-share-buttons');
+    if (!shareButtonsContainer) {
+      console.warn(`Article with ID "${articleId}" is missing a .social-share-buttons container.`, article);
+      return;
+    }
+
+    const twitterLink = shareButtonsContainer.querySelector('a[title="Share on Twitter"]');
+    if (twitterLink) {
+      twitterLink.href = `https://twitter.com/intent/tweet?url=${encodedArticleUrl}&text=${encodedArticleTitle}`;
+    }
+
+    const facebookLink = shareButtonsContainer.querySelector('a[title="Share on Facebook"]');
+    if (facebookLink) {
+      facebookLink.href = `https://www.facebook.com/sharer/sharer.php?u=${encodedArticleUrl}&quote=${encodedArticleTitle}`;
+    }
+
+    const linkedinLink = shareButtonsContainer.querySelector('a[title="Share on LinkedIn"]');
+    if (linkedinLink) {
+      // Using the article title as the summary for LinkedIn, as per existing structure.
+      const encodedArticleSummary = encodedArticleTitle;
+      linkedinLink.href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodedArticleUrl}&title=${encodedArticleTitle}&summary=${encodedArticleSummary}`;
+    }
+  });
+}
+
 // Initialize carousel
 document.addEventListener('DOMContentLoaded', function() {
   const carousel = document.getElementById('welcomeCarousel');
@@ -242,4 +294,6 @@ document.addEventListener('DOMContentLoaded', function() {
       handleResize();
     });
   }
+  // Automatically update share links for all articles on page load.
+  updateShareLinks();
 }); 
