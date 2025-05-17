@@ -3,14 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Veronica and Antoine">
+  <meta name="robots" content="index, follow">
+  <meta name="revisit-after" content="7 days">
+  <meta name="generator" content="Ocean to Earth Life">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- PWA Meta Tags -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Ocean to Earth Life">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  
   <title>À Propos - Ocean to Earth Life</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <meta name="description" content="Découvrez Veronica et Antoine, leurs passions pour la vie marine, la science des plantes et le bien-être, et leur mission de connecter l'océan, la terre et la vie.">
+  <meta name="keywords" content="biologie marine, science des plantes, bien-être, conservation marine, vie durable, pleine conscience, connexion nature">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://oceantoearth.life/fr/about.html">
+  
+  <!-- Language Alternates -->
+  <link rel="alternate" hreflang="fr" href="https://oceantoearth.life/fr/about.html">
+  <link rel="alternate" hreflang="it" href="https://oceantoearth.life/it/about.html">
+  <link rel="alternate" hreflang="de" href="https://oceantoearth.life/de/about.html">
+  <link rel="alternate" hreflang="en" href="https://oceantoearth.life/en/about.html">
+  <link rel="alternate" hreflang="x-default" href="https://oceantoearth.life/en/about.html">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://oceantoearth.life/fr/about.html">
+  <meta property="og:title" content="À Propos - Ocean to Earth Life">
+  <meta property="og:description" content="Découvrez Veronica et Antoine, leurs passions pour la vie marine, la science des plantes et le bien-être, et leur mission de connecter l'océan, la terre et la vie.">
+  <meta property="og:image" content="https://oceantoearth.life/assets/optimized/logo.png">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="À Propos - Ocean to Earth Life">
+  <meta name="twitter:description" content="Découvrez Veronica et Antoine, leurs passions pour la vie marine, la science des plantes et le bien-être, et leur mission de connecter l'océan, la terre et la vie.">
+  <meta name="twitter:image" content="https://oceantoearth.life/assets/optimized/logo.png">
+  
+  <!-- Link to main stylesheet -->
+  <link rel="stylesheet" href="../css/style.css?v=1.0.1">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -18,7 +62,7 @@
   <header class="py-3 bg-white shadow-sm">
     <nav class="navbar navbar-expand-lg navbar-light container-fluid px-3">
       <a href="home.html" class="logo-link d-flex align-items-center me-3">
-        <img src="../assets/logo.png" alt="Ocean to Earth Life Logo" class="logo img-fluid" style="width: 138px; height: 138px;" srcset="../assets/logo.png 1x, ../assets/logo.png 2x">
+        <img src="../assets/logo.png" alt="Ocean to Earth Life Logo" class="logo img-fluid" style="width: 138px; height: 138px;" srcset="../assets/logo.png 1x, ../assets/logo.png 2x" loading="eager" fetchpriority="high">
       </a>
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -51,9 +95,13 @@
         <!-- Ocean Explorer Card -->
         <section class="about-card section-ocean" id="ocean-card">
           <button class="toggle-button" type="button" id="toggle-ocean" onclick="toggleCard('ocean')"><i class="fas fa-moon"></i></button>
-          <div class="card-header">
-            <h2>L'Explorateur des Océans</h2>
-            <img src="../assets/optimized/antoine_01.JPG" alt="Antoine" class="img-fluid rounded shadow" style="max-height: 400px; object-fit: cover; transform: rotate(90deg); margin-top: 2rem;" loading="lazy" width="800" height="600">
+          <div class="card-header text-center position-relative">
+            <div class="mt-4 d-flex flex-column align-items-center justify-content-center w-100">
+              <h2 class="mb-4 text-center w-100">L'Explorateur des Océans</h2>
+              <div class="text-center mb-4 w-100 d-flex justify-content-center">
+                <img src="../assets/optimized/antoine_01.JPG" alt="Antoine - Explorateur des Océans chez Ocean to Earth Life" class="img-fluid rounded shadow" style="max-height: 400px; object-fit: cover; transform: rotate(90deg);" loading="lazy" width="800" height="600">
+              </div>
+            </div>
           </div>
           <div class="card-content" id="ocean-content">
             <p>Bonjour ! Je suis Antoine, et je me suis toujours senti le plus à l'aise sous les vagues. En tant que biologiste marin et plongeur professionnel, j'ai passé d'innombrables heures à explorer les merveilles cachées de l'océan. Il y a quelque chose de magique à observer un récif corallien s'animer à l'aube ou à rencontrer une tortue de mer curieuse dans son habitat naturel.</p>
@@ -73,9 +121,13 @@
         <!-- Earth Whisperer Card -->
         <section class="about-card section-earth" id="earth-card">
           <button class="toggle-button" type="button" id="toggle-earth" onclick="toggleCard('earth')"><i class="fas fa-moon"></i></button>
-          <div class="card-header">
-            <h2>La Chuchoteuse de la Terre</h2>
-            <img src="../assets/optimized/vero_01.jpg" alt="Véronique" class="img-fluid rounded shadow" style="max-height: 400px; object-fit: cover; transform: rotate(90deg); margin-top: 2rem;" loading="lazy" width="800" height="600">
+          <div class="card-header text-center position-relative">
+            <div class="mt-4 d-flex flex-column align-items-center justify-content-center w-100">
+              <h2 class="mb-4 text-center w-100">La Chuchoteuse de la Terre</h2>
+              <div class="text-center mb-4 w-100 d-flex justify-content-center">
+                <img src="../assets/optimized/vero_01.jpg" alt="Véronique - Chuchoteuse de la Terre chez Ocean to Earth Life" class="img-fluid rounded shadow" style="max-height: 400px; object-fit: cover; transform: rotate(90deg);" loading="lazy" width="800" height="600">
+              </div>
+            </div>
           </div>
           <div class="card-content" id="earth-content">
             <p>Bonjour ! Je suis Veronica. Mon voyage avec les plantes a commencé dans le jardin de mon grand-père, où j'ai découvert pour la première fois la magie silencieuse de voir les graines germer et les fleurs s'épanouir. Aujourd'hui, en tant que scientifique des plantes, je reste captivée par les façons complexes dont les plantes communiquent et s'adaptent à leur environnement. Il y a quelque chose de profondément émouvant à comprendre comment ces êtres silencieux façonnent notre monde.</p>
@@ -107,6 +159,37 @@
       const currentPage = currentPath.split('/').pop();
       window.location.href = `/${lang}/${currentPage}`;
     }
+  </script>
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Ocean to Earth Life",
+    "url": "https://oceantoearth.life",
+    "description": "Une plateforme explorant la connexion entre l'océan, la terre et la vie à travers la conservation marine, la science des plantes et le bien-être.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://oceantoearth.life/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ocean to Earth Life",
+    "url": "https://oceantoearth.life",
+    "logo": "https://oceantoearth.life/assets/optimized/logo.png",
+    "sameAs": [
+      "https://www.instagram.com/oceantoearth.life",
+      "https://www.facebook.com/oceantoearth.life",
+      "https://twitter.com/oceantoearthlife"
+    ]
+  }
   </script>
 </body>
 </html> 
