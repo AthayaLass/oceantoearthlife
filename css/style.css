@@ -9,7 +9,7 @@
   --text: #23313A;
 }
 
-/* General body styles */
+/* General body styles asd */
 body {
   background: var(--background), repeating-radial-gradient(circle at 20% 20%, #5ca9b31a, #fff0 80px);
   color: var(--text);
