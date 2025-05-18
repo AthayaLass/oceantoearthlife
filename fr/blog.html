@@ -184,6 +184,32 @@
           <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23MPAs&quote=Gardiens%20des%20R%C3%A9cifs%20%3A%20Pourquoi%20Nous%20Devrions%20Nous%20Soucier%20des%20AMP%20Tropicales" target="_blank" title="Partager sur Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
           <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23MPAs&title=Gardiens%20des%20R%C3%A9cifs%20%3A%20Pourquoi%20Nous%20Devrions%20Nous%20Soucier%20des%20AMP%20Tropicales&summary=Pourquoi%20Nous%20Devrions%20Nous%20Soucier%20des%20AMP%20Tropicales" target="_blank" title="Partager sur LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
+
+        <!-- Section des commentaires -->
+        <div class="comment-section mt-4">
+          <button class="btn btn-outline-primary mb-3" onclick="toggleComments('MPAs')">
+            <i class="fas fa-comments"></i> Afficher les commentaires
+          </button>
+          <div id="comments-MPAs" class="comments-container" style="display: none;">
+            <div class="comment-form mb-4">
+              <h5>Laisser un commentaire</h5>
+              <form onsubmit="submitComment(event, 'MPAs')">
+                <div class="mb-3">
+                  <label for="name-MPAs" class="form-label">Nom :</label>
+                  <input type="text" class="form-control" id="name-MPAs" required>
+                </div>
+                <div class="mb-3">
+                  <label for="comment-MPAs" class="form-label">Commentaire :</label>
+                  <textarea class="form-control" id="comment-MPAs" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Publier le commentaire</button>
+              </form>
+            </div>
+            <div id="comments-list-MPAs" class="comments-list">
+              <!-- Les commentaires seront ajoutés dynamiquement ici -->
+            </div>
+          </div>
+        </div>
       </article>
       <!-- FIN DE L'ARTICLE -->
       <!-- DÉBUT DE L'ARTICLE (Copiez tout ce bloc pour un nouvel article) -->
@@ -250,6 +276,32 @@
           <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&text=Quand%20l%27Oc%C3%A9an%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Partager sur Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
           <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&quote=Quand%20l%27Oc%C3%A9an%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Partager sur Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
           <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&title=Quand%20l%27Oc%C3%A9an%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience&summary=Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Partager sur LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+
+        <!-- Section des commentaires -->
+        <div class="comment-section mt-4">
+          <button class="btn btn-outline-primary mb-3" onclick="toggleComments('welcome!')">
+            <i class="fas fa-comments"></i> Afficher les commentaires
+          </button>
+          <div id="comments-welcome!" class="comments-container" style="display: none;">
+            <div class="comment-form mb-4">
+              <h5>Laisser un commentaire</h5>
+              <form onsubmit="submitComment(event, 'welcome!')">
+                <div class="mb-3">
+                  <label for="name-welcome!" class="form-label">Nom :</label>
+                  <input type="text" class="form-control" id="name-welcome!" required>
+                </div>
+                <div class="mb-3">
+                  <label for="comment-welcome!" class="form-label">Commentaire :</label>
+                  <textarea class="form-control" id="comment-welcome!" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Publier le commentaire</button>
+              </form>
+            </div>
+            <div id="comments-list-welcome!" class="comments-list">
+              <!-- Les commentaires seront ajoutés dynamiquement ici -->
+            </div>
+          </div>
         </div>
       </article>
       <!-- FIN DE L'ARTICLE -->

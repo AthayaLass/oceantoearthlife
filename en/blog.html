@@ -184,6 +184,32 @@
           <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fen%2Fblog.html%23MPAs&quote=Guardians%20of%20the%20Reef%3A%20Why%20We%20Should%20Care%20About%20Tropical%20MPAs" target="_blank" title="Share on Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
           <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fen%2Fblog.html%23MPAs&title=Guardians%20of%20the%20Reef%3A%20Why%20We%20Should%20Care%20About%20Tropical%20MPAs&summary=Why%20We%20Should%20Care%20About%20Tropical%20MPAs" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
+
+        <!-- Comment Section -->
+        <div class="comment-section mt-4">
+          <button class="btn btn-outline-primary mb-3" onclick="toggleComments('MPAs')">
+            <i class="fas fa-comments"></i> Show Comments
+          </button>
+          <div id="comments-MPAs" class="comments-container" style="display: none;">
+            <div class="comment-form mb-4">
+              <h5>Leave a Comment</h5>
+              <form onsubmit="submitComment(event, 'MPAs')">
+                <div class="mb-3">
+                  <label for="name-MPAs" class="form-label">Name:</label>
+                  <input type="text" class="form-control" id="name-MPAs" required>
+                </div>
+                <div class="mb-3">
+                  <label for="comment-MPAs" class="form-label">Comment:</label>
+                  <textarea class="form-control" id="comment-MPAs" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Comment</button>
+              </form>
+            </div>
+            <div id="comments-list-MPAs" class="comments-list">
+              <!-- Comments will be dynamically added here -->
+            </div>
+          </div>
+        </div>
       </article>
       <!-- ARTICLE END -->
       <!-- ARTICLE START (Copy this whole block for a new article) -->
@@ -252,6 +278,32 @@
           <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fen%2Fblog.html%23welcome!&quote=When%20Ocean%20Meets%20Earth%3A%20Our%20Journey%20of%20Conservation%20and%20Mindfulness" target="_blank" title="Share on Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
           <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fen%2Fblog.html%23welcome!&title=When%20Ocean%20Meets%20Earth%3A%20Our%20Journey%20of%20Conservation%20and%20Mindfulness&summary=Our%20Journey%20of%20Conservation%20and%20Mindfulness" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
+
+        <!-- Comment Section -->
+        <div class="comment-section mt-4">
+          <button class="btn btn-outline-primary mb-3" onclick="toggleComments('welcome!')">
+            <i class="fas fa-comments"></i> Show Comments
+          </button>
+          <div id="comments-welcome!" class="comments-container" style="display: none;">
+            <div class="comment-form mb-4">
+              <h5>Leave a Comment</h5>
+              <form onsubmit="submitComment(event, 'welcome!')">
+                <div class="mb-3">
+                  <label for="name-welcome!" class="form-label">Name:</label>
+                  <input type="text" class="form-control" id="name-welcome!" required>
+                </div>
+                <div class="mb-3">
+                  <label for="comment-welcome!" class="form-label">Comment:</label>
+                  <textarea class="form-control" id="comment-welcome!" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Comment</button>
+              </form>
+            </div>
+            <div id="comments-list-welcome!" class="comments-list">
+              <!-- Comments will be dynamically added here -->
+            </div>
+          </div>
+        </div>
       </article>
       <!-- ARTICLE END -->
     </div>
@@ -267,6 +319,7 @@
   <script src="../js/blog.js"></script>
   <script src="../js/header.js"></script>
   <script src="../js/voting.js"></script>
+  <script src="../js/comments.js"></script>
   <script>
     function changeLanguage(lang) {
       const currentPath = window.location.pathname;
