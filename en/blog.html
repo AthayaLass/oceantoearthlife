@@ -94,6 +94,20 @@
             <i class="fas fa-minus"></i>
           </button>
         </div>
+        <div class="vote-container" data-article-id="MPAs">
+          <div class="vote-buttons">
+            <button class="vote-btn upvote" onclick="handleVote('MPAs', 'up')" title="Upvote">
+              <i class="fas fa-arrow-up"></i>
+            </button>
+            <span class="vote-count">0</span>
+            <button class="vote-btn downvote" onclick="handleVote('MPAs', 'down')" title="Downvote">
+              <i class="fas fa-arrow-down"></i>
+            </button>
+          </div>
+          <div class="vote-stats">
+            <span class="total-votes">Total votes: 0</span>
+          </div>
+        </div>
         <div class="article-content active">
           <p>Hey, I want to talk about something that doesn't get nearly enough attention - <strong>Marine Protected Areas</strong>, or MPAs, especially in tropical zones. If you've ever snorkeled over a coral reef, you know the feeling: it's like dropping into a different planet. But here's the deal - those reefs are in real trouble. MPAs are one of the strongest tools we've got to help them bounce back.</p>
         
@@ -109,7 +123,7 @@
           </p>
         
           <h5>What Even Are MPAs?</h5>
-          <p>Marine Protected Areas are zones in the ocean where human activity - usually fishing, drilling, and dumping - is limited or banned. Some are strict no-take zones, while others allow sustainable activities.</p>
+          <p>Marine Protected Areas are zones in the ocean where human activity (usually fishing, drilling, and dumping) is limited or banned. Some are strict no-take zones, while others allow sustainable activities. Access to these areas is carefully managed: while many MPAs welcome tourists for activities like snorkeling, diving, and wildlife watching, they often require permits and have specific guidelines for boat access, anchoring, and visitor numbers to minimize environmental impact, etc. This balance between conservation and sustainable tourism helps protect marine ecosystems while allowing people to experience and appreciate their beauty.</p>
           <p>In tropical places like Indonesia, the Philippines, the Caribbean, and East Africa, MPAs are a huge deal. These are some of the most biodiverse and also most exploited parts of the ocean. Reefs in these areas are under intense pressure, and MPAs can give them breathing room.</p>
           
           <h5>Do MPAs Actually Work?</h5>
@@ -120,11 +134,11 @@
               <li>old (10+ years)</li>
               <li>large</li>
               <li>isolated</li>
-            </ul> had over twice the fish biomass compared to unprotected areas.</p>
+            </ul> had over <strong>twice the fish biomass</strong> compared to unprotected areas.</p>
           <p>Apo Island in the Philippines is a well-known example. Local fishers partnered with scientists in the 1980s to create a no-take zone. Within a few years, fish populations boomed inside and around the protected area. Local catches improved, and the reef got healthier (<a href="https://marineconservationphilippines.org/location/apo-island/" target="_blank">Marine Conservation Philippines</a>).</p>
           <p>Another example is Belize, where MPAs combined with fisher co-management led to ecological recovery and better fishing outcomes (<a href="https://thecommonwealth.org/case-study/case-study-belize-towards-expansion-no-take-areas-mpa-system" target="_blank">TheCommonwealth.org</a>).</p>
           <h6><em>Finally, an example that I hold close to my heart: <strong>Bird's Head Seascape - Raja Ampat, Indonesia</strong></em></h6>
-          <p>The Bird’s Head Seascape in West Papua, Indonesia, is one of the most biodiverse marine regions on Earth - home to 75% of the world’s coral species and over 1,800 reef fish. In 2024, a $35 million U.S. - Indonesia debt-for-nature swap marked a major step in protecting these ecosystems. By combining science with local traditions like <a href="https://www.tropilogy.com/article/sasi-raja-ampat-a-unique-marine-ritual-practice/" target="_blank"><em>sasi</em></a>, communities and conservationists have created a thriving network of marine protected areas, reviving fish stocks and supporting sustainable livelihoods. (<a href="https://www.nature.org/en-us/about-us/where-we-work/asia-pacific/indonesia/stories-in-indonesia/birds-head-seascape/" target="_blank">The Nature Conservancy's Bird's Head Seascape page</a>).</p>
+          <p>The Bird's Head Seascape in West Papua, Indonesia, is one of the most biodiverse marine regions on Earth - home to 75% of the world's coral species and over 1,800 reef fish. In 2024, a $35 million U.S. - Indonesia debt-for-nature swap marked a major step in protecting these ecosystems. By combining science with local traditions like <a href="https://www.tropilogy.com/article/sasi-raja-ampat-a-unique-marine-ritual-practice/" target="_blank"><em>sasi</em></a>, communities and conservationists have created a thriving network of marine protected areas, reviving fish stocks and supporting sustainable livelihoods. (<a href="https://www.nature.org/en-us/about-us/where-we-work/asia-pacific/indonesia/stories-in-indonesia/birds-head-seascape/" target="_blank">The Nature Conservancy's Bird's Head Seascape page</a>).</p>
           
           <h5>Why Some MPAs Don't Work</h5>
           <p>Unfortunately, not all MPAs are effective. Some are what we call "paper parks" - they exist on a map, but there's no real enforcement or funding.</p>
@@ -189,6 +203,20 @@
             <i class="fas fa-minus"></i>
           </button>
         </div>
+        <div class="vote-container" data-article-id="welcome!">
+          <div class="vote-buttons">
+            <button class="vote-btn upvote" onclick="handleVote('welcome!', 'up')" title="Upvote">
+              <i class="fas fa-arrow-up"></i>
+            </button>
+            <span class="vote-count">0</span>
+            <button class="vote-btn downvote" onclick="handleVote('welcome!', 'down')" title="Downvote">
+              <i class="fas fa-arrow-down"></i>
+            </button>
+          </div>
+          <div class="vote-stats">
+            <span class="total-votes">Total votes: 0</span>
+          </div>
+        </div>
         <div class="article-content active">
           <p>Welcome to our little corner of the internet! We're a couple in our 30s who fell in love with each other and with the incredible world around us. We're here to share our passion for the ocean's mysteries, the earth's wisdom, and the beautiful intersection of science and mindfulness.</p>
 
@@ -238,6 +266,7 @@
   <!-- Custom JS -->
   <script src="../js/blog.js"></script>
   <script src="../js/header.js"></script>
+  <script src="../js/voting.js"></script>
   <script>
     function changeLanguage(lang) {
       const currentPath = window.location.pathname;

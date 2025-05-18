@@ -94,6 +94,20 @@
             <i class="fas fa-minus"></i>
           </button>
         </div>
+        <div class="vote-container" data-article-id="MPAs">
+          <div class="vote-buttons">
+            <button class="vote-btn upvote" onclick="handleVote('MPAs', 'up')" title="Positiv bewerten">
+              <i class="fas fa-arrow-up"></i>
+            </button>
+            <span class="vote-count">0</span>
+            <button class="vote-btn downvote" onclick="handleVote('MPAs', 'down')" title="Negativ bewerten">
+              <i class="fas fa-arrow-down"></i>
+            </button>
+          </div>
+          <div class="vote-stats">
+            <span class="total-votes">Gesamtstimmen: 0</span>
+          </div>
+        </div>
         <div class="article-content active">
           <p>Hallo, ich möchte über etwas sprechen, das bei weitem nicht genug Aufmerksamkeit erhält – <strong>Meeresschutzgebiete</strong> (Marine Protected Areas, MPAs), insbesondere in tropischen Zonen. Wenn Sie jemals über einem Korallenriff geschnorchelt sind, kennen Sie das Gefühl: Es ist, als würde man auf einem anderen Planeten landen. Aber hier ist die Sache – diese Riffe sind in ernsten Schwierigkeiten. MPAs sind eines der stärksten Werkzeuge, die wir haben, um ihnen bei der Erholung zu helfen.</p>
         
@@ -109,7 +123,7 @@
           </p>
         
           <h5>Was sind MPAs überhaupt?</h5>
-          <p>Meeresschutzgebiete sind Zonen im Ozean, in denen menschliche Aktivitäten – üblicherweise Fischerei, Bohrungen und Müllentsorgung – eingeschränkt oder verboten sind. Einige sind strikte Entnahmeverbotszonen, während andere nachhaltige Aktivitäten erlauben.</p>
+          <p>Marine Schutzgebiete sind Bereiche im Ozean, in denen menschliche Aktivitäten (hauptsächlich Fischerei, Bohrungen und Entsorgung) eingeschränkt oder verboten sind. Einige sind strikte No-Take-Zonen, während andere nachhaltige Aktivitäten erlauben. Der Zugang zu diesen Gebieten wird sorgfältig verwaltet: Obwohl viele MPAs Touristen für Aktivitäten wie Schnorcheln, Tauchen und Wildtierbeobachtung willkommen heißen, erfordern sie oft Genehmigungen und haben spezifische Richtlinien für Bootszugang, Ankern und Besucherzahlen, um die Umweltauswirkungen zu minimieren, usw. Dieses Gleichgewicht zwischen Naturschutz und nachhaltigem Tourismus hilft, Meeresökosysteme zu schützen, während Menschen ihre Schönheit erleben und schätzen können.</p>
           <p>An tropischen Orten wie Indonesien, den Philippinen, der Karibik und Ostafrika sind MPAs eine große Sache. Dies sind einige der artenreichsten und auch am stärksten ausgebeuteten Teile des Ozeans. Die Riffe in diesen Gebieten stehen unter starkem Druck, und MPAs können ihnen eine Atempause verschaffen.</p>
           
           <h5>Funktionieren MPAs tatsächlich?</h5>
@@ -139,12 +153,12 @@
           <h6><em>Eine neue Bedrohung: <strong>Tiefseebergbau</strong></em></h6>
           <p>Der Tiefseebergbau entwickelt sich zu einem heißen Thema, insbesondere durch neue staatliche Unterstützung, einschließlich Maßnahmen der Trump-Regierung, die ihn fördern – was sogar Länder wie die Schweiz erreicht, wo 'Allseas' Interesse am Tiefseebergbau bekundet. Die Idee ist, wertvolle Metalle wie Kobalt und Nickel vom Meeresboden zu gewinnen – Materialien, die für Dinge wie Batterien und Elektronik unerlässlich sind. Aber die Tiefsee ist eine der am wenigsten erforschten und fragilsten Umgebungen der Erde. Viele ihrer Ökosysteme, einschließlich alter Korallen und einzigartiger Arten, brauchen Hunderte bis Tausende von Jahren, um zu wachsen und sich zu erholen. Im Gegensatz zu flachen Riffen könnten Schäden dort unten im Wesentlichen dauerhaft sein. Während wir uns durch MPAs für mehr Meeresschutz einsetzen, droht der Tiefseebergbau viele dieser Fortschritte zunichte zu machen, wenn wir nicht mit äußerster Vorsicht und besserem Verständnis vorgehen.</p>
           <h5>Was macht ein gutes MPA aus?</h5>
-          <p>Aus jahrelanger Forschung wissen wir, was funktioniert:
+          <p>Nach Jahren der Forschung, hier ist was funktioniert:
             <ul>
-              <li><strong>Lokale Führung</strong> – Co-Management mit indigenen oder lokalen Gemeinschaften verbessert den Erfolg</li>
-              <li><strong>Entnahmeverbotszonen</strong> – Je strenger der Schutz, desto schneller die Erholung</li>
-              <li><strong>Überwachung und Wissenschaft</strong> – Daten helfen, die Dinge auf Kurs zu halten</li>
-              <li><strong>Klimafreundliches Design</strong> – Die Einbeziehung von Mangroven und Seegras hilft, die Widerstandsfähigkeit zu stärken</li>
+              <li><strong>Lokale Führung</strong>  -  Co-Management mit indigenen oder lokalen Gemeinschaften verbessert den Erfolg</li>
+              <li><strong>No-Take-Zonen</strong>  -  Je strenger der Schutz, desto schneller die Erholung</li>
+              <li><strong>Überwachung und Wissenschaft</strong>  -  Daten helfen, auf dem richtigen Weg zu bleiben</li>
+              <li><strong>Klima-smartes Design</strong>  -  Die Einbeziehung von Mangroven und Seegraswiesen hilft, Widerstandsfähigkeit aufzubauen</li>
             </ul>
           </p>
           <p>Auch globale Ziele wie <strong>30x30</strong> – der Schutz von 30 % des Ozeans bis 2030 – funktionieren nur, wenn sie gut verwaltete tropische MPAs umfassen und nicht nur abgelegene Gebiete, die leicht zu schließen, aber ökologisch weniger dringend sind.</p>
@@ -166,9 +180,9 @@
         </div>
 
         <div class="social-share-buttons" style="text-align: right; margin-top: 10px;">
-          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23MPAs&text=%5BDE%5D%20Guardians%20of%20the%20Reef%3A%20Why%20We%20Should%20Care%20About%20Tropical%20MPAs" target="_blank" title="Auf Twitter teilen" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23MPAs&quote=%5BDE%5D%20Guardians%20of%20the%20Reef%3A%20Why%20We%20Should%20Care%20About%20Tropical%20MPAs" target="_blank" title="Auf Facebook teilen" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23MPAs&title=%5BDE%5D%20Guardians%20of%20the%20Reef%3A%20Why%20We%20Should%20Care%20About%20Tropical%20MPAs&summary=%5BDE%5D%20Why%20We%20Should%20Care%20About%20Tropical%20MPAs" target="_blank" title="Auf LinkedIn teilen"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23MPAs&text=W%C3%A4chter%20der%20Riffe%3A%20Warum%20uns%20tropische%20Meeresschutzgebiete%20am%20Herzen%20liegen%20sollten" target="_blank" title="Auf Twitter teilen" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23MPAs&quote=W%C3%A4chter%20der%20Riffe%3A%20Warum%20uns%20tropische%20Meeresschutzgebiete%20am%20Herzen%20liegen%20sollten" target="_blank" title="Auf Facebook teilen" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23MPAs&title=W%C3%A4chter%20der%20Riffe%3A%20Warum%20uns%20tropische%20Meeresschutzgebiete%20am%20Herzen%20liegen%20sollten&summary=Warum%20uns%20tropische%20Meeresschutzgebiete%20am%20Herzen%20liegen%20sollten" target="_blank" title="Auf LinkedIn teilen"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
       </article>
       <!-- ARTICLE END -->
@@ -187,6 +201,20 @@
           <button class="toggle-article">
             <i class="fas fa-minus"></i>
           </button>
+        </div>
+        <div class="vote-container" data-article-id="welcome!">
+          <div class="vote-buttons">
+            <button class="vote-btn upvote" onclick="handleVote('welcome!', 'up')" title="Positiv bewerten">
+              <i class="fas fa-arrow-up"></i>
+            </button>
+            <span class="vote-count">0</span>
+            <button class="vote-btn downvote" onclick="handleVote('welcome!', 'down')" title="Negativ bewerten">
+              <i class="fas fa-arrow-down"></i>
+            </button>
+          </div>
+          <div class="vote-stats">
+            <span class="total-votes">Gesamtstimmen: 0</span>
+          </div>
         </div>
         <div class="article-content active">
           <p>Willkommen in unserer kleinen Ecke des Internets! Wir sind ein Paar in den Dreißigern, das sich ineinander und in die unglaubliche Welt um uns herum verliebt hat. Wir sind hier, um unsere Leidenschaft für die Geheimnisse des Ozeans, die Weisheit der Erde und die wunderschöne Schnittstelle zwischen Wissenschaft und Achtsamkeit zu teilen.</p>
@@ -237,6 +265,7 @@
   <!-- Custom JS -->
   <script src="../js/blog.js"></script>
   <script src="../js/header.js"></script>
+  <script src="../js/voting.js"></script>
   <script>
     function changeLanguage(lang) {
       const currentPath = window.location.pathname;

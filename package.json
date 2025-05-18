@@ -23,11 +23,8 @@
   "homepage": "https://github.com/AthayaLass/oceantoearthlife#readme",
   "devDependencies": {
     "concurrently": "^9.1.2",
-    "live-server": "^1.2.0",
-    "sass": "^1.69.5",
+    "live-server": "^1.2.2",
+    "sass": "^1.89.0",
     "sharp": "^0.33.2"
-  },
-  "dependencies": {
-    "sass": "^1.69.5"
   }
 }

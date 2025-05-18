@@ -94,6 +94,20 @@
             <i class="fas fa-minus"></i>
           </button>
         </div>
+        <div class="vote-container" data-article-id="MPAs">
+          <div class="vote-buttons">
+            <button class="vote-btn upvote" onclick="handleVote('MPAs', 'up')" title="Voter pour">
+              <i class="fas fa-arrow-up"></i>
+            </button>
+            <span class="vote-count">0</span>
+            <button class="vote-btn downvote" onclick="handleVote('MPAs', 'down')" title="Voter contre">
+              <i class="fas fa-arrow-down"></i>
+            </button>
+          </div>
+          <div class="vote-stats">
+            <span class="total-votes">Total des votes : 0</span>
+          </div>
+        </div>
         <div class="article-content active">
           <p>Salut, je veux parler de quelque chose qui ne reçoit pas assez d'attention - les <strong>aires marines protégées</strong>, ou AMP, en particulier dans les zones tropicales. Si vous avez déjà fait de la plongée avec tuba au-dessus d'un récif corallien, vous connaissez la sensation : c'est comme atterrir sur une autre planète. Mais voilà le problème - ces récifs sont en grand danger. Les AMP sont l'un des outils les plus puissants dont nous disposons pour les aider à se rétablir.</p>
         
@@ -109,7 +123,7 @@
           </p>
         
           <h5>Que sont même les AMP ?</h5>
-          <p>Les aires marines protégées sont des zones de l'océan où l'activité humaine - généralement la pêche, le forage et le déversement - est limitée ou interdite. Certaines sont des zones strictes de non-prélèvement, tandis que d'autres autorisent des activités durables.</p>
+          <p>Les Aires Marines Protégées sont des zones dans l'océan où les activités humaines (généralement la pêche, le forage et le déversement) sont limitées ou interdites. Certaines sont des zones de non-prélèvement strictes, tandis que d'autres permettent des activités durables. L'accès à ces zones est soigneusement géré : bien que de nombreuses AMP accueillent les touristes pour des activités comme le snorkeling, la plongée et l'observation de la faune, elles exigent souvent des permis et ont des directives spécifiques concernant l'accès des bateaux, l'ancrage et le nombre de visiteurs pour minimiser l'impact environnemental, etc. Cet équilibre entre conservation et tourisme durable aide à protéger les écosystèmes marins tout en permettant aux gens d'en expérimenter et d'en apprécier la beauté.</p>
           <p>Dans les endroits tropicaux comme l'Indonésie, les Philippines, les Caraïbes et l'Afrique de l'Est, les AMP sont très importantes. Ce sont certaines des parties les plus riches en biodiversité et aussi les plus exploitées de l'océan. Les récifs de ces régions subissent une pression intense, et les AMP peuvent leur donner un répit.</p>
           
           <h5>Les AMP fonctionnent-elles réellement ?</h5>
@@ -141,10 +155,10 @@
           <h5>Qu'est-ce qui fait une bonne AMP ?</h5>
           <p>D'après des années de recherche, voici ce qui fonctionne :
             <ul>
-              <li><strong>Leadership local</strong> - La cogestion avec les communautés autochtones ou locales améliore le succès</li>
-              <li><strong>Zones de non-prélèvement</strong> - Plus la protection est stricte, plus la récupération est rapide</li>
-              <li><strong>Surveillance et science</strong> - Les données aident à maintenir le cap</li>
-              <li><strong>Conception intelligente face au climat</strong> - Inclure les mangroves et les herbiers marins aide à renforcer la résilience</li>
+              <li><strong>Leadership local</strong>  -  La cogestion avec les communautés autochtones ou locales améliore le succès</li>
+              <li><strong>Zones de non-prélèvement</strong>  -  Plus la protection est stricte, plus la récupération est rapide</li>
+              <li><strong>Surveillance et science</strong>  -  Les données aident à maintenir le cap</li>
+              <li><strong>Conception intelligente face au climat</strong>  -  Inclure les mangroves et les herbiers marins aide à renforcer la résilience</li>
             </ul>
           </p>
           <p>De plus, les objectifs mondiaux comme <strong>30x30</strong> - protéger 30 % de l'océan d'ici 2030 - ne fonctionnent que s'ils incluent des AMP tropicales bien gérées, et pas seulement des zones reculées faciles à fermer mais écologiquement moins urgentes.</p>
@@ -166,9 +180,9 @@
         </div>
 
         <div class="social-share-buttons" style="text-align: right; margin-top: 10px;">
-          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23MPAs&text=%5BFR%5D%20Guardians%20of%20the%20Reef%3A%20Why%20We%20Should%20Care%20About%20Tropical%20MPAs" target="_blank" title="Partager sur Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23MPAs&quote=%5BFR%5D%20Guardians%20of%20the%20Reef%3A%20Why%20We%20Should%20Care%20About%20Tropical%20MPAs" target="_blank" title="Partager sur Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23MPAs&title=%5BFR%5D%20Guardians%20of%20the%20Reef%3A%20Why%20We%20Should%20Care%20About%20Tropical%20MPAs&summary=%5BFR%5D%20Why%20We%20Should%20Care%20About%20Tropical%20MPAs" target="_blank" title="Partager sur LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23MPAs&text=Gardiens%20des%20R%C3%A9cifs%20%3A%20Pourquoi%20Nous%20Devrions%20Nous%20Soucier%20des%20AMP%20Tropicales" target="_blank" title="Partager sur Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23MPAs&quote=Gardiens%20des%20R%C3%A9cifs%20%3A%20Pourquoi%20Nous%20Devrions%20Nous%20Soucier%20des%20AMP%20Tropicales" target="_blank" title="Partager sur Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23MPAs&title=Gardiens%20des%20R%C3%A9cifs%20%3A%20Pourquoi%20Nous%20Devrions%20Nous%20Soucier%20des%20AMP%20Tropicales&summary=Pourquoi%20Nous%20Devrions%20Nous%20Soucier%20des%20AMP%20Tropicales" target="_blank" title="Partager sur LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
       </article>
       <!-- FIN DE L'ARTICLE -->
@@ -187,6 +201,20 @@
           <button class="toggle-article">
             <i class="fas fa-minus"></i>
           </button>
+        </div>
+        <div class="vote-container" data-article-id="welcome!">
+          <div class="vote-buttons">
+            <button class="vote-btn upvote" onclick="handleVote('welcome!', 'up')" title="Voter pour">
+              <i class="fas fa-arrow-up"></i>
+            </button>
+            <span class="vote-count">0</span>
+            <button class="vote-btn downvote" onclick="handleVote('welcome!', 'down')" title="Voter contre">
+              <i class="fas fa-arrow-down"></i>
+            </button>
+          </div>
+          <div class="vote-stats">
+            <span class="total-votes">Total des votes : 0</span>
+          </div>
         </div>
         <div class="article-content active">
           <p>Bienvenue dans notre petit coin d'Internet ! Nous sommes un couple dans la trentaine, tombés amoureux l'un de l'autre et du monde incroyable qui nous entoure. Nous sommes ici pour partager notre passion pour les mystères de l'océan, la sagesse de la terre et la belle intersection entre science et pleine conscience.</p>
@@ -219,9 +247,9 @@
              Les liens de partage ci-dessous seront automatiquement mis à jour par JavaScript.
         -->
         <div class="social-share-buttons" style="text-align: right; margin-top: 10px;">
-          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23bienvenue!&text=Quand%20l%27Oc%C3%A9an%20Rencontre%20la%20Terre%20%3A%20Notre%20Parcours%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Partager sur Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23bienvenue!&quote=Quand%20l%27Oc%C3%A9an%20Rencontre%20la%20Terre%20%3A%20Notre%20Parcours%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Partager sur Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23bienvenue!&title=Quand%20l%27Oc%C3%A9an%20Rencontre%20la%20Terre%20%3A%20Notre%20Parcours%20de%20Conservation%20et%20de%20Pleine%20Conscience&summary=Notre%20Parcours%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Partager sur LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&text=Quand%20l%27Oc%C3%A9an%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Partager sur Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&quote=Quand%20l%27Oc%C3%A9an%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Partager sur Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&title=Quand%20l%27Oc%C3%A9an%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience&summary=Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Partager sur LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
       </article>
       <!-- FIN DE L'ARTICLE -->
@@ -237,6 +265,7 @@
   <!-- Custom JS -->
   <script src="../js/blog.js"></script>
   <script src="../js/header.js"></script>
+  <script src="../js/voting.js"></script>
   <script>
     function changeLanguage(lang) {
       const currentPath = window.location.pathname;
