@@ -94,20 +94,22 @@
             <i class="fas fa-minus"></i>
           </button>
         </div>
+        <!-- Voting section commented out until backend implementation
         <div class="vote-container" data-article-id="MPAs">
           <div class="vote-buttons">
-            <button class="vote-btn upvote" onclick="handleVote('MPAs', 'up')" title="Positiv bewerten">
+            <button class="vote-btn upvote" onclick="handleVote('MPAs', 'up')" title="Upvote">
               <i class="fas fa-arrow-up"></i>
             </button>
             <span class="vote-count">0</span>
-            <button class="vote-btn downvote" onclick="handleVote('MPAs', 'down')" title="Negativ bewerten">
+            <button class="vote-btn downvote" onclick="handleVote('MPAs', 'down')" title="Downvote">
               <i class="fas fa-arrow-down"></i>
             </button>
           </div>
           <div class="vote-stats">
-            <span class="total-votes">Gesamtstimmen: 0</span>
+            <span class="total-votes">Total votes: 0</span>
           </div>
         </div>
+        -->
         <div class="article-content active">
           <p>Hallo, ich möchte über etwas sprechen, das bei weitem nicht genug Aufmerksamkeit erhält – <strong>Meeresschutzgebiete</strong> (Marine Protected Areas, MPAs), insbesondere in tropischen Zonen. Wenn Sie jemals über einem Korallenriff geschnorchelt sind, kennen Sie das Gefühl: Es ist, als würde man auf einem anderen Planeten landen. Aber hier ist die Sache – diese Riffe sind in ernsten Schwierigkeiten. MPAs sind eines der stärksten Werkzeuge, die wir haben, um ihnen bei der Erholung zu helfen.</p>
         
@@ -180,10 +182,36 @@
         </div>
 
         <div class="social-share-buttons" style="text-align: right; margin-top: 10px;">
-          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23MPAs&text=W%C3%A4chter%20der%20Riffe%3A%20Warum%20uns%20tropische%20Meeresschutzgebiete%20am%20Herzen%20liegen%20sollten" target="_blank" title="Auf Twitter teilen" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23MPAs&quote=W%C3%A4chter%20der%20Riffe%3A%20Warum%20uns%20tropische%20Meeresschutzgebiete%20am%20Herzen%20liegen%20sollten" target="_blank" title="Auf Facebook teilen" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23MPAs&title=W%C3%A4chter%20der%20Riffe%3A%20Warum%20uns%20tropische%20Meeresschutzgebiete%20am%20Herzen%20liegen%20sollten&summary=Warum%20uns%20tropische%20Meeresschutzgebiete%20am%20Herzen%20liegen%20sollten" target="_blank" title="Auf LinkedIn teilen"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23MPAs&text=Hüter%20des%20Riffs%3A%20Warum%20uns%20tropische%20Meeresschutzgebiete%20wichtig%20sein%20sollten" target="_blank" title="Share on Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23MPAs&quote=Hüter%20des%20Riffs%3A%20Warum%20uns%20tropische%20Meeresschutzgebiete%20wichtig%20sein%20sollten" target="_blank" title="Share on Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23MPAs&title=Hüter%20des%20Riffs%3A%20Warum%20uns%20tropische%20Meeresschutzgebiete%20wichtig%20sein%20sollten&summary=Warum%20uns%20tropische%20Meeresschutzgebiete%20wichtig%20sein%20sollten" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
+
+        <!-- Comment section commented out until backend implementation
+        <div class="comment-section mt-4">
+          <button class="btn btn-outline-primary mb-3" onclick="toggleComments('MPAs')">
+            <i class="fas fa-comments"></i> Kommentare anzeigen
+          </button>
+          <div id="comments-MPAs" class="comments-container" style="display: none;">
+            <div class="comment-form mb-4">
+              <h5>Kommentar hinterlassen</h5>
+              <form onsubmit="submitComment(event, 'MPAs')">
+                <div class="mb-3">
+                  <label for="name-MPAs" class="form-label">Name:</label>
+                  <input type="text" class="form-control" id="name-MPAs" required>
+                </div>
+                <div class="mb-3">
+                  <label for="comment-MPAs" class="form-label">Kommentar:</label>
+                  <textarea class="form-control" id="comment-MPAs" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Kommentar senden</button>
+              </form>
+            </div>
+            <div id="comments-list-MPAs" class="comments-list">
+            </div>
+          </div>
+        </div>
+        -->
       </article>
       <!-- ARTICLE END -->
       <!-- ARTICLE START (Copy this whole block for a new article) -->
@@ -202,20 +230,22 @@
             <i class="fas fa-minus"></i>
           </button>
         </div>
+        <!-- Voting section commented out until backend implementation
         <div class="vote-container" data-article-id="welcome!">
           <div class="vote-buttons">
-            <button class="vote-btn upvote" onclick="handleVote('welcome!', 'up')" title="Positiv bewerten">
+            <button class="vote-btn upvote" onclick="handleVote('welcome!', 'up')" title="Upvote">
               <i class="fas fa-arrow-up"></i>
             </button>
             <span class="vote-count">0</span>
-            <button class="vote-btn downvote" onclick="handleVote('welcome!', 'down')" title="Negativ bewerten">
+            <button class="vote-btn downvote" onclick="handleVote('welcome!', 'down')" title="Downvote">
               <i class="fas fa-arrow-down"></i>
             </button>
           </div>
           <div class="vote-stats">
-            <span class="total-votes">Gesamtstimmen: 0</span>
+            <span class="total-votes">Total votes: 0</span>
           </div>
         </div>
+        -->
         <div class="article-content active">
           <p>Willkommen in unserer kleinen Ecke des Internets! Wir sind ein Paar in den Dreißigern, das sich ineinander und in die unglaubliche Welt um uns herum verliebt hat. Wir sind hier, um unsere Leidenschaft für die Geheimnisse des Ozeans, die Weisheit der Erde und die wunderschöne Schnittstelle zwischen Wissenschaft und Achtsamkeit zu teilen.</p>
 
@@ -247,10 +277,36 @@
              Die Share-Links unten werden automatisch per JavaScript aktualisiert.
         -->
         <div class="social-share-buttons" style="text-align: right; margin-top: 10px;">
-          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23welcome!&text=Wenn%20Ozean%20auf%20Erde%20trifft%3A%20Unsere%20Reise%20der%20Erhaltung%20und%20Achtsamkeit" target="_blank" title="Auf Twitter teilen" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23welcome!&quote=Wenn%20Ozean%20auf%20Erde%20trifft%3A%20Unsere%20Reise%20der%20Erhaltung%20und%20Achtsamkeit" target="_blank" title="Auf Facebook teilen" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23welcome!&title=Wenn%20Ozean%20auf%20Erde%20trifft%3A%20Unsere%20Reise%20der%20Erhaltung%20und%20Achtsamkeit&summary=Unsere%20Reise%20der%20Erhaltung%20und%20Achtsamkeit" target="_blank" title="Auf LinkedIn teilen"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23welcome!&text=Wenn%20Ozean%20auf%20Erde%20trifft%3A%20Unsere%20Reise%20der%20Erhaltung%20und%20Achtsamkeit" target="_blank" title="Share on Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23welcome!&quote=Wenn%20Ozean%20auf%20Erde%20trifft%3A%20Unsere%20Reise%20der%20Erhaltung%20und%20Achtsamkeit" target="_blank" title="Share on Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fde%2Fblog.html%23welcome!&title=Wenn%20Ozean%20auf%20Erde%20trifft%3A%20Unsere%20Reise%20der%20Erhaltung%20und%20Achtsamkeit&summary=Unsere%20Reise%20der%20Erhaltung%20und%20Achtsamkeit" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
+
+        <!-- Comment section commented out until backend implementation
+        <div class="comment-section mt-4">
+          <button class="btn btn-outline-primary mb-3" onclick="toggleComments('welcome!')">
+            <i class="fas fa-comments"></i> Kommentare anzeigen
+          </button>
+          <div id="comments-welcome!" class="comments-container" style="display: none;">
+            <div class="comment-form mb-4">
+              <h5>Kommentar hinterlassen</h5>
+              <form onsubmit="submitComment(event, 'welcome!')">
+                <div class="mb-3">
+                  <label for="name-welcome!" class="form-label">Name:</label>
+                  <input type="text" class="form-control" id="name-welcome!" required>
+                </div>
+                <div class="mb-3">
+                  <label for="comment-welcome!" class="form-label">Kommentar:</label>
+                  <textarea class="form-control" id="comment-welcome!" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Kommentar senden</button>
+              </form>
+            </div>
+            <div id="comments-list-welcome!" class="comments-list">
+            </div>
+          </div>
+        </div>
+        -->
       </article>
       <!-- ARTIKEL ENDE -->
     </div>
@@ -265,7 +321,6 @@
   <!-- Custom JS -->
   <script src="../js/blog.js"></script>
   <script src="../js/header.js"></script>
-  <script src="../js/voting.js"></script>
   <script>
     function changeLanguage(lang) {
       const currentPath = window.location.pathname;

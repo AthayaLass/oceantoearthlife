@@ -143,20 +143,22 @@
             <i class="fas fa-minus"></i>
           </button>
         </div>
+        <!-- Voting section commented out until backend implementation
         <div class="vote-container" data-article-id="MPAs">
           <div class="vote-buttons">
-            <button class="vote-btn upvote" onclick="handleVote('MPAs', 'up')" title="Vota a favore">
+            <button class="vote-btn upvote" onclick="handleVote('MPAs', 'up')" title="Upvote">
               <i class="fas fa-arrow-up"></i>
             </button>
             <span class="vote-count">0</span>
-            <button class="vote-btn downvote" onclick="handleVote('MPAs', 'down')" title="Vota contro">
+            <button class="vote-btn downvote" onclick="handleVote('MPAs', 'down')" title="Downvote">
               <i class="fas fa-arrow-down"></i>
             </button>
           </div>
           <div class="vote-stats">
-            <span class="total-votes">Totale voti: 0</span>
+            <span class="total-votes">Total votes: 0</span>
           </div>
         </div>
+        -->
         <div class="article-content active">
           <p>Ehi, voglio parlare di qualcosa che non riceve abbastanza attenzione - le <strong>Aree Marine Protette</strong>, o AMP, specialmente nelle zone tropicali. Se avete mai fatto snorkeling su una barriera corallina, conoscete la sensazione: è come cadere su un pianeta diverso. Ma ecco il punto - quelle barriere sono in guai seri. Le AMP sono uno degli strumenti più potenti che abbiamo per aiutarle a riprendersi.</p>
         
@@ -229,12 +231,12 @@
         </div>
 
         <div class="social-share-buttons" style="text-align: right; margin-top: 10px;">
-          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Fit%2Fblog.html%23MPAs&text=Custodi%20della%20Barriera%20Corallina%3A%20Perch%C3%A9%20Dovremmo%20Preoccuparci%20delle%20AMP%20Tropicali" target="_blank" title="Condividi su Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fit%2Fblog.html%23MPAs&quote=Custodi%20della%20Barriera%20Corallina%3A%20Perch%C3%A9%20Dovremmo%20Preoccuparci%20delle%20AMP%20Tropicali" target="_blank" title="Condividi su Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fit%2Fblog.html%23MPAs&title=Custodi%20della%20Barriera%20Corallina%3A%20Perch%C3%A9%20Dovremmo%20Preoccuparci%20delle%20AMP%20Tropicali&summary=Perch%C3%A9%20Dovremmo%20Preoccuparci%20delle%20AMP%20Tropicali" target="_blank" title="Condividi su LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Fit%2Fblog.html%23MPAs&text=Custodi%20della%20Barriera%3A%20Perché%20Dovremmo%20Preoccuparci%20delle%20Aree%20Marine%20Protette%20Tropicali" target="_blank" title="Share on Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fit%2Fblog.html%23MPAs&quote=Custodi%20della%20Barriera%3A%20Perché%20Dovremmo%20Preoccuparci%20delle%20Aree%20Marine%20Protette%20Tropicali" target="_blank" title="Share on Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fit%2Fblog.html%23MPAs&title=Custodi%20della%20Barriera%3A%20Perché%20Dovremmo%20Preoccuparci%20delle%20Aree%20Marine%20Protette%20Tropicali&summary=Perché%20Dovremmo%20Preoccuparci%20delle%20Aree%20Marine%20Protette%20Tropicali" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
 
-        <!-- Sezione commenti -->
+        <!-- Comment section commented out until backend implementation
         <div class="comment-section mt-4">
           <button class="btn btn-outline-primary mb-3" onclick="toggleComments('MPAs')">
             <i class="fas fa-comments"></i> Mostra commenti
@@ -244,21 +246,21 @@
               <h5>Lascia un commento</h5>
               <form onsubmit="submitComment(event, 'MPAs')">
                 <div class="mb-3">
-                  <label for="name-MPAs" class="form-label">Nome :</label>
+                  <label for="name-MPAs" class="form-label">Nome:</label>
                   <input type="text" class="form-control" id="name-MPAs" required>
                 </div>
                 <div class="mb-3">
-                  <label for="comment-MPAs" class="form-label">Commento :</label>
+                  <label for="comment-MPAs" class="form-label">Commento:</label>
                   <textarea class="form-control" id="comment-MPAs" rows="3" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Pubblica commento</button>
+                <button type="submit" class="btn btn-primary">Invia commento</button>
               </form>
             </div>
             <div id="comments-list-MPAs" class="comments-list">
-              <!-- I commenti verranno aggiunti dinamicamente qui -->
             </div>
           </div>
         </div>
+        -->
       </article>
       <!-- ARTICLE END -->
       <!-- ARTICLE START (Copy this whole block for a new article) -->
@@ -277,20 +279,22 @@
             <i class="fas fa-minus"></i>
           </button>
         </div>
+        <!-- Voting section commented out until backend implementation
         <div class="vote-container" data-article-id="welcome!">
           <div class="vote-buttons">
-            <button class="vote-btn upvote" onclick="handleVote('welcome!', 'up')" title="Vota a favore">
+            <button class="vote-btn upvote" onclick="handleVote('welcome!', 'up')" title="Upvote">
               <i class="fas fa-arrow-up"></i>
             </button>
             <span class="vote-count">0</span>
-            <button class="vote-btn downvote" onclick="handleVote('welcome!', 'down')" title="Vota contro">
+            <button class="vote-btn downvote" onclick="handleVote('welcome!', 'down')" title="Downvote">
               <i class="fas fa-arrow-down"></i>
             </button>
           </div>
           <div class="vote-stats">
-            <span class="total-votes">Totale voti: 0</span>
+            <span class="total-votes">Total votes: 0</span>
           </div>
         </div>
+        -->
         <div class="article-content active">
           <p>Benvenuti nel nostro piccoloangolo di internet! Siamo una coppia sulla trentina che si è innamorata l'una dell'altra e del mondo incredibile che ci circonda. Siamo qui per condividere la nostra passione per i misteri dell'oceano, la saggezza della terra e la bellissima intersezione tra scienza e consapevolezza.</p>
 
@@ -322,12 +326,12 @@
              I link di condivisione sottostanti verranno aggiornati automaticamente da JavaScript.
         -->
         <div class="social-share-buttons" style="text-align: right; margin-top: 10px;">
-          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Fit%2Fblog.html%23welcome!&text=Quando%20l%27Oceano%20Incontra%20la%20Terra%3A%20Il%20Nostro%20Viaggio%20di%20Conservazione%20e%20Consapevolezza" target="_blank" title="Condividi su Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fit%2Fblog.html%23welcome!&quote=Quando%20l%27Oceano%20Incontra%20la%20Terra%3A%20Il%20Nostro%20Viaggio%20di%20Conservazione%20e%20Consapevolezza" target="_blank" title="Condividi su Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fit%2Fblog.html%23welcome!&title=Quando%20l%27Oceano%20Incontra%20la%20Terra%3A%20Il%20Nostro%20Viaggio%20di%20Conservazione%20e%20Consapevolezza&summary=Il%20Nostro%20Viaggio%20di%20Conservazione%20e%20Consapevolezza" target="_blank" title="Condividi su LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Fit%2Fblog.html%23welcome!&text=Quando%20l%27Oceano%20Incontra%20la%20Terra%3A%20Il%20Nostro%20Viaggio%20di%20Conservazione%20e%20Consapevolezza" target="_blank" title="Share on Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fit%2Fblog.html%23welcome!&quote=Quando%20l%27Oceano%20Incontra%20la%20Terra%3A%20Il%20Nostro%20Viaggio%20di%20Conservazione%20e%20Consapevolezza" target="_blank" title="Share on Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fit%2Fblog.html%23welcome!&title=Quando%20l%27Oceano%20Incontra%20la%20Terra%3A%20Il%20Nostro%20Viaggio%20di%20Conservazione%20e%20Consapevolezza&summary=Il%20Nostro%20Viaggio%20di%20Conservazione%20e%20Consapevolezza" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
 
-        <!-- Sezione commenti -->
+        <!-- Comment section commented out until backend implementation
         <div class="comment-section mt-4">
           <button class="btn btn-outline-primary mb-3" onclick="toggleComments('welcome!')">
             <i class="fas fa-comments"></i> Mostra commenti
@@ -337,21 +341,21 @@
               <h5>Lascia un commento</h5>
               <form onsubmit="submitComment(event, 'welcome!')">
                 <div class="mb-3">
-                  <label for="name-welcome!" class="form-label">Nome :</label>
+                  <label for="name-welcome!" class="form-label">Nome:</label>
                   <input type="text" class="form-control" id="name-welcome!" required>
                 </div>
                 <div class="mb-3">
-                  <label for="comment-welcome!" class="form-label">Commento :</label>
+                  <label for="comment-welcome!" class="form-label">Commento:</label>
                   <textarea class="form-control" id="comment-welcome!" rows="3" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Pubblica commento</button>
+                <button type="submit" class="btn btn-primary">Invia commento</button>
               </form>
             </div>
             <div id="comments-list-welcome!" class="comments-list">
-              <!-- I commenti verranno aggiunti dinamicamente qui -->
             </div>
           </div>
         </div>
+        -->
       </article>
       <!-- FINE ARTICOLO -->
     </div>
@@ -366,51 +370,11 @@
   <!-- Custom JS -->
   <script src="../js/blog.js"></script>
   <script src="../js/header.js"></script>
-  <script src="../js/voting.js"></script>
   <script>
-    // Funzione per gestire il cambio di articolo
-    function showArticle(articleId) {
-      // Nascondi tutti gli articoli
-      document.querySelectorAll('.article-item').forEach(article => {
-        article.classList.remove('active');
-      });
-      
-      // Mostra l'articolo selezionato
-      document.getElementById(articleId).classList.add('active');
-      
-      // Aggiorna l'URL con l'ID dell'articolo
-      history.pushState(null, '', '#' + articleId);
-    }
-
-    // Funzione per gestire il cambio di lingua
     function changeLanguage(lang) {
-      if (lang === 'en') {
-        window.location.href = '../en/blog.html' + window.location.hash;
-      } else if (lang === 'fr') {
-        window.location.href = '../fr/blog.html' + window.location.hash;
-      }
-    }
-
-    // Funzione per gestire i commenti
-    function toggleComments(articleId) {
-      const commentsContainer = document.getElementById(`comments-${articleId}`);
-      const button = commentsContainer.previousElementSibling;
-      
-      if (commentsContainer.style.display === 'none') {
-        commentsContainer.style.display = 'block';
-        button.innerHTML = '<i class="fas fa-comments"></i> Nascondi commenti';
-        loadComments(articleId);
-      } else {
-        commentsContainer.style.display = 'none';
-        button.innerHTML = '<i class="fas fa-comments"></i> Mostra commenti';
-      }
-    }
-
-    function submitComment(event, articleId) {
-      event.preventDefault();
-      const name = document.getElementById(`name-${articleId}`).value;
-      const comment = document.getElementById(`comment-${articleId}`).value;
-      addComment(articleId, name, comment);
+      const currentPath = window.location.pathname;
+      const currentPage = currentPath.split('/').pop();
+      window.location.href = `/${lang}/${currentPage}`;
     }
   </script>
 </body>

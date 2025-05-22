@@ -85,7 +85,7 @@
         <div class="article-header" onclick="toggleArticle(this)">
           <div class="article-title">
             <!-- TODO for new article: Update the H2 title below -->
-            <h2>Gardiens des Récifs : Pourquoi Nous Devrions Nous Soucier des AMP Tropicales</h2>
+            <h2>Gardiennes des Récifs : Pourquoi les Aires Marines Protégées Tropicales Devraient Nous Préoccuper</h2>
             <div class="article-tags">
               <span class="tag ocean">océan</span>
             </div>
@@ -94,20 +94,22 @@
             <i class="fas fa-minus"></i>
           </button>
         </div>
+        <!-- Voting section commented out until backend implementation
         <div class="vote-container" data-article-id="MPAs">
           <div class="vote-buttons">
-            <button class="vote-btn upvote" onclick="handleVote('MPAs', 'up')" title="Voter pour">
+            <button class="vote-btn upvote" onclick="handleVote('MPAs', 'up')" title="Upvote">
               <i class="fas fa-arrow-up"></i>
             </button>
             <span class="vote-count">0</span>
-            <button class="vote-btn downvote" onclick="handleVote('MPAs', 'down')" title="Voter contre">
+            <button class="vote-btn downvote" onclick="handleVote('MPAs', 'down')" title="Downvote">
               <i class="fas fa-arrow-down"></i>
             </button>
           </div>
           <div class="vote-stats">
-            <span class="total-votes">Total des votes : 0</span>
+            <span class="total-votes">Total votes: 0</span>
           </div>
         </div>
+        -->
         <div class="article-content active">
           <p>Salut, je veux parler de quelque chose qui ne reçoit pas assez d'attention - les <strong>aires marines protégées</strong>, ou AMP, en particulier dans les zones tropicales. Si vous avez déjà fait de la plongée avec tuba au-dessus d'un récif corallien, vous connaissez la sensation : c'est comme atterrir sur une autre planète. Mais voilà le problème - ces récifs sont en grand danger. Les AMP sont l'un des outils les plus puissants dont nous disposons pour les aider à se rétablir.</p>
         
@@ -180,12 +182,12 @@
         </div>
 
         <div class="social-share-buttons" style="text-align: right; margin-top: 10px;">
-          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23MPAs&text=Gardiens%20des%20R%C3%A9cifs%20%3A%20Pourquoi%20Nous%20Devrions%20Nous%20Soucier%20des%20AMP%20Tropicales" target="_blank" title="Partager sur Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23MPAs&quote=Gardiens%20des%20R%C3%A9cifs%20%3A%20Pourquoi%20Nous%20Devrions%20Nous%20Soucier%20des%20AMP%20Tropicales" target="_blank" title="Partager sur Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23MPAs&title=Gardiens%20des%20R%C3%A9cifs%20%3A%20Pourquoi%20Nous%20Devrions%20Nous%20Soucier%20des%20AMP%20Tropicales&summary=Pourquoi%20Nous%20Devrions%20Nous%20Soucier%20des%20AMP%20Tropicales" target="_blank" title="Partager sur LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23MPAs&text=Gardiennes%20des%20Récifs%20%3A%20Pourquoi%20les%20Aires%20Marines%20Protégées%20Tropicales%20Devraient%20Nous%20Préoccuper" target="_blank" title="Share on Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23MPAs&quote=Gardiennes%20des%20Récifs%20%3A%20Pourquoi%20les%20Aires%20Marines%20Protégées%20Tropicales%20Devraient%20Nous%20Préoccuper" target="_blank" title="Share on Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23MPAs&title=Gardiennes%20des%20Récifs%20%3A%20Pourquoi%20les%20Aires%20Marines%20Protégées%20Tropicales%20Devraient%20Nous%20Préoccuper&summary=Pourquoi%20les%20Aires%20Marines%20Protégées%20Tropicales%20Devraient%20Nous%20Préoccuper" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
 
-        <!-- Section des commentaires -->
+        <!-- Comment section commented out until backend implementation
         <div class="comment-section mt-4">
           <button class="btn btn-outline-primary mb-3" onclick="toggleComments('MPAs')">
             <i class="fas fa-comments"></i> Afficher les commentaires
@@ -202,14 +204,14 @@
                   <label for="comment-MPAs" class="form-label">Commentaire :</label>
                   <textarea class="form-control" id="comment-MPAs" rows="3" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Publier le commentaire</button>
+                <button type="submit" class="btn btn-primary">Envoyer le commentaire</button>
               </form>
             </div>
             <div id="comments-list-MPAs" class="comments-list">
-              <!-- Les commentaires seront ajoutés dynamiquement ici -->
             </div>
           </div>
         </div>
+        -->
       </article>
       <!-- FIN DE L'ARTICLE -->
       <!-- DÉBUT DE L'ARTICLE (Copiez tout ce bloc pour un nouvel article) -->
@@ -228,20 +230,22 @@
             <i class="fas fa-minus"></i>
           </button>
         </div>
+        <!-- Voting section commented out until backend implementation
         <div class="vote-container" data-article-id="welcome!">
           <div class="vote-buttons">
-            <button class="vote-btn upvote" onclick="handleVote('welcome!', 'up')" title="Voter pour">
+            <button class="vote-btn upvote" onclick="handleVote('welcome!', 'up')" title="Upvote">
               <i class="fas fa-arrow-up"></i>
             </button>
             <span class="vote-count">0</span>
-            <button class="vote-btn downvote" onclick="handleVote('welcome!', 'down')" title="Voter contre">
+            <button class="vote-btn downvote" onclick="handleVote('welcome!', 'down')" title="Downvote">
               <i class="fas fa-arrow-down"></i>
             </button>
           </div>
           <div class="vote-stats">
-            <span class="total-votes">Total des votes : 0</span>
+            <span class="total-votes">Total votes: 0</span>
           </div>
         </div>
+        -->
         <div class="article-content active">
           <p>Bienvenue dans notre petit coin d'Internet ! Nous sommes un couple dans la trentaine, tombés amoureux l'un de l'autre et du monde incroyable qui nous entoure. Nous sommes ici pour partager notre passion pour les mystères de l'océan, la sagesse de la terre et la belle intersection entre science et pleine conscience.</p>
 
@@ -273,12 +277,12 @@
              Les liens de partage ci-dessous seront automatiquement mis à jour par JavaScript.
         -->
         <div class="social-share-buttons" style="text-align: right; margin-top: 10px;">
-          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&text=Quand%20l%27Oc%C3%A9an%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Partager sur Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&quote=Quand%20l%27Oc%C3%A9an%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Partager sur Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&title=Quand%20l%27Oc%C3%A9an%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience&summary=Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Partager sur LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&text=Quand%20l%27Océan%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Share on Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&quote=Quand%20l%27Océan%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Share on Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&title=Quand%20l%27Océan%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience&summary=Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
 
-        <!-- Section des commentaires -->
+        <!-- Comment section commented out until backend implementation
         <div class="comment-section mt-4">
           <button class="btn btn-outline-primary mb-3" onclick="toggleComments('welcome!')">
             <i class="fas fa-comments"></i> Afficher les commentaires
@@ -295,14 +299,14 @@
                   <label for="comment-welcome!" class="form-label">Commentaire :</label>
                   <textarea class="form-control" id="comment-welcome!" rows="3" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Publier le commentaire</button>
+                <button type="submit" class="btn btn-primary">Envoyer le commentaire</button>
               </form>
             </div>
             <div id="comments-list-welcome!" class="comments-list">
-              <!-- Les commentaires seront ajoutés dynamiquement ici -->
             </div>
           </div>
         </div>
+        -->
       </article>
       <!-- FIN DE L'ARTICLE -->
     </div>
@@ -317,7 +321,6 @@
   <!-- Custom JS -->
   <script src="../js/blog.js"></script>
   <script src="../js/header.js"></script>
-  <script src="../js/voting.js"></script>
   <script>
     function changeLanguage(lang) {
       const currentPath = window.location.pathname;
