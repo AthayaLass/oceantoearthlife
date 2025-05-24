@@ -49,6 +49,9 @@
     <h3>On this page:</h3>
     <ul class="nav nav-pills flex-column">
       <li class="nav-item mb-2">
+        <a class="nav-link active" href="#plants" style="background-color: #e8f4f8; color: #2c3e50; border: 1px solid #b8d8e8; transition: all 0.3s ease;">The Silent Power of Plants</a>
+      </li>
+      <li class="nav-item mb-2">
         <a class="nav-link active" href="#MPAs" style="background-color: #e8f4f8; color: #2c3e50; border: 1px solid #b8d8e8; transition: all 0.3s ease;">Guardians of the Reefs: Why Tropical Marine Protected Areas Should Matter to Us</a>
       </li>
       <li class="nav-item mb-2">
@@ -80,12 +83,67 @@
     -->
     <div class="articles-container">
       <!-- ARTICLE START (Copy this whole block for a new article) -->
+      <article id="plants" class="article-item active">
+        <div class="article-header" onclick="toggleArticle(this)">
+          <div class="article-title">
+            <h2>The Silent Power of Plants</h2>
+            <h5><em>By Veronica</em></h5>
+            <div class="article-tags">
+              <span class="tag earth">earth</span>
+              <span class="tag life">life</span>
+            </div>
+          </div>
+          <button class="toggle-article">
+            <i class="fas fa-minus"></i>
+          </button>
+        </div>
+        <div class="article-content active">
+          <p>They don't speak, walk, or run. Yet, plants are among the most extraordinary living beings on our planet.
+            We often pass by them without a second thought - trees lining the street, houseplants on a windowsill, grass underfoot. But behind their stillness lies a world of complex intelligence, resilience, and quiet communication. Let's take a moment to appreciate the green genius all around us.</p>
+
+          <h5>Self-Sustaining Marvels</h5>
+          <p>Plants are the original solar panels. Through photosynthesis, they convert sunlight into energy, creating oxygen and the food chain foundation for almost all life on Earth (<a href="https://www.britannica.com/science/photosynthesis" target="_blank">Britannica - Photosynthesis</a>). No shopping, no cooking - they feed themselves with sunlight, air, and water. How poetic is that?</p>
+
+          <h5>Masters of Defense</h5>
+          <p>Though rooted in place, plants aren't defenseless. They release chemicals to deter herbivores - think of the bitter taste in unripe fruit or the sting of a nettle. Some can even "call for help": when attacked by pests, they emit volatile organic compounds to attract predatory insects that eat the invaders (<a href="https://www.sciencedirect.com/science/article/abs/pii/S0169534709003000" target="_blank">Heil & Karban, 2010</a>).</p>
+
+          <h5>Green Communication Networks</h5>
+          <p>Yes, plants "talk." Through their roots and the underground fungal network known as the mycorrhizal network (the "Wood Wide Web"), trees share nutrients and send warning signals to each other (<a href="https://www.nature.com/articles/41557" target="_blank">Simard et al., 1997</a>). When one tree is attacked, its neighbors prepare their defenses. This is care, solidarity - forest-style.</p>
+
+
+          <h5>More Than Just Decoration</h5> 
+          <p>Science shows that being around plants reduces stress, boosts mood, and improves air quality (<a href="https://www.sciencedirect.com/science/article/abs/pii/S0272494409000413" target="_blank">Bringslimark et al., 2009</a>). They give us medicine, shelter, food, and breath - and ask for so little in return.</p>
+
+          <h5>Why we should care</h5>
+          <p>In a world obsessed with speed and noise, plants remind us of the power of slowness, presence, and quiet resilience. They don't rush, yet they grow. They don't speak, yet they connect. They survive not through dominance, but through balance and cooperation. Observing them invites us to pause, breathe, and realign with what truly matters. If we learned to listen to the natural world - to the way plants live, adapt, and care - perhaps we'd treat our planet, and each other, with more kindness. The more we pay attention to plants, the more we remember that we, too, are nature. <br><br>So next time you walk by a tree or water your houseplant, pause. Notice the quiet life before you - steadfast, generous, and deeply connected.</p>
+
+          <h5>Sources</h5>
+          <ul>
+            <li><a href="https://www.britannica.com/science/photosynthesis" target="_blank">Britannica - Photosynthesis</a></li>
+            <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0169534709003000" target="_blank">Heil & Karban, 2010</a></li>
+            <li><a href="https://www.nature.com/articles/41557" target="_blank">Simard et al., 1997</a></li>
+            <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0272494409000413" target="_blank">Bringslimark et al., 2009</a></li>
+          </ul>
+        </div>
+        <div class="article-image">
+          <img src="../assets/forest.jpg" alt="Forest" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+
+        <div class="social-share-buttons" style="text-align: right; margin-top: 10px;">
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Fen%2Fblog.html%23plants&text=The%20Silent%20Power%20of%20Plants" target="_blank" title="Share on Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fen%2Fblog.html%23plants&quote=The%20Silent%20Power%20of%20Plants" target="_blank" title="Share on Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fen%2Fblog.html%23plants&title=The%20Silent%20Power%20of%20Plants&summary=Discovering%20the%20hidden%20world%20of%20plant%20intelligence%20and%20communication" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+      </article>
+      <!-- ARTICLE END -->
+      <!-- ARTICLE START (Copy this whole block for a new article) -->
       <!-- TODO for new article: Change "welcome!" to a unique ID (e.g., "new-article-slug") -->
       <article id="MPAs" class="article-item active">
         <div class="article-header" onclick="toggleArticle(this)">
           <div class="article-title">
             <!-- TODO for new article: Update the H2 title below -->
             <h2>Guardians of the Reef: Why We Should Care About Tropical MPAs</h2>
+            <h5><em>By Antoine</em></h5>
             <div class="article-tags">
               <span class="tag ocean">ocean</span>
             </div>
@@ -186,32 +244,6 @@
           <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fen%2Fblog.html%23MPAs&quote=Guardians%20of%20the%20Reef%3A%20Why%20We%20Should%20Care%20About%20Tropical%20MPAs" target="_blank" title="Share on Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
           <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fen%2Fblog.html%23MPAs&title=Guardians%20of%20the%20Reef%3A%20Why%20We%20Should%20Care%20About%20Tropical%20MPAs&summary=Why%20We%20Should%20Care%20About%20Tropical%20MPAs" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
-
-        <!-- Comment Section -->
-        <div class="comment-section mt-4">
-          <button class="btn btn-outline-primary mb-3" onclick="toggleComments('MPAs')">
-            <i class="fas fa-comments"></i> Show Comments
-          </button>
-          <div id="comments-MPAs" class="comments-container" style="display: none;">
-            <div class="comment-form mb-4">
-              <h5>Leave a Comment</h5>
-              <form onsubmit="submitComment(event, 'MPAs')">
-                <div class="mb-3">
-                  <label for="name-MPAs" class="form-label">Name:</label>
-                  <input type="text" class="form-control" id="name-MPAs" required>
-                </div>
-                <div class="mb-3">
-                  <label for="comment-MPAs" class="form-label">Comment:</label>
-                  <textarea class="form-control" id="comment-MPAs" rows="3" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit Comment</button>
-              </form>
-            </div>
-            <div id="comments-list-MPAs" class="comments-list">
-              <!-- Comments will be dynamically added here -->
-            </div>
-          </div>
-        </div>
       </article>
       <!-- ARTICLE END -->
       <!-- ARTICLE START (Copy this whole block for a new article) -->
@@ -282,33 +314,6 @@
           <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Fen%2Fblog.html%23welcome!&quote=When%20Ocean%20Meets%20Earth%3A%20Our%20Journey%20of%20Conservation%20and%20Mindfulness" target="_blank" title="Share on Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
           <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Fen%2Fblog.html%23welcome!&title=When%20Ocean%20Meets%20Earth%3A%20Our%20Journey%20of%20Conservation%20and%20Mindfulness&summary=Our%20Journey%20of%20Conservation%20and%20Mindfulness" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
-
-        <!-- Comment section commented out until backend implementation
-        <div class="comment-section mt-4">
-          <button class="btn btn-outline-primary mb-3" onclick="toggleComments('welcome!')">
-            <i class="fas fa-comments"></i> Show Comments
-          </button>
-          <div id="comments-welcome!" class="comments-container" style="display: none;">
-            <div class="comment-form mb-4">
-              <h5>Leave a Comment</h5>
-              <form onsubmit="submitComment(event, 'welcome!')">
-                <div class="mb-3">
-                  <label for="name-welcome!" class="form-label">Name:</label>
-                  <input type="text" class="form-control" id="name-welcome!" required>
-                </div>
-                <div class="mb-3">
-                  <label for="comment-welcome!" class="form-label">Comment:</label>
-                  <textarea class="form-control" id="comment-welcome!" rows="3" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit Comment</button>
-              </form>
-            </div>
-            <div id="comments-list-welcome!" class="comments-list">
-              <!-- Comments will be dynamically added here -->
-            </div>
-          </div>
-        </div>
-        -->
       </article>
       <!-- ARTICLE END -->
     </div>

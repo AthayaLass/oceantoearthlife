@@ -49,12 +49,15 @@
     <h3>Sur cette page :</h3>
     <ul class="nav nav-pills flex-column">
       <li class="nav-item mb-2">
-        <a class="nav-link active" href="#MPAs" style="background-color: #e8f4f8; color: #2c3e50; border: 1px solid #b8d8e8; transition: all 0.3s ease;">Gardiens des récifs : Pourquoi les aires marines protégées tropicales devraient nous tenir à cœur</a>
+        <a class="nav-link active" href="#plants" style="background-color: #e8f4f8; color: #2c3e50; border: 1px solid #b8d8e8; transition: all 0.3s ease;">Le Pouvoir Silencieux des Plantes</a>
       </li>
       <li class="nav-item mb-2">
-        <a class="nav-link active" href="#welcome!" style="background-color: #e8f4f8; color: #2c3e50; border: 1px solid #b8d8e8; transition: all 0.3s ease;">Quand l'océan rencontre la terre : Notre voyage de conservation et de pleine conscience</a>
+        <a class="nav-link active" href="#MPAs" style="background-color: #e8f4f8; color: #2c3e50; border: 1px solid #b8d8e8; transition: all 0.3s ease;">Gardiens des Récifs : Pourquoi les Aires Marines Protégées Tropicales Devraient Nous Importer</a>
       </li>
-      <!-- TODO: Lors de l'ajout d'un nouvel article, ajoutez un nouveau <li class="nav-item">...</li> avec le lien vers l'ID du nouvel article et son titre ici -->
+      <li class="nav-item mb-2">
+        <a class="nav-link active" href="#welcome!" style="background-color: #e8f4f8; color: #2c3e50; border: 1px solid #b8d8e8; transition: all 0.3s ease;">Quand l'Océan Rencontre la Terre : Notre Voyage de Conservation et de Pleine Conscience</a>
+      </li>
+      <!-- TODO: When adding a new article, add a new <li class="nav-item">...</li> with the link to the new article ID and title here -->
     </ul>
   </nav>
 
@@ -80,7 +83,59 @@
     -->
     <div class="articles-container">
       <!-- ARTICLE START (Copy this whole block for a new article) -->
-      <!-- TODO for new article: Change "welcome!" to a unique ID (e.g., "new-article-slug") -->
+      <article id="plants" class="article-item active">
+        <div class="article-header" onclick="toggleArticle(this)">
+          <div class="article-title">
+            <h2>Le Pouvoir Silencieux des Plantes</h2>
+            <h5><em>Par Veronica</em></h5>
+            <div class="article-tags">
+              <span class="tag earth">terre</span>
+              <span class="tag life">vie</span>
+            </div>
+          </div>
+          <button class="toggle-article">
+            <i class="fas fa-minus"></i>
+          </button>
+        </div>
+        <div class="article-content active">
+          <p>Elles ne parlent pas, ne marchent pas, ne courent pas. Pourtant, les plantes sont parmi les êtres vivants les plus extraordinaires de notre planète. Nous passons souvent à côté d'elles sans y prêter attention - les arbres qui bordent la rue, les plantes d'intérieur sur un rebord de fenêtre, l'herbe sous nos pieds. Mais derrière leur immobilité se cache un monde d'intelligence complexe, de résilience et de communication silencieuse. Prenons un moment pour apprécier le génie vert qui nous entoure.</p>
+
+          <h5>Des Merveilles Autonomes</h5>
+          <p>Les plantes sont les panneaux solaires originaux. Grâce à la photosynthèse, elles convertissent la lumière du soleil en énergie, créant de l'oxygène et la base de la chaîne alimentaire pour presque toute la vie sur Terre (<a href="https://www.britannica.com/science/photosynthesis" target="_blank">Britannica - Photosynthèse</a>). Pas de courses, pas de cuisine - elles se nourrissent elles-mêmes avec la lumière du soleil, l'air et l'eau. N'est-ce pas poétique ?</p>
+
+          <h5>Maîtres de la Défense</h5>
+          <p>Bien que fixées en place, les plantes ne sont pas sans défense. Elles libèrent des produits chimiques pour dissuader les herbivores - pensez au goût amer des fruits non mûrs ou à la piqûre d'une ortie. Certaines peuvent même "appeler à l'aide" : lorsqu'elles sont attaquées par des ravageurs, elles émettent des composés organiques volatils pour attirer les insectes prédateurs qui mangent les envahisseurs (<a href="https://www.sciencedirect.com/science/article/abs/pii/S0169534709003000" target="_blank">Heil & Karban, 2010</a>).</p>
+
+          <h5>Réseaux de Communication Verts</h5>
+          <p>Oui, les plantes "parlent". Par leurs racines et le réseau fongique souterrain connu sous le nom de réseau mycorhizien (le "Wood Wide Web"), les arbres partagent des nutriments et s'envoient des signaux d'avertissement (<a href="https://www.nature.com/articles/41557" target="_blank">Simard et al., 1997</a>). Quand un arbre est attaqué, ses voisins préparent leurs défenses. C'est de l'entraide, de la solidarité - version forêt.</p>
+
+          <h5>Plus Qu'Une Simple Décoration</h5>
+          <p>La science montre que le fait d'être entouré de plantes réduit le stress, améliore l'humeur et la qualité de l'air (<a href="https://www.sciencedirect.com/science/article/abs/pii/S0272494409000413" target="_blank">Bringslimark et al., 2009</a>). Elles nous donnent des médicaments, un abri, de la nourriture et de l'air - et demandent si peu en retour.</p>
+
+          <h5>Pourquoi nous devrions nous en soucier</h5>
+          <p>Dans un monde obsédé par la vitesse et le bruit, les plantes nous rappellent le pouvoir de la lenteur, de la présence et de la résilience silencieuse. Elles ne se précipitent pas, mais elles grandissent. Elles ne parlent pas, mais elles se connectent. Elles survivent non pas par la domination, mais par l'équilibre et la coopération. Les observer nous invite à faire une pause, à respirer et à nous réaligner avec ce qui compte vraiment. Si nous apprenions à écouter le monde naturel - à la façon dont les plantes vivent, s'adaptent et prennent soin - peut-être traiterions-nous notre planète, et les uns les autres, avec plus de gentillesse. Plus nous prêtons attention aux plantes, plus nous nous souvenons que nous aussi, nous sommes la nature. <br><br>Alors la prochaine fois que vous passez devant un arbre ou arrosez votre plante d'intérieur, faites une pause. Remarquez la vie silencieuse devant vous - constante, généreuse et profondément connectée.</p>
+
+          <h5>Sources</h5>
+          <ul>
+            <li><a href="https://www.britannica.com/science/photosynthesis" target="_blank">Britannica - Photosynthèse</a></li>
+            <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0169534709003000" target="_blank">Heil & Karban, 2010</a></li>
+            <li><a href="https://www.nature.com/articles/41557" target="_blank">Simard et al., 1997</a></li>
+            <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0272494409000413" target="_blank">Bringslimark et al., 2009</a></li>
+          </ul>
+        </div>
+
+        <div class="article-image">
+          <img src="../assets/forest.jpg" alt="Forest" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        
+        <div class="social-share-buttons" style="text-align: right; margin-top: 10px;">
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23plants&text=Le%20Pouvoir%20Silencieux%20des%20Plantes" target="_blank" title="Share on Twitter" style="margin-right: 10px;"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23plants&quote=Le%20Pouvoir%20Silencieux%20des%20Plantes" target="_blank" title="Share on Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23plants&title=Le%20Pouvoir%20Silencieux%20des%20Plantes&summary=Découvrir%20le%20monde%20caché%20de%20l'intelligence%20et%20de%20la%20communication%20des%20plantes" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+      </article>
+      <!-- ARTICLE END -->
+      <!-- ARTICLE START (Copy this whole block for a new article) -->
       <article id="MPAs" class="article-item active">
         <div class="article-header" onclick="toggleArticle(this)">
           <div class="article-title">
@@ -186,32 +241,6 @@
           <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23MPAs&quote=Gardiennes%20des%20Récifs%20%3A%20Pourquoi%20les%20Aires%20Marines%20Protégées%20Tropicales%20Devraient%20Nous%20Préoccuper" target="_blank" title="Share on Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
           <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23MPAs&title=Gardiennes%20des%20Récifs%20%3A%20Pourquoi%20les%20Aires%20Marines%20Protégées%20Tropicales%20Devraient%20Nous%20Préoccuper&summary=Pourquoi%20les%20Aires%20Marines%20Protégées%20Tropicales%20Devraient%20Nous%20Préoccuper" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
-
-        <!-- Comment section commented out until backend implementation
-        <div class="comment-section mt-4">
-          <button class="btn btn-outline-primary mb-3" onclick="toggleComments('MPAs')">
-            <i class="fas fa-comments"></i> Afficher les commentaires
-          </button>
-          <div id="comments-MPAs" class="comments-container" style="display: none;">
-            <div class="comment-form mb-4">
-              <h5>Laisser un commentaire</h5>
-              <form onsubmit="submitComment(event, 'MPAs')">
-                <div class="mb-3">
-                  <label for="name-MPAs" class="form-label">Nom :</label>
-                  <input type="text" class="form-control" id="name-MPAs" required>
-                </div>
-                <div class="mb-3">
-                  <label for="comment-MPAs" class="form-label">Commentaire :</label>
-                  <textarea class="form-control" id="comment-MPAs" rows="3" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Envoyer le commentaire</button>
-              </form>
-            </div>
-            <div id="comments-list-MPAs" class="comments-list">
-            </div>
-          </div>
-        </div>
-        -->
       </article>
       <!-- FIN DE L'ARTICLE -->
       <!-- DÉBUT DE L'ARTICLE (Copiez tout ce bloc pour un nouvel article) -->
@@ -281,32 +310,6 @@
           <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&quote=Quand%20l%27Océan%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Share on Facebook" style="margin-right: 10px;"><i class="fab fa-facebook fa-2x"></i></a>
           <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.oceantoearth.life%2Ffr%2Fblog.html%23welcome!&title=Quand%20l%27Océan%20Rencontre%20la%20Terre%20%3A%20Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience&summary=Notre%20Voyage%20de%20Conservation%20et%20de%20Pleine%20Conscience" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
-
-        <!-- Comment section commented out until backend implementation
-        <div class="comment-section mt-4">
-          <button class="btn btn-outline-primary mb-3" onclick="toggleComments('welcome!')">
-            <i class="fas fa-comments"></i> Afficher les commentaires
-          </button>
-          <div id="comments-welcome!" class="comments-container" style="display: none;">
-            <div class="comment-form mb-4">
-              <h5>Laisser un commentaire</h5>
-              <form onsubmit="submitComment(event, 'welcome!')">
-                <div class="mb-3">
-                  <label for="name-welcome!" class="form-label">Nom :</label>
-                  <input type="text" class="form-control" id="name-welcome!" required>
-                </div>
-                <div class="mb-3">
-                  <label for="comment-welcome!" class="form-label">Commentaire :</label>
-                  <textarea class="form-control" id="comment-welcome!" rows="3" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Envoyer le commentaire</button>
-              </form>
-            </div>
-            <div id="comments-list-welcome!" class="comments-list">
-            </div>
-          </div>
-        </div>
-        -->
       </article>
       <!-- FIN DE L'ARTICLE -->
     </div>
