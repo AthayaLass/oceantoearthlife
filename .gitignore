@@ -30,5 +30,4 @@ build/
 *.log
 
 # CSS files
-css/*.css
 css/*.css.map
