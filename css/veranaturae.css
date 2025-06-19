@@ -457,7 +457,7 @@ nav a:hover {
 }
 
 .mindfulness-benefits li {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.8;
     color: var(--text);
     margin-bottom: 0.8rem;
@@ -700,6 +700,10 @@ footer {
     
     .floating-services {
         padding: 0.8rem 1.2rem;
+        /* Enhanced mobile visibility */
+        box-shadow: 0 6px 25px rgba(107, 94, 78, 0.3), 0 0 0 2px var(--accent);
+        animation: mobilePulse 2s ease-in-out infinite;
+        border: 3px solid var(--white);
     }
     
     .floating-services span {
@@ -714,6 +718,25 @@ footer {
     .modal-content {
         margin: 1rem;
         max-height: 90vh;
+    }
+    
+    /* Adjust floating services button position for mobile */
+    .floating-services-container {
+        top: 80%;
+        left: 1rem;
+        z-index: 999;
+    }
+    
+    /* Add mobile-specific pulse animation */
+    @keyframes mobilePulse {
+        0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 6px 25px rgba(107, 94, 78, 0.3), 0 0 0 2px var(--accent);
+        }
+        50% {
+            transform: scale(1.1);
+            box-shadow: 0 8px 35px rgba(107, 94, 78, 0.4), 0 0 0 3px var(--accent), 0 0 20px rgba(182, 191, 165, 0.6);
+        }
     }
 }
 
@@ -783,7 +806,80 @@ footer {
         font-size: 1.1rem;
     }
     
+    .mindfulness-benefits li {
+        font-size: 1.1rem;
+    }
+    
     .about-section h2 {
         font-size: 2.2rem;
+    }
+    
+    /* Further adjust floating services button for smaller screens */
+    .floating-services-container {
+        top: 85%;
+        left: 0.5rem;
+        z-index: 999;
+    }
+    
+    .floating-services {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        /* Enhanced visibility for small screens */
+        background: linear-gradient(135deg, var(--dark-green) 0%, var(--accent) 100%);
+        box-shadow: 0 8px 30px rgba(107, 94, 78, 0.4), 0 0 0 3px var(--white), 0 0 25px rgba(182, 191, 165, 0.7);
+        animation: smallMobilePulse 1.5s ease-in-out infinite;
+        border: 3px solid var(--white);
+        position: relative;
+    }
+    
+    .floating-services::before {
+        content: "💡";
+        position: absolute;
+        top: -15px;
+        right: -10px;
+        font-size: 1.2rem;
+        animation: sparkle 2s ease-in-out infinite;
+    }
+    
+    /* Enhanced pulse animation for small screens */
+    @keyframes smallMobilePulse {
+        0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 8px 30px rgba(107, 94, 78, 0.4), 0 0 0 3px var(--white), 0 0 25px rgba(182, 191, 165, 0.7);
+        }
+        50% {
+            transform: scale(1.15);
+            box-shadow: 0 12px 40px rgba(107, 94, 78, 0.5), 0 0 0 4px var(--white), 0 0 35px rgba(182, 191, 165, 0.9);
+        }
+    }
+    
+    @keyframes sparkle {
+        0%, 100% {
+            opacity: 0.7;
+            transform: scale(1) rotate(0deg);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.2) rotate(180deg);
+        }
+    }
+    
+    /* Italian language specific adjustments for mobile */
+    html[lang="it"] .mobile-nav a {
+        font-size: 1rem;
+        padding: 0.7rem;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    html[lang="it"] .mindfulness-section h2 {
+        font-size: 2.4rem;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    html[lang="it"] nav a {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
     }
 } 
