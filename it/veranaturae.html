@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veranaturae – Consapevolezza, Yoga & Apprezzamento della Natura</title>
+    <link rel="stylesheet" href="../css/veranaturae.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo-link">
+                    <img src="../assets/Logo_Veranaturae.png" alt="Logo Veranaturae" class="logo">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#mindfulness">Consapevolezza</a></li>
+                        <li><a href="#about">Chi Sono</a></li>
+                        <li><a href="#contact">Contatto</a></li>
+                    </ul>
+                </nav>
+                <!-- Language Selector -->
+                <div class="language-selector ms-3">
+                    <select class="form-select" onchange="changeLanguage(this.value)">
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                        <option value="it" selected>Italiano</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </div>
+                <!-- Burger Menu -->
+                <div class="burger-menu" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="#mindfulness" onclick="closeMobileMenu()">Consapevolezza</a></li>
+                <li><a href="#about" onclick="closeMobileMenu()">Chi Sono</a></li>
+                <li><a href="#contact" onclick="closeMobileMenu()">Contatto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Floating Services Button - Positioned in top left below header -->
+    <div class="floating-services-container">
+        <div class="floating-services" onclick="openServicesModal()">
+            <i class="fas fa-spa"></i>
+            <span>I Miei Servizi</span>
+        </div>
+    </div>
+
+    <!-- Services Modal -->
+    <div class="modal-overlay" id="servicesModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>I Miei Servizi</h3>
+                <button class="modal-close" onclick="closeServicesModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="services-grid">
+                    <div class="service-grid-item">
+                        <div class="service-image">
+                            <img src="../assets/mindfulness01.jpg" alt="Consapevolezza al Lavoro">
+                        </div>
+                        <h4>Consapevolezza al Lavoro</h4>
+                        <p>Porta la consapevolezza nella tua vita professionale con tecniche pratiche per ridurre lo stress, migliorare la concentrazione e creare un ambiente di lavoro più equilibrato.</p>
+                    </div>
+                    <div class="service-grid-item">
+                        <div class="service-image">
+                            <img src="../assets/landscape_01.jpeg" alt="Coaching Individuale">
+                        </div>
+                        <h4>Coaching Individuale</h4>
+                        <p>Sessioni di coaching personalizzate sulla consapevolezza, adattate alle tue esigenze e obiettivi specifici, fornendo guida e supporto individuali nel tuo percorso.</p>
+                    </div>
+                    <div class="service-grid-item">
+                        <div class="service-image">
+                            <img src="../assets/vero_01.jpg" alt="Ritiro">
+                        </div>
+                        <h4>Ritiro</h4>
+                        <p>Immergiti nella natura con i nostri ritiri di consapevolezza, offrendo una connessione profonda, rinnovamento ed esperienze trasformative in bellissimi ambienti naturali.</p>
+                    </div>
+                    <div class="service-grid-item">
+                        <div class="service-image">
+                            <img src="../assets/antoine_06.jpg" alt="Yoga e Respirazione">
+                        </div>
+                        <h4>Yoga e Respirazione</h4>
+                        <p>Combina movimenti yoga gentili con pratiche di respirazione consapevole per coltivare la consapevolezza, ridurre le tensioni e migliorare la tua connessione mente-corpo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <h4>Interessato? Contattami!</h4>
+                <p>Pronto a iniziare il tuo percorso di consapevolezza? Mi piacerebbe sentire da te e aiutarti a trovare la pratica perfetta per le tue esigenze.</p>
+                <a href="mailto:veronica@oceantoearth.life" class="button">Contattami</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Benvenuto a Veranaturae</h1>
+                <p class="subtitle">Un Santuario per la Consapevolezza, lo Yoga e l'Apprezzamento della Natura</p>
+            </div>
+        </section>
+
+        <section id="mindfulness" class="mindfulness-section">
+            <div class="container">
+                <h2>Consapevolezza</h2>
+                <div class="mindfulness-intro">
+                    <p>Nel nostro mondo frenetico, spesso perdiamo il contatto con il momento presente e la nostra connessione con il mondo naturale. La consapevolezza ci offre un percorso di ritorno alla coscienza, aiutandoci a trovare pace, chiarezza e una più profonda apprezzamento dei momenti semplici della vita.</p>
+                </div>
+
+                <div class="icon-divider">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
+
+                <div class="mindfulness-description">
+                    <p>La consapevolezza è la pratica di prestare attenzione al momento presente con curiosità e senza giudizio. Si tratta di essere pienamente consapevoli di ciò che sta accadendo ora – i nostri pensieri, le nostre emozioni, le sensazioni corporee e il mondo che ci circonda.</p>
+                    
+                    <p>Alla base, la consapevolezza è semplicemente l'arte di essere presenti. È imparare a osservare i tuoi pensieri e le tue emozioni mentre sorgono, senza lasciarsi coinvolgere. Immagina di sederti vicino a un ruscello e guardare le foglie galleggiare – è così che impariamo a osservare i nostri pensieri: notandoli e lasciandoli passare.</p>
+                    
+                    <p>La consapevolezza può essere praticata attraverso la meditazione, la respirazione consapevole, o semplicemente portando attenzione alle attività quotidiane. Non si tratta di svuotare la mente – è sviluppare una relazione gentile e curiosa con tutto ciò che accade nel momento presente.</p>
+                </div>
+
+                <div class="icon-divider">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
+
+                <div class="mindfulness-benefits">
+                    <p>Attraverso una pratica regolare della consapevolezza, puoi sperimentare numerosi benefici:</p>
+                    <ul>
+                        <li>Riduzione dello stress e dell'ansia</li>
+                        <li>Miglioramento della regolazione emotiva</li>
+                        <li>Migliore qualità del sonno</li>
+                        <li>Aumento della consapevolezza di sé</li>
+                        <li>Maggiore senso di pace interiore</li>
+                        <li>Relazione più compassionevole con te stesso e gli altri</li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>Chi Sono</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Ciao, sono Veronica – biologa delle piante, coach di consapevolezza, amante della natura – e qualcuno che sa cosa significa vivere in modalità pilota automatico.</p>
+                        <p>Per anni ho lavorato come biologa delle piante, profondamente connessa al mondo naturale. La natura è sempre stata il mio rifugio - un posto dove mi sentivo in pace, radicata e veramente me stessa. Ma qualcosa è cambiato quando ho scoperto la consapevolezza: quella sensazione di connessione si è approfondita. Il modo in cui vivevo la vita, incluso il mio tempo nella natura, è diventato più vivido, più presente, più vivo.</p>
+                        <p>La consapevolezza mi ha insegnato a rallentare, respirare e sentire davvero. Anche qualcosa che ho sempre amato - come le immersioni - ha assunto una profondità completamente nuova. Ora, quando mi immergo con piena consapevolezza, sintonizzandomi su ogni respiro e ogni sensazione nel mio corpo, non è più solo un hobby; è un'esperienza potente e radicante.</p>
+                        <p>Questo è ciò che mi ha ispirato a diventare una coach di consapevolezza. Volevo condividere questo modo di vivere più consapevolmente - con meno stress, più presenza e più gioia.</p>
+                        <p>Che tu stia attraversando delle sfide, cercando calma, o semplicemente desiderando riconnetterti con te stesso, sono qui per supportarti. Il mio approccio è semplice, pratico e umano. Non devi sederti in silenzio per ore o essere "bravo nella meditazione". Hai solo bisogno della volontà di fare una pausa, respirare e fare un passo alla volta.</p>
+                        <p>Credo che tutti meritino di sperimentare il potere curativo di queste pratiche, e mi impegno a creare spazi sicuri e accoglienti dove le persone possono esplorare, imparare e crescere insieme.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="../assets/vero_01.jpg" alt="Veronica - Guida alla Consapevolezza">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contattami</h2>
+                <div class="contact-content">
+                    <p>Interessato a partecipare a una sessione o a saperne di più sulle pratiche di consapevolezza? Contattami per maggiori informazioni.</p>
+                    <a href="mailto:veronica@oceantoearth.life" class="button">Contattami</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Veranaturae. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <script src="../js/veranaturae.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

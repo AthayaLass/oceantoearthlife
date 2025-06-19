@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veranaturae – Achtsamkeit, Yoga & Naturverbundenheit</title>
+    <link rel="stylesheet" href="../css/veranaturae.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo-link">
+                    <img src="../assets/Logo_Veranaturae.png" alt="Veranaturae Logo" class="logo">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#mindfulness">Achtsamkeit</a></li>
+                        <li><a href="#about">Über Mich</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <!-- Language Selector -->
+                <div class="language-selector ms-3">
+                    <select class="form-select" onchange="changeLanguage(this.value)">
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                        <option value="it">Italiano</option>
+                        <option value="de" selected>Deutsch</option>
+                    </select>
+                </div>
+                <!-- Burger Menu -->
+                <div class="burger-menu" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="#mindfulness" onclick="closeMobileMenu()">Achtsamkeit</a></li>
+                <li><a href="#about" onclick="closeMobileMenu()">Über Mich</a></li>
+                <li><a href="#contact" onclick="closeMobileMenu()">Kontakt</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Floating Services Button - Positioned in top left below header -->
+    <div class="floating-services-container">
+        <div class="floating-services" onclick="openServicesModal()">
+            <i class="fas fa-spa"></i>
+            <span>Meine Services</span>
+        </div>
+    </div>
+
+    <!-- Services Modal -->
+    <div class="modal-overlay" id="servicesModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Meine Services</h3>
+                <button class="modal-close" onclick="closeServicesModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="services-grid">
+                    <div class="service-grid-item">
+                        <div class="service-image">
+                            <img src="../assets/mindfulness01.jpg" alt="Achtsamkeit am Arbeitsplatz">
+                        </div>
+                        <h4>Achtsamkeit am Arbeitsplatz</h4>
+                        <p>Bringen Sie Achtsamkeit in Ihr Berufsleben mit praktischen Techniken zur Stressreduktion, Verbesserung der Konzentration und Schaffung einer ausgewogeneren Arbeitsumgebung.</p>
+                    </div>
+                    <div class="service-grid-item">
+                        <div class="service-image">
+                            <img src="../assets/landscape_01.jpeg" alt="Einzelcoaching">
+                        </div>
+                        <h4>Einzelcoaching</h4>
+                        <p>Personalisierte Achtsamkeits-Coaching-Sitzungen, die auf Ihre spezifischen Bedürfnisse und Ziele zugeschnitten sind und individuelle Anleitung und Unterstützung auf Ihrem Weg bieten.</p>
+                    </div>
+                    <div class="service-grid-item">
+                        <div class="service-image">
+                            <img src="../assets/vero_01.jpg" alt="Retreat">
+                        </div>
+                        <h4>Retreat</h4>
+                        <p>Tauchen Sie ein in die Natur mit unseren Achtsamkeits-Retreats, die tiefe Verbindung, Erneuerung und transformative Erfahrungen in wunderschönen natürlichen Umgebungen bieten.</p>
+                    </div>
+                    <div class="service-grid-item">
+                        <div class="service-image">
+                            <img src="../assets/antoine_06.jpg" alt="Yoga und Atemarbeit">
+                        </div>
+                        <h4>Yoga und Atemarbeit</h4>
+                        <p>Kombinieren Sie sanfte Yoga-Bewegungen mit bewussten Atemübungen, um Achtsamkeit zu kultivieren, Spannungen zu reduzieren und Ihre Körper-Geist-Verbindung zu verbessern.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <h4>Interessiert? Melden Sie sich!</h4>
+                <p>Bereit, Ihren Achtsamkeitsweg zu beginnen? Ich würde gerne von Ihnen hören und Ihnen helfen, die perfekte Praxis für Ihre Bedürfnisse zu finden.</p>
+                <a href="mailto:veronica@oceantoearth.life" class="button">Kontaktieren Sie mich</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Willkommen bei Veranaturae</h1>
+                <p class="subtitle">Ein Heiligtum für Achtsamkeit, Yoga und Naturverbundenheit</p>
+            </div>
+        </section>
+
+        <section id="mindfulness" class="mindfulness-section">
+            <div class="container">
+                <h2>Achtsamkeit</h2>
+                <div class="mindfulness-intro">
+                    <p>In unserer hektischen Welt verlieren wir oft den Kontakt zum gegenwärtigen Moment und unsere Verbindung zur natürlichen Welt. Achtsamkeit bietet uns einen Weg zurück zum Bewusstsein und hilft uns, Frieden, Klarheit und eine tiefere Wertschätzung für die einfachen Momente des Lebens zu finden.</p>
+                </div>
+
+                <div class="icon-divider">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
+
+                <div class="mindfulness-description">
+                    <p>Achtsamkeit ist die Praxis, dem gegenwärtigen Moment mit Neugier und ohne Urteil Aufmerksamkeit zu schenken. Es geht darum, sich vollständig bewusst zu sein, was jetzt geschieht – unsere Gedanken, Gefühle, körperlichen Empfindungen und die Welt um uns herum.</p>
+                    
+                    <p>Im Kern ist Achtsamkeit einfach die Kunst, präsent zu sein. Es ist das Lernen, Ihre Gedanken und Emotionen zu beobachten, wenn sie auftauchen, ohne sich in sie zu verstricken. Stellen Sie sich vor, Sie sitzen an einem Bach und schauen den Blättern zu, wie sie vorbeischweben – so lernen wir, unsere Gedanken zu beobachten: sie zu bemerken und vorbeiziehen zu lassen.</p>
+                    
+                    <p>Achtsamkeit kann durch Meditation, bewusstes Atmen oder einfach durch das Bringen von Aufmerksamkeit in alltägliche Aktivitäten praktiziert werden. Es geht nicht darum, den Geist zu leeren – es ist die Entwicklung einer freundlichen, neugierigen Beziehung zu allem, was im gegenwärtigen Moment geschieht.</p>
+                </div>
+
+                <div class="icon-divider">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
+
+                <div class="mindfulness-benefits">
+                    <p>Durch regelmäßige Achtsamkeitspraxis können Sie zahlreiche Vorteile erfahren:</p>
+                    <ul>
+                        <li>Reduzierung von Stress und Angst</li>
+                        <li>Verbesserte emotionale Regulation</li>
+                        <li>Bessere Schlafqualität</li>
+                        <li>Erhöhtes Selbstbewusstsein</li>
+                        <li>Größeres Gefühl inneren Friedens</li>
+                        <li>Mitfühlendere Beziehung zu sich selbst und anderen</li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>Über Mich</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Hallo, ich bin Veronica – Pflanzenbiologin, Achtsamkeits-Coach, Naturliebhaberin – und jemand, der weiß, wie es ist, im Autopilot-Modus zu leben.</p>
+                        <p>Jahrelang habe ich als Pflanzenbiologin gearbeitet und war tief mit der natürlichen Welt verbunden. Die Natur war immer mein Zufluchtsort - ein Ort, an dem ich mich friedlich, geerdet und wirklich ich selbst fühlte. Aber etwas veränderte sich, als ich Achtsamkeit entdeckte: dieses Gefühl der Verbindung vertiefte sich. Die Art, wie ich das Leben erlebte, einschließlich meiner Zeit in der Natur, wurde lebendiger, präsenter, lebendiger.</p>
+                        <p>Achtsamkeit lehrte mich, langsamer zu werden, zu atmen und wirklich zu fühlen. Selbst etwas, das ich immer geliebt habe - wie das Tauchen - bekam eine völlig neue Tiefe. Jetzt, wenn ich mit voller Achtsamkeit tauche und mich auf jeden Atemzug und jede Empfindung in meinem Körper einstimme, ist es nicht mehr nur ein Hobby; es ist eine kraftvolle, erdende Erfahrung.</p>
+                        <p>Das ist es, was mich inspiriert hat, Achtsamkeits-Coach zu werden. Ich wollte diese Art, bewusster zu leben, teilen - mit weniger Stress, mehr Präsenz und mehr Freude.</p>
+                        <p>Egal, ob Sie Herausforderungen durchleben, nach Ruhe suchen oder einfach nur wieder mit sich selbst in Verbindung treten möchten, ich bin hier, um Sie zu unterstützen. Mein Ansatz ist einfach, bodenständig und menschlich. Sie müssen nicht stundenlang in Stille sitzen oder "gut in Meditation" sein. Sie brauchen nur die Bereitschaft, innezuhalten, zu atmen und einen Schritt nach dem anderen zu machen.</p>
+                        <p>Ich glaube, dass jeder es verdient, die heilende Kraft dieser Praktiken zu erfahren, und ich setze mich dafür ein, sichere, einladende Räume zu schaffen, in denen Menschen zusammen erkunden, lernen und wachsen können.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="../assets/vero_01.jpg" alt="Veronica - Achtsamkeitsführerin">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Kontakt</h2>
+                <div class="contact-content">
+                    <p>Interessiert an einer Sitzung oder möchten Sie mehr über Achtsamkeitspraktiken erfahren? Kontaktieren Sie mich für weitere Informationen.</p>
+                    <a href="mailto:veronica@oceantoearth.life" class="button">Kontaktieren Sie mich</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Veranaturae. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="../js/veranaturae.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
