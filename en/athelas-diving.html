@@ -15,22 +15,31 @@
                 <a href="../index.html" class="logo-link">
                     <img src="../assets/Logo_Athelas.png" alt="Athelas Diving Logo" class="logo">
                 </a>
-                <nav>
+                
+                <!-- Burger Menu Button -->
+                <div class="burger-menu" id="burgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <nav class="nav-menu" id="navMenu">
                     <ul>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#experience">Experience</a></li>
+                        <li><a href="#healthy-diving">Health Benefits</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <select class="language-select" onchange="changeLanguage(this.value)">
+                            <option value="en" selected>English</option>
+                            <option value="fr">Français</option>
+                            <option value="it">Italiano</option>
+                            <option value="de">Deutsch</option>
+                        </select>
+                    </div>
                 </nav>
-                <!-- Language Selector -->
-                <div class="language-selector">
-                    <select class="language-select" onchange="changeLanguage(this.value)">
-                        <option value="en" selected>English</option>
-                        <option value="fr">Français</option>
-                        <option value="it">Italiano</option>
-                        <option value="de">Deutsch</option>
-                    </select>
-                </div>
             </div>
         </div>
     </header>
@@ -101,7 +110,7 @@
             </div>
         </section>
 
-        <section class="healthy-diving">
+        <section id="healthy-diving" class="healthy-diving">
             <div class="container">
                 <h2>Healthy Diving</h2>
                 <div class="healthy-diving-content">
