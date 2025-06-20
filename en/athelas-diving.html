@@ -22,6 +22,15 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <select class="language-select" onchange="changeLanguage(this.value)">
+                        <option value="en" selected>English</option>
+                        <option value="fr">Français</option>
+                        <option value="it">Italiano</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </div>
             </div>
         </div>
     </header>
@@ -39,35 +48,120 @@
                 <h2>Our Services</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h3>Diving Education</h3>
-                        <p>Professional diving courses and certifications for all levels</p>
                         <div class="service-image">
-                            <img src="../assets/optimized/antoine_02.jpeg" alt="Diving Education" class="service-img">
+                            <img src="../assets/optimized/antoine_02.jpeg" alt="Dive Courses" class="service-img">
+                        </div>
+                        <h3>Dive Courses</h3>
+                        <p class="service-teaser">From Discovery Scuba Diving to Dive Master certification. Professional training for all levels, coming soon!</p>
+                        <div class="service-status">
+                            <span class="coming-soon">Coming Soon</span>
                         </div>
                     </div>
+                    
                     <div class="service-card">
-                        <i class="fas fa-water"></i>
+                        <div class="service-image">
+                            <img src="../assets/optimized/undewaterOm.jpeg" alt="Guided Tours" class="service-img">
+                        </div>
+                        <h3>Guided Tours</h3>
+                        <p class="service-teaser">Explore pristine underwater locations with expert guidance. Discover hidden marine treasures and create unforgettable memories.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="../assets/underwater_work02.JPG" alt="Underwater Work" class="service-img">
+                        </div>
                         <h3>Underwater Work</h3>
-                        <p>Specialized underwater services and technical diving</p>
-                        <div class="service-image">
-                            <img src="../assets/optimized/antoine_05.jpeg" alt="Underwater Work" class="service-img">
-                        </div>
+                        <p class="service-teaser">Professional underwater services including equipment setup, environmental surveillance for construction projects, and technical diving solutions.</p>
                     </div>
+                    
                     <div class="service-card">
-                        <i class="fas fa-camera"></i>
-                        <h3>Underwater Photography</h3>
-                        <p>Capture the beauty of marine life and underwater landscapes</p>
+                        <div class="service-image">
+                            <img src="../assets/optimized/coral.jpeg" alt="Aquatic Ecology Course" class="service-img">
+                        </div>
+                        <h3>Aquatic Ecology Course</h3>
+                        <p class="service-teaser">Dive deep into marine science! Learn about ecology, behavior, species identification, invasive species, and scientific research techniques.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="../assets/mindfulness01.jpg" alt="Underwater Mindfulness" class="service-img">
+                        </div>
+                        <h3>Underwater Mindfulness</h3>
+                        <p class="service-teaser">Experience the ultimate connection with nature through guided underwater meditation sessions in partnership with <a href="veranaturae.html" class="partner-link">Veranaturae</a>.</p>
+                    </div>
+                    
+                    <div class="service-card">
                         <div class="service-image">
                             <img src="../assets/optimized/vero_04.jpeg" alt="Underwater Photography" class="service-img">
                         </div>
+                        <h3>Underwater Photography</h3>
+                        <p class="service-teaser">Capture your underwater moments with professional photography services, brought to you in partnership with <a href="veranaturae.html" class="partner-link">Veranaturae</a>.</p>
                     </div>
-                    <div class="service-card">
-                        <i class="fas fa-users"></i>
-                        <h3>Group Experiences</h3>
-                        <p>Custom diving experiences for groups and teams</p>
-                        <div class="service-image">
-                            <img src="../assets/optimized/cute_shrimps.jpeg" alt="Group Experiences" class="service-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="healthy-diving">
+            <div class="container">
+                <h2>Healthy Diving</h2>
+                <div class="healthy-diving-content">
+                    <div class="healthy-diving-intro">
+                        <p>Want to dive healthy? Scuba diving is a scientifically supported way to improve your physical and mental health. Here's how each dive benefits you, with evidence from peer-reviewed research and expert studies:</p>
+                    </div>
+                    <div class="health-benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Burn up to 700 calories per hour</h4>
+                                <p>Scuba diving is a moderate to vigorous physical activity that can burn significant calories through swimming, equipment handling, and thermal regulation.</p>
+                                <div class="source">Source: Divers Alert Network (DAN), "Physical Fitness and Diving" (2023); American College of Sports Medicine guidelines on aquatic exercise</div>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Strengthen your heart and lungs</h4>
+                                <p>Regular diving activities improve cardiovascular fitness and respiratory function through controlled breathing techniques and moderate aerobic exercise.</p>
+                                <div class="source">Source: PADI (Professional Association of Diving Instructors), "Health Benefits of Diving" (2023); World Health Organization guidelines on physical activity</div>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-lungs"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Reduce stress and anxiety through controlled breathing</h4>
+                                <p>The rhythmic breathing patterns and immersive underwater environment create a natural meditation-like state that promotes relaxation and stress reduction.</p>
+                                <div class="source">Source: Divers Alert Network (DAN), "Mental Health Benefits of Diving" (2023); American Psychological Association on nature-based stress reduction</div>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Improve sleep and emotional balance</h4>
+                                <p>The combination of physical exertion, stress reduction, and exposure to natural environments contributes to better sleep quality and emotional well-being.</p>
+                                <div class="source">Source: National Sleep Foundation, "Exercise and Sleep" (2023); Blue Mind theory on water's psychological benefits</div>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Build core strength and flexibility with low-impact movement</h4>
+                                <p>Water's natural resistance provides a full-body workout while buoyancy reduces joint stress, making diving an excellent low-impact exercise option.</p>
+                                <div class="source">Source: American College of Sports Medicine, "Aquatic Exercise Guidelines" (2023); Arthritis Foundation recommendations for water-based activities</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -148,5 +242,15 @@
     </footer>
 
     <script src="../js/athelas-diving.js"></script>
+    <script>
+        // Language selector function
+        function changeLanguage(lang) {
+            // Store the user's language choice
+            localStorage.setItem('userLanguageChoice', lang);
+            const currentPath = window.location.pathname;
+            const currentPage = currentPath.split('/').pop();
+            window.location.href = `/${lang}/${currentPage}`;
+        }
+    </script>
 </body>
 </html> 

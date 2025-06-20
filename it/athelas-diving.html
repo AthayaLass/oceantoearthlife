@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athelas Diving - Servizi di Immersione Professionale</title>
+    <link rel="stylesheet" href="../css/athelas-diving.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo-link">
+                    <img src="../assets/Logo_Athelas.png" alt="Logo Athelas Diving" class="logo">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#services">Servizi</a></li>
+                        <li><a href="#experience">Esperienza</a></li>
+                        <li><a href="#contact">Contatti</a></li>
+                    </ul>
+                </nav>
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <select class="language-select" onchange="changeLanguage(this.value)">
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                        <option value="it" selected>Italiano</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Benvenuti ad Athelas Diving</h1>
+                <p class="subtitle">Servizi di Immersione Professionale & Formazione</p>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>I Nostri Servizi</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="../assets/optimized/antoine_02.jpeg" alt="Corsi di Immersione" class="service-img">
+                        </div>
+                        <h3>Corsi di Immersione</h3>
+                        <p class="service-teaser">Dal Battesimo Subacqueo alla certificazione Dive Master. Formazione professionale per tutti i livelli, presto disponibile!</p>
+                        <div class="service-status">
+                            <span class="coming-soon">Presto Disponibile</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="../assets/optimized/undewaterOm.jpeg" alt="Tour Guidati" class="service-img">
+                        </div>
+                        <h3>Tour Guidati</h3>
+                        <p class="service-teaser">Esplora località subacquee incontaminate con la guida di esperti. Scopri tesori marini nascosti e crea ricordi indimenticabili.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="../assets/underwater_work02.JPG" alt="Lavori Subacquei" class="service-img">
+                        </div>
+                        <h3>Lavori Subacquei</h3>
+                        <p class="service-teaser">Servizi subacquei professionali inclusi installazione di attrezzature, sorveglianza ambientale per progetti di costruzione e soluzioni di immersione tecnica.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="../assets/optimized/coral.jpeg" alt="Corso di Ecologia Acquatica" class="service-img">
+                        </div>
+                        <h3>Corso di Ecologia Acquatica</h3>
+                        <p class="service-teaser">Immergiti nella scienza marina! Impara l'ecologia, il comportamento, l'identificazione delle specie, le specie invasive e le tecniche di ricerca scientifica.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="../assets/mindfulness01.jpg" alt="Consapevolezza Subacquea" class="service-img">
+                        </div>
+                        <h3>Consapevolezza Subacquea</h3>
+                        <p class="service-teaser">Vivi la connessione ultima con la natura attraverso sessioni di meditazione subacquea guidate in partnership con <a href="veranaturae.html" class="partner-link">Veranaturae</a>.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="../assets/optimized/vero_04.jpeg" alt="Fotografia Subacquea" class="service-img">
+                        </div>
+                        <h3>Fotografia Subacquea</h3>
+                        <p class="service-teaser">Cattura i tuoi momenti subacquei con servizi di fotografia professionale, offerti in partnership con <a href="veranaturae.html" class="partner-link">Veranaturae</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="healthy-diving">
+            <div class="container">
+                <h2>Immersione Sana</h2>
+                <div class="healthy-diving-content">
+                    <div class="healthy-diving-intro">
+                        <p>Vuoi immergerti in modo sano? L'immersione subacquea è un metodo scientificamente provato per migliorare la tua salute fisica e mentale. Ecco come ogni immersione ti beneficia, con prove da ricerche peer-reviewed e studi di esperti:</p>
+                    </div>
+                    <div class="health-benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Brucia fino a 700 calorie all'ora</h4>
+                                <p>L'immersione subacquea è un'attività fisica da moderata a vigorosa che può bruciare calorie significative attraverso il nuoto, la gestione delle attrezzature e la regolazione termica.</p>
+                                <div class="source">Fonte: Divers Alert Network (DAN), "Physical Fitness and Diving" (2023); linee guida dell'American College of Sports Medicine sull'esercizio acquatico</div>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Rafforza il cuore e i polmoni</h4>
+                                <p>Le attività di immersione regolari migliorano la forma cardiovascolare e la funzione respiratoria attraverso tecniche di respirazione controllata ed esercizio aerobico moderato.</p>
+                                <div class="source">Fonte: PADI (Professional Association of Diving Instructors), "Health Benefits of Diving" (2023); linee guida dell'Organizzazione Mondiale della Sanità sull'attività fisica</div>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-lungs"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Riduci stress e ansia attraverso la respirazione controllata</h4>
+                                <p>I pattern di respirazione ritmica e l'ambiente subacqueo immersivo creano uno stato naturale simile alla meditazione che promuove il rilassamento e la riduzione dello stress.</p>
+                                <div class="source">Fonte: Divers Alert Network (DAN), "Mental Health Benefits of Diving" (2023); American Psychological Association sulla riduzione dello stress basata sulla natura</div>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Migliora il sonno e l'equilibrio emotivo</h4>
+                                <p>La combinazione di sforzo fisico, riduzione dello stress ed esposizione agli ambienti naturali contribuisce a una migliore qualità del sonno e al benessere emotivo.</p>
+                                <div class="source">Fonte: National Sleep Foundation, "Exercise and Sleep" (2023); teoria Blue Mind sui benefici psicologici dell'acqua</div>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Sviluppa la forza del core e la flessibilità con movimenti a basso impatto</h4>
+                                <p>La resistenza naturale dell'acqua fornisce un allenamento completo del corpo mentre la galleggiabilità riduce lo stress articolare, rendendo l'immersione un'ottima opzione di esercizio a basso impatto.</p>
+                                <div class="source">Fonte: American College of Sports Medicine, "Aquatic Exercise Guidelines" (2023); raccomandazioni dell'Arthritis Foundation per le attività acquatiche</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2>Vivi l'Esperienza</h2>
+                <div class="experience-content">
+                    <div class="experience-text">
+                        <p>Immergiti nel magico mondo subacqueo con le nostre esperienze di immersione uniche:</p>
+                        <ul>
+                            <li>Tour di immersione guidati in località incontaminate</li>
+                            <li>Avventure di immersione notturna</li>
+                            <li>Incontri con la vita marina</li>
+                            <li>Sessioni di fotografia subacquea</li>
+                            <li>Esperienze di immersione personalizzate</li>
+                        </ul>
+                    </div>
+                    <div class="experience-image">
+                        <img src="../assets/optimized/undewaterOm.jpeg" alt="Esperienza di Immersione" class="experience-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="professional">
+            <div class="container">
+                <h2>Formazione Professionale</h2>
+                <div class="professional-content">
+                    <div class="professional-text">
+                        <p>Con una vasta esperienza di immersione, porto una ricchezza di conoscenze ed esperienza ad ogni immersione. Le mie qualifiche attuali includono:</p>
+                        <ul>
+                            <li>Certificazione PADI Rescue Diver</li>
+                            <li>Certificazione Emergency First Response (EFR)</li>
+                            <li>Certificazione SDI Dive Master</li>
+                            <li>Qualifica Dive Leader</li>
+                        </ul>
+                        <p>Attualmente in formazione per diventare istruttore SDI/TDI certificato, mi impegno in uno sviluppo professionale continuo e a condividere la mia passione per l'immersione con gli altri.</p>
+                    </div>
+                    <div class="professional-image">
+                        <img src="../assets/antoine_01.JPG" alt="Istruttore di immersione professionale" class="professional-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fun" class="fun">
+            <div class="container">
+                <h2>Immergiti nell'Avventura</h2>
+                <div class="fun-content">
+                    <div class="fun-image">
+                        <img src="../assets/optimized/antoine_03.jpeg" alt="Immersione Divertente" class="fun-img">
+                    </div>
+                    <div class="fun-text">
+                        <p>Vivi la magia del mondo subacqueo con le nostre attività di immersione divertenti e coinvolgenti. Che tu sia un principiante o un subacqueo esperto, creiamo avventure memorabili che combinano sicurezza, educazione e puro divertimento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contattaci</h2>
+                <div class="contact-content">
+                    <p>Interessato ai nostri servizi? Contattaci per discutere delle tue esigenze di immersione.</p>
+                    <a href="mailto:contact@athelas-diving.com" class="button">Contattaci</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Athelas Diving. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <script src="../js/athelas-diving.js"></script>
+    <script>
+        // Language selector function
+        function changeLanguage(lang) {
+            // Store the user's language choice
+            localStorage.setItem('userLanguageChoice', lang);
+            const currentPath = window.location.pathname;
+            const currentPage = currentPath.split('/').pop();
+            window.location.href = `/${lang}/${currentPage}`;
+        }
+    </script>
+</body>
+</html> 
