@@ -16,13 +16,37 @@
 
     gtag('config', 'G-V531WTX9CR');
   </script>
+  <style>
+    .back-to-home {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: #fff;
+        background: rgba(0,0,0,0.8);
+        padding: 10px 15px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 15px;
+        z-index: 1000;
+        font-weight: 600;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    @media (max-width: 768px) {
+        .back-to-home {
+            top: 10px;
+            left: 10px;
+            padding: 8px 12px;
+            font-size: 13px;
+        }
+    }
+  </style>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
                 <!-- Back to home link -->
-                <a href="home.html" class="back-to-home" style="position: absolute; top: 20px; left: 20px; color: #fff; background: rgba(0,0,0,0.8); padding: 10px 15px; border-radius: 6px; text-decoration: none; font-size: 15px; z-index: 1000; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+                <a href="home.html" class="back-to-home">
                     <i class="fas fa-arrow-left"></i> Retour Accueil
                 </a>
                 <a href="../index.html" class="logo-link">
