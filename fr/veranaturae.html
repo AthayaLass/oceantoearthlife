@@ -34,10 +34,30 @@
     }
     @media (max-width: 768px) {
         .back-to-home {
-            top: 10px;
-            left: 10px;
-            padding: 6px 10px;
-            font-size: 12px;
+            display: none;
+        }
+    }
+    @media (max-width: 600px) {
+        .back-to-home {
+            top: 15px;
+            left: 15px;
+            padding: 5px 8px;
+            font-size: 11px;
+            /* Ensure it doesn't overlap with logo */
+            max-width: calc(50vw - 30px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    @media (max-width: 480px) {
+        .back-to-home {
+            top: 12px;
+            left: 12px;
+            padding: 4px 6px;
+            font-size: 10px;
+            /* Further reduce size on very small screens */
+            max-width: calc(40vw - 24px);
         }
     }
   </style>
@@ -150,6 +170,7 @@
                         <div class="service-image">
                             <img src="../assets/fafa02.jpg" alt="Ayurveda">
                         </div>
+                        <div class="coming-soon-tag">Bientôt Disponible</div>
                         <h4>Ayurveda</h4>
                         <p>Découvrez la sagesse ancienne de la guérison ayurvédique.
                             Bientôt disponible ! Explorez l'approche holistique du bien-être à travers l'Ayurveda, le système traditionnel indien de médecine. Apprenez votre constitution unique et comment équilibrer l'esprit, le corps et l'âme grâce à des pratiques naturelles et des ajustements de mode de vie.</p>

@@ -251,10 +251,11 @@ nav a:hover {
 }
 
 .service-grid-item {
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 20px;
+    position: relative;
+    background: linear-gradient(135deg, rgba(249, 248, 246, 0.9) 0%, rgba(231, 217, 196, 0.8) 100%);
+    border-radius: 25px;
     padding: 1.5rem;
-    box-shadow: 0 8px 32px rgba(107, 94, 78, 0.08);
+    box-shadow: 0 8px 25px var(--shadow);
     transition: all 0.3s ease;
     border: 1px solid rgba(182, 191, 165, 0.2);
     backdrop-filter: blur(5px);
@@ -917,5 +918,33 @@ footer {
     html[lang="it"] nav a {
         font-size: 1rem;
         padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Coming Soon Tag Styles */
+.coming-soon-tag {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--soft-orange) 0%, var(--soft-pink) 100%);
+    color: var(--text);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: 'Cinzel', serif;
+    box-shadow: 0 2px 8px rgba(107, 94, 78, 0.15);
+    border: 1px solid rgba(182, 191, 165, 0.3);
+    z-index: 10;
+    animation: gentleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes gentleGlow {
+    0% {
+        box-shadow: 0 2px 8px rgba(107, 94, 78, 0.15);
+    }
+    100% {
+        box-shadow: 0 4px 12px rgba(107, 94, 78, 0.25), 0 0 0 1px rgba(182, 191, 165, 0.4);
     }
 } 

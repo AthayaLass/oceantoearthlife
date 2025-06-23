@@ -34,10 +34,30 @@
     }
     @media (max-width: 768px) {
         .back-to-home {
-            top: 10px;
-            left: 10px;
-            padding: 6px 10px;
-            font-size: 12px;
+            display: none;
+        }
+    }
+    @media (max-width: 600px) {
+        .back-to-home {
+            top: 15px;
+            left: 15px;
+            padding: 5px 8px;
+            font-size: 11px;
+            /* Ensure it doesn't overlap with logo */
+            max-width: calc(50vw - 30px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    @media (max-width: 480px) {
+        .back-to-home {
+            top: 12px;
+            left: 12px;
+            padding: 4px 6px;
+            font-size: 10px;
+            /* Further reduce size on very small screens */
+            max-width: calc(40vw - 24px);
         }
     }
   </style>
@@ -111,8 +131,8 @@
                             <img src="../assets/mindfulness01.jpg" alt="1 zu 1 Coaching">
                         </div>
                         <h4>1:1 Coaching</h4>
-                        <p>Treten Sie in ein ausgewogeneres Leben mit persönlicher Begleitung ein.
-                            Ob Sie neu in der Achtsamkeit sind oder eine bestehende Praxis vertiefen, meine individuellen Coaching-Sitzungen sind um Ihre einzigartigen Ziele und den Rhythmus Ihres Lebens herum gestaltet. Gemeinsam kultivieren wir Präsenz, Widerstandsfähigkeit und Selbstbewusstsein - ein achtsamer Atemzug nach dem anderen.</p>
+                        <p>Betreten Sie ein ausgewogeneres Leben mit persönlicher Begleitung.
+                            Ob Sie neu in der Achtsamkeit sind oder eine bestehende Praxis vertiefen, meine individuellen Coaching-Sitzungen sind auf Ihre einzigartigen Ziele und den Rhythmus Ihres Lebens zugeschnitten. Gemeinsam kultivieren wir Präsenz, Widerstandsfähigkeit und Selbstbewusstsein - einen achtsamen Atemzug nach dem anderen.</p>
                     </div>
                     <div class="service-grid-item">
                         <div class="service-image">
@@ -120,15 +140,15 @@
                         </div>
                         <h4>Retreat</h4>
                         <p>Entfliehen Sie dem Lärm und verbinden Sie sich wieder mit sich selbst.
-                            Schließen Sie sich einem meiner kleinen Achtsamkeits-Retreats in der friedlichen Umgebung von Bern an. Diese Wochenend- oder mehrtägigen Retreats bieten Raum für tiefe Erholung, geführte Meditation, achtsame Bewegung und Zeit in der Natur, damit Sie erfrischt und inspiriert zurückkehren.</p>
+                            Schließen Sie sich einem meiner Achtsamkeits-Retreats in kleinen Gruppen in der friedlichen Umgebung von Bern an. Diese Wochenend- oder mehrtägigen Retreats bieten Raum für tiefe Erholung, geführte Meditation, achtsame Bewegung und Zeit in der Natur, damit Sie erfrischt und inspiriert zurückkehren.</p>
                     </div>
                     <div class="service-grid-item">
                         <div class="service-image">
-                            <img src="../assets/plants_02.jpeg" alt="Achtsamkeit am Arbeitsplatz">
+                            <img src="../assets/plants_02.jpeg" alt="Achtsamkeit bei der Arbeit">
                         </div>
-                        <h4>Achtsamkeit am Arbeitsplatz</h4>
-                        <p>Steigern Sie das Wohlbefinden, die Konzentration und Zusammenarbeit Ihres Teams.
-                            Meine maßgeschneiderten Achtsamkeits-Workshops und Unternehmenssitzungen bringen Klarheit und Ruhe an den Arbeitsplatz. Helfen Sie Ihrem Team, Stress zu reduzieren, Veränderungen zu bewältigen und emotionale Intelligenz zu verbessern, direkt im Herzen Ihrer Organisation.</p>
+                        <h4>Achtsamkeit bei der Arbeit</h4>
+                        <p>Steigern Sie das Wohlbefinden, die Konzentration und die Zusammenarbeit Ihres Teams.
+                            Meine maßgeschneiderten Achtsamkeits-Workshops und Unternehmenssitzungen bringen Klarheit und Ruhe an den Arbeitsplatz. Helfen Sie Ihrem Team, Stress zu reduzieren, Veränderungen zu bewältigen und die emotionale Intelligenz zu verbessern, direkt im Herzen Ihrer Organisation.</p>
                     </div>
                     <div class="service-grid-item">
                         <div class="service-image">
@@ -136,7 +156,7 @@
                         </div>
                         <h4>Yoga und Atemarbeit</h4>
                         <p>Verlangsamen Sie, werden Sie weicher und atmen Sie.
-                            Yoga und Atemarbeit sind mächtige Verbündete auf dem Weg der Achtsamkeit. In diesen Sitzungen kombinieren wir sanfte, bewusste Bewegung mit geführten Atemtechniken, um Ihnen zu helfen, Stress abzubauen, den Geist zu beruhigen und zu Ihrem inneren Zentrum zurückzukehren.</p>
+                            Yoga und Atemarbeit sind mächtige Verbündete auf dem Weg zur Achtsamkeit. In diesen Sitzungen kombinieren wir sanfte, bewusste Bewegung mit geführten Atemtechniken, um Ihnen zu helfen, Stress abzubauen, den Geist zu beruhigen und zu Ihrem inneren Zentrum zurückzukehren.</p>
                     </div>
                     <div class="service-grid-item">
                         <div class="service-image">
@@ -150,9 +170,10 @@
                         <div class="service-image">
                             <img src="../assets/fafa02.jpg" alt="Ayurveda">
                         </div>
+                        <div class="coming-soon-tag">Demnächst Verfügbar</div>
                         <h4>Ayurveda</h4>
                         <p>Entdecken Sie die alte Weisheit der ayurvedischen Heilung.
-                            Bald verfügbar! Erkunden Sie den ganzheitlichen Ansatz zum Wohlbefinden durch Ayurveda, das traditionelle indische Medizinsystem. Lernen Sie Ihre einzigartige Konstitution kennen und wie Sie Geist, Körper und Seele durch natürliche Praktiken und Lebensstilanpassungen ins Gleichgewicht bringen.</p>
+                            Demnächst verfügbar! Erkunden Sie den ganzheitlichen Ansatz zum Wohlbefinden durch Ayurveda, das traditionelle indische Medizinsystem. Lernen Sie Ihre einzigartige Konstitution kennen und wie Sie Geist, Körper und Seele durch natürliche Praktiken und Lebensstilanpassungen ausbalancieren können.</p>
                     </div>
                 </div>
             </div>

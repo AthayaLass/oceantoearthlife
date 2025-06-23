@@ -34,10 +34,30 @@
     }
     @media (max-width: 768px) {
         .back-to-home {
-            top: 10px;
-            left: 10px;
-            padding: 6px 10px;
-            font-size: 12px;
+            display: none;
+        }
+    }
+    @media (max-width: 600px) {
+        .back-to-home {
+            top: 15px;
+            left: 15px;
+            padding: 5px 8px;
+            font-size: 11px;
+            /* Ensure it doesn't overlap with logo */
+            max-width: calc(50vw - 30px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    @media (max-width: 480px) {
+        .back-to-home {
+            top: 12px;
+            left: 12px;
+            padding: 4px 6px;
+            font-size: 10px;
+            /* Further reduce size on very small screens */
+            max-width: calc(40vw - 24px);
         }
     }
   </style>
@@ -112,7 +132,7 @@
                         </div>
                         <h4>Coaching 1:1</h4>
                         <p>Accedi a una vita più equilibrata con una guida personalizzata.
-                            Che tu sia nuovo alla consapevolezza o che stia approfondendo una pratica esistente, le mie sessioni di coaching individuali sono progettate intorno ai tuoi obiettivi unici e al ritmo della tua vita. Insieme, coltiveremo presenza, resilienza e consapevolezza di sé - un respiro consapevole alla volta.</p>
+                            Che tu sia nuovo alla mindfulness o che stia approfondendo una pratica esistente, le mie sessioni di coaching individuali sono progettate intorno ai tuoi obiettivi unici e al ritmo della tua vita. Insieme, coltiveremo presenza, resilienza e consapevolezza di sé - un respiro consapevole alla volta.</p>
                     </div>
                     <div class="service-grid-item">
                         <div class="service-image">
@@ -120,15 +140,15 @@
                         </div>
                         <h4>Ritiro</h4>
                         <p>Fuggi dal rumore e riconnettiti con te stesso.
-                            Unisciti a uno dei miei ritiri di consapevolezza in piccoli gruppi nei tranquilli dintorni di Berna. Questi ritiri di fine settimana o di più giorni offrono spazio per un riposo profondo, meditazione guidata, movimento consapevole e tempo nella natura, così tornerai rinfrescato e ispirato.</p>
+                            Unisciti a uno dei miei ritiri di mindfulness in piccoli gruppi negli ambienti tranquilli di Berna. Questi ritiri di fine settimana o di più giorni offrono spazio per un riposo profondo, sessioni di meditazione guidata, movimento consapevole e tempo nella natura, così torni rinfrescato e ispirato.</p>
                     </div>
                     <div class="service-grid-item">
                         <div class="service-image">
-                            <img src="../assets/plants_02.jpeg" alt="Consapevolezza al Lavoro">
+                            <img src="../assets/plants_02.jpeg" alt="Mindfulness al Lavoro">
                         </div>
-                        <h4>Consapevolezza al Lavoro</h4>
+                        <h4>Mindfulness al Lavoro</h4>
                         <p>Migliora il benessere, la concentrazione e la collaborazione del tuo team.
-                            I miei workshop di consapevolezza personalizzati e le sessioni aziendali portano chiarezza e calma sul posto di lavoro. Aiuta il tuo team a ridurre lo stress, gestire il cambiamento e migliorare l'intelligenza emotiva, direttamente nel cuore della tua organizzazione.</p>
+                            I miei workshop di mindfulness personalizzati e le sessioni aziendali portano chiarezza e calma sul posto di lavoro. Aiuta il tuo team a ridurre lo stress, gestire il cambiamento e migliorare l'intelligenza emotiva, direttamente nel cuore della tua organizzazione.</p>
                     </div>
                     <div class="service-grid-item">
                         <div class="service-image">
@@ -136,20 +156,21 @@
                         </div>
                         <h4>Yoga e Respirazione</h4>
                         <p>Rallenta, ammorbidisci e respira.
-                            Lo yoga e la respirazione sono potenti alleati sul percorso della consapevolezza. In queste sessioni, combiniamo movimento consapevole e gentile con tecniche di respirazione guidate per aiutarti a rilasciare lo stress, calmare la mente e tornare al tuo centro interiore.</p>
+                            Lo yoga e la respirazione sono potenti alleati sul percorso della mindfulness. In queste sessioni, combiniamo movimento consapevole e gentile con tecniche di respirazione guidate per aiutarti a rilasciare lo stress, calmare la mente e tornare al tuo centro interiore.</p>
                     </div>
                     <div class="service-grid-item">
                         <div class="service-image">
-                            <img src="../assets/fish02.JPG" alt="Consapevolezza Sottomarina">
+                            <img src="../assets/fish02.JPG" alt="Mindfulness Subacquea">
                         </div>
-                        <h4>Consapevolezza Sottomarina</h4>
-                        <p>Sperimenta la consapevolezza in un ambiente sottomarino unico.
-                            Connettiti con il sereno mondo sottomarino mentre pratichi tecniche di consapevolezza. Questo approccio innovativo combina gli effetti calmanti dell'acqua con le pratiche tradizionali di consapevolezza, creando un'esperienza veramente immersiva e trasformativa. <strong>In collaborazione con <a href="athelas-diving.html" style="color: var(--main); text-decoration: underline;">Athelas Diving</a>.</strong></p>
+                        <h4>Mindfulness Subacquea</h4>
+                        <p>Sperimenta la mindfulness in un ambiente subacqueo unico.
+                            Connettiti con il sereno mondo subacqueo mentre pratichi tecniche di mindfulness. Questo approccio innovativo combina gli effetti calmanti dell'acqua con le pratiche tradizionali di mindfulness, creando un'esperienza veramente immersiva e trasformativa. <strong>In collaborazione con <a href="athelas-diving.html" style="color: var(--main); text-decoration: underline;">Athelas Diving</a>.</strong></p>
                     </div>
                     <div class="service-grid-item">
                         <div class="service-image">
                             <img src="../assets/fafa02.jpg" alt="Ayurveda">
                         </div>
+                        <div class="coming-soon-tag">Prossimamente</div>
                         <h4>Ayurveda</h4>
                         <p>Scopri l'antica saggezza della guarigione ayurvedica.
                             Prossimamente! Esplora l'approccio olistico al benessere attraverso l'Ayurveda, il sistema tradizionale indiano di medicina. Impara la tua costituzione unica e come bilanciare mente, corpo e spirito attraverso pratiche naturali e aggiustamenti dello stile di vita.</p>

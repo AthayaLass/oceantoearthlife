@@ -34,10 +34,30 @@
         }
         @media (max-width: 768px) {
             .back-to-home {
-                top: 10px;
-                left: 10px;
-                padding: 6px 10px;
-                font-size: 12px;
+                display: none;
+            }
+        }
+        @media (max-width: 600px) {
+            .back-to-home {
+                top: 15px;
+                left: 15px;
+                padding: 5px 8px;
+                font-size: 11px;
+                /* Ensure it doesn't overlap with logo */
+                max-width: calc(50vw - 30px);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        @media (max-width: 480px) {
+            .back-to-home {
+                top: 12px;
+                left: 12px;
+                padding: 4px 6px;
+                font-size: 10px;
+                /* Further reduce size on very small screens */
+                max-width: calc(40vw - 24px);
             }
         }
     </style>
@@ -106,7 +126,6 @@
             </div>
             <div class="modal-body">
                 <div class="services-grid">
-
                     <div class="service-grid-item">
                         <div class="service-image">
                             <img src="../assets/mindfulness01.jpg" alt="1 to 1 Coaching">
@@ -151,6 +170,7 @@
                         <div class="service-image">
                             <img src="../assets/fafa04 - Copy.jpg" alt="Ayurveda">
                         </div>
+                        <div class="coming-soon-tag">Coming Soon</div>
                         <h4>Ayurveda</h4>
                         <p>Discover the ancient wisdom of Ayurvedic healing.
                             Coming soon! Explore the holistic approach to wellness through Ayurveda, the traditional Indian system of medicine. Learn about your unique constitution and how to balance mind, body, and spirit through natural practices and lifestyle adjustments.</p>
