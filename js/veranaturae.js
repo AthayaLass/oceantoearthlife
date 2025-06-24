@@ -77,6 +77,30 @@ function closeServicesModal() {
     document.body.style.overflow = ''; // Restore scrolling
 }
 
+// Flip card function for services
+function flipCard(card) {
+    // Prevent rapid clicking that could cause lag
+    if (card.classList.contains('flipping')) {
+        return;
+    }
+    
+    // Flip back any other flipped cards first
+    const allCards = document.querySelectorAll('.flip-card');
+    allCards.forEach(otherCard => {
+        if (otherCard !== card && otherCard.classList.contains('flipped')) {
+            otherCard.classList.remove('flipped');
+        }
+    });
+    
+    card.classList.add('flipping');
+    card.classList.toggle('flipped');
+    
+    // Remove flipping class after animation completes
+    setTimeout(() => {
+        card.classList.remove('flipping');
+    }, 400);
+}
+
 // Close modal when clicking outside
 document.addEventListener('click', function(event) {
     const modal = document.getElementById('servicesModal');

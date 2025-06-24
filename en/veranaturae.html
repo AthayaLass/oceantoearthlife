@@ -18,49 +18,6 @@
 
       gtag('config', 'G-V531WTX9CR');
     </script>
-    <style>
-        .back-to-home {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            color: #fff;
-            background: rgba(0,0,0,0.7);
-            padding: 8px 12px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 14px;
-            z-index: 1000;
-            font-weight: 500;
-        }
-        @media (max-width: 768px) {
-            .back-to-home {
-                display: none;
-            }
-        }
-        @media (max-width: 600px) {
-            .back-to-home {
-                top: 15px;
-                left: 15px;
-                padding: 5px 8px;
-                font-size: 11px;
-                /* Ensure it doesn't overlap with logo */
-                max-width: calc(50vw - 30px);
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-        }
-        @media (max-width: 480px) {
-            .back-to-home {
-                top: 12px;
-                left: 12px;
-                padding: 4px 6px;
-                font-size: 10px;
-                /* Further reduce size on very small screens */
-                max-width: calc(40vw - 24px);
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -125,55 +82,156 @@
                 </button>
             </div>
             <div class="modal-body">
+                <div class="services-info">
+                    <div class="info-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Every session is personalized according to the requirements of the individual or group!</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Session language: available in French, Italian and English.</span>
+                    </div>
+                </div>
                 <div class="services-grid">
                     <div class="service-grid-item">
-                        <div class="service-image">
-                            <img src="../assets/mindfulness01.jpg" alt="1 to 1 Coaching">
+                        <div class="flip-card" onclick="flipCard(this)">
+                            <div class="flip-card-front">
+                                <div class="service-image">
+                                    <img src="../assets/mindfulness01.jpg" alt="1 to 1 Coaching">
+                                    <div class="click-indicator">💡 Click</div>
+                                </div>
+                                <h4 class="service-title">1:1 Coaching</h4>
+                            </div>
+                            <div class="flip-card-back coaching">
+                                <div class="price-content">
+                                    <h4>1:1 Coaching</h4>
+                                    <ul class="price-list">
+                                        <li>Individual mindfulness session (1h): CHF 70</li>
+                                        <li>4 sessions (1h each): CHF 280</li>
+                                        <li>8 sessions (1h each): CHF 480</li>
+                                    </ul>
+                                    <div class="price-note">Includes 30 min discovery + follow-up session</div>
+                                </div>
+                                <div class="flip-back-hint">Click to flip back</div>
+                            </div>
                         </div>
-                        <h4>1:1 Coaching</h4>
                         <p>Step into a more balanced life with personal guidance.
                             Whether you're new to mindfulness or deepening an existing practice, my individual coaching sessions are designed around your unique goals and life rhythm. Together, we'll cultivate presence, resilience, and self-awareness - one mindful breath at a time.</p>
                     </div>
                     <div class="service-grid-item">
-                        <div class="service-image">
-                            <img src="../assets/nature02.jpg" alt="Retreat">
+                        <div class="flip-card" onclick="flipCard(this)">
+                            <div class="flip-card-front">
+                                <div class="service-image">
+                                    <img src="../assets/nature02.jpg" alt="Retreat">
+                                    <div class="click-indicator">💡 Click</div>
+                                </div>
+                                <h4 class="service-title">Retreat</h4>
+                            </div>
+                            <div class="flip-card-back retreat">
+                                <div class="price-content">
+                                    <h4>Retreat</h4>
+                                    <ul class="price-list">
+                                        <li>CHF 250 per person (2 people)</li>
+                                        <li>CHF 300 per person (1 person)</li>
+                                    </ul>
+                                    <div class="price-includes">Included: vegetarian meals, room, guided sessions</div>
+                                    <div class="price-excludes">Not included: travel to and from Schwarzenburg</div>
+                                </div>
+                                <div class="flip-back-hint">Click to flip back</div>
+                            </div>
                         </div>
-                        <h4>Retreat</h4>
                         <p>Escape the noise and reconnect with yourself.
                             Join one of my small-group mindfulness retreats in the tranquil surroundings of Bern. These weekend or multi-day retreats offer space for deep rest, guided meditation, mindful movement, and time in nature, so you return refreshed and inspired.</p>
                     </div>
                     <div class="service-grid-item">
-                        <div class="service-image">
-                            <img src="../assets/plants_02.jpeg" alt="Mindfulness at Work">
+                        <div class="flip-card" onclick="flipCard(this)">
+                            <div class="flip-card-front">
+                                <div class="service-image">
+                                    <img src="../assets/plants_02.jpeg" alt="Mindfulness at Work">
+                                    <div class="click-indicator">💡 Click</div>
+                                </div>
+                                <h4 class="service-title">Mindfulness at Work</h4>
+                            </div>
+                            <div class="flip-card-back work">
+                                <div class="price-content">
+                                    <h4>Mindfulness at Work</h4>
+                                    <ul class="price-list">
+                                        <li>2h workshop (max. 15 people)*: CHF 400</li>
+                                        <li>8 sessions of 1h (max. 10 people)*: CHF 2,500</li>
+                                    </ul>
+                                    <div class="price-disclaimer">*Price may vary based on location & materials</div>
+                                </div>
+                                <div class="flip-back-hint">Click to flip back</div>
+                            </div>
                         </div>
-                        <h4>Mindfulness at Work</h4>
                         <p>Boost your team's well-being, focus, and collaboration.
                             My tailored mindfulness workshops and corporate sessions bring clarity and calm into the workplace. Help your team reduce stress, manage change, and enhance emotional intelligence, right at the heart of your organization.</p>
                     </div>
                     <div class="service-grid-item">
-                        <div class="service-image">
-                            <img src="../assets/creuxDuVan_03.jpg" alt="Yoga and Breathwork">
+                        <div class="flip-card" onclick="flipCard(this)">
+                            <div class="flip-card-front">
+                                <div class="service-image">
+                                    <img src="../assets/creuxDuVan_03.jpg" alt="Yoga and Breathwork">
+                                    <div class="click-indicator">💡 Click</div>
+                                </div>
+                                <h4 class="service-title">Yoga and Breathwork</h4>
+                            </div>
+                            <div class="flip-card-back yoga">
+                                <div class="price-content">
+                                    <h4>Yoga and Breathwork</h4>
+                                    <ul class="price-list">
+                                        <li>Private session (1h): CHF 40</li>
+                                        <li>Group session of 1h (max. 10 people): CHF 25/person</li>
+                                    </ul>
+                                </div>
+                                <div class="flip-back-hint">Click to flip back</div>
+                            </div>
                         </div>
-                        <h4>Yoga and Breathwork</h4>
                         <p>Slow down, soften, and breathe.
                             Yoga and breathwork are powerful allies on the path to mindfulness. In these sessions, we combine gentle, conscious movement with guided breathing techniques to help you release stress, calm the mind, and return to your inner center.</p>
                     </div>
                     <div class="service-grid-item">
-                        <div class="service-image">
-                            <img src="../assets/fish02.JPG" alt="Underwater Mindfulness">
+                        <div class="flip-card" onclick="flipCard(this)">
+                            <div class="flip-card-front">
+                                <div class="service-image">
+                                    <img src="../assets/fish02.JPG" alt="Underwater Mindfulness">
+                                    <div class="click-indicator">💡 Click</div>
+                                </div>
+                                <h4 class="service-title">Underwater Mindfulness</h4>
+                            </div>
+                            <div class="flip-card-back underwater">
+                                <div class="price-content">
+                                    <h4>Underwater Mindfulness</h4>
+                                    <div class="price-amount">Contact for Pricing</div>
+                                    <div class="price-description">Collaborative service with <i>Athelas Diving</i></div>
+                                </div>
+                                <div class="flip-back-hint">Click to flip back</div>
+                            </div>
                         </div>
-                        <h4>Underwater Mindfulness</h4>
                         <p>Experience mindfulness in a unique underwater environment.
                             Connect with the serene underwater world while practicing mindfulness techniques. This innovative approach combines the calming effects of water with traditional mindfulness practices, creating a truly immersive and transformative experience. <strong>In collaboration with <a href="athelas-diving.html" style="color: var(--main); text-decoration: underline;">Athelas Diving</a>.</strong></p>
                     </div>
                     <div class="service-grid-item">
-                        <div class="service-image">
-                            <img src="../assets/fafa04 - Copy.jpg" alt="Ayurveda">
+                        <div class="flip-card" onclick="flipCard(this)">
+                            <div class="flip-card-front">
+                                <div class="service-image">
+                                    <img src="../assets/fafa04 - Copy.jpg" alt="Ayurveda">
+                                    <div class="click-indicator">💡 Click</div>
+                                </div>
+                                <h4 class="service-title">Ayurveda</h4>
+                            </div>
+                            <div class="flip-card-back ayurveda">
+                                <div class="price-content">
+                                    <h4>Ayurveda</h4>
+                                    <div class="price-amount">Coming Soon</div>
+                                    <div class="price-description">Pricing will be announced when services launch</div>
+                                </div>
+                                <div class="flip-back-hint">Click to flip back</div>
+                            </div>
                         </div>
-                        <div class="coming-soon-tag">Coming Soon</div>
-                        <h4>Ayurveda</h4>
                         <p>Discover the ancient wisdom of Ayurvedic healing.
                             Coming soon! Explore the holistic approach to wellness through Ayurveda, the traditional Indian system of medicine. Learn about your unique constitution and how to balance mind, body, and spirit through natural practices and lifestyle adjustments.</p>
+                        <div class="coming-soon-tag">Coming Soon</div>
                     </div>
                 </div>
             </div>

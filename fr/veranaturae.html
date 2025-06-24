@@ -125,55 +125,156 @@
                 </button>
             </div>
             <div class="modal-body">
+                <div class="services-info">
+                    <div class="info-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Chaque séance est personnalisée selon les exigences de l'individu ou du groupe !</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Langue des séances : disponible en français, italien et anglais.</span>
+                    </div>
+                </div>
                 <div class="services-grid">
                     <div class="service-grid-item">
-                        <div class="service-image">
-                            <img src="../assets/mindfulness01.jpg" alt="Coaching 1 à 1">
+                        <div class="flip-card" onclick="flipCard(this)">
+                            <div class="flip-card-front">
+                                <div class="service-image">
+                                    <img src="../assets/mindfulness01.jpg" alt="Coaching 1 à 1">
+                                    <div class="click-indicator">💡 Cliquer</div>
+                                </div>
+                                <h4 class="service-title">Coaching 1:1</h4>
+                            </div>
+                            <div class="flip-card-back coaching">
+                                <div class="price-content">
+                                    <h4>Coaching 1:1</h4>
+                                    <ul class="price-list">
+                                        <li>Séance mindfulness individuelle (1h) : CHF 70</li>
+                                        <li>Parcours de 4 séances de 1h : CHF 280</li>
+                                        <li>Parcours de 8 séances de 1h : CHF 480</li>
+                                    </ul>
+                                    <div class="price-note">Inclus séance de connaissance 30 min + séance follow-up 30 min gratuites</div>
+                                </div>
+                                <div class="flip-back-hint">Cliquer pour retourner</div>
+                            </div>
                         </div>
-                        <h4>Coaching 1:1</h4>
                         <p>Accédez à une vie plus équilibrée avec un accompagnement personnalisé.
                             Que vous soyez nouveau dans la pleine conscience ou que vous approfondissiez une pratique existante, mes sessions de coaching individuelles sont conçues autour de vos objectifs uniques et du rythme de votre vie. Ensemble, nous cultiverons la présence, la résilience et la conscience de soi - une respiration consciente à la fois.</p>
                     </div>
                     <div class="service-grid-item">
-                        <div class="service-image">
-                            <img src="../assets/nature02.jpg" alt="Retraite">
+                        <div class="flip-card" onclick="flipCard(this)">
+                            <div class="flip-card-front">
+                                <div class="service-image">
+                                    <img src="../assets/nature02.jpg" alt="Retraite">
+                                    <div class="click-indicator">💡 Cliquer</div>
+                                </div>
+                                <h4 class="service-title">Retraite</h4>
+                            </div>
+                            <div class="flip-card-back retreat">
+                                <div class="price-content">
+                                    <h4>Retraite</h4>
+                                    <ul class="price-list">
+                                        <li>CHF 250 par personne (2 personnes)</li>
+                                        <li>CHF 300 par personne (1 personne)</li>
+                                    </ul>
+                                    <div class="price-includes">Inclus : repas végétariens, chambre, heures de mindfulness et yoga guidées</div>
+                                    <div class="price-excludes">Non inclus : voyage aller-retour de Schwarzenburg</div>
+                                </div>
+                                <div class="flip-back-hint">Cliquer pour retourner</div>
+                            </div>
                         </div>
-                        <h4>Retraite</h4>
                         <p>Échappez au bruit et reconnectez-vous avec vous-même.
                             Rejoignez l'une de mes retraites de pleine conscience en petit groupe dans les environs paisibles de Berne. Ces retraites de week-end ou de plusieurs jours offrent un espace pour un repos profond, la méditation guidée, le mouvement conscient et du temps dans la nature, afin que vous reveniez rafraîchi et inspiré.</p>
                     </div>
                     <div class="service-grid-item">
-                        <div class="service-image">
-                            <img src="../assets/plants_02.jpeg" alt="Pleine Conscience au Travail">
+                        <div class="flip-card" onclick="flipCard(this)">
+                            <div class="flip-card-front">
+                                <div class="service-image">
+                                    <img src="../assets/plants_02.jpeg" alt="Pleine Conscience au Travail">
+                                    <div class="click-indicator">💡 Cliquer</div>
+                                </div>
+                                <h4 class="service-title">Pleine Conscience au Travail</h4>
+                            </div>
+                            <div class="flip-card-back work">
+                                <div class="price-content">
+                                    <h4>Pleine Conscience au Travail</h4>
+                                    <ul class="price-list">
+                                        <li>Workshop de 2h pour entreprise (max. 15 personnes)* : CHF 400</li>
+                                        <li>Parcours de 8 séances de 1h pour entreprises (max. 10 personnes)* : CHF 2,500</li>
+                                    </ul>
+                                    <div class="price-disclaimer">*Prix susceptible de varier selon l'emplacement et le matériel requis</div>
+                                </div>
+                                <div class="flip-back-hint">Cliquer pour retourner</div>
+                            </div>
                         </div>
-                        <h4>Pleine Conscience au Travail</h4>
                         <p>Améliorez le bien-être, la concentration et la collaboration de votre équipe.
                             Mes ateliers de pleine conscience personnalisés et mes sessions d'entreprise apportent clarté et calme sur le lieu de travail. Aidez votre équipe à réduire le stress, gérer le changement et améliorer l'intelligence émotionnelle, directement au cœur de votre organisation.</p>
                     </div>
                     <div class="service-grid-item">
-                        <div class="service-image">
-                            <img src="../assets/creuxDuVan_03.jpg" alt="Yoga et Respiration">
+                        <div class="flip-card" onclick="flipCard(this)">
+                            <div class="flip-card-front">
+                                <div class="service-image">
+                                    <img src="../assets/creuxDuVan_03.jpg" alt="Yoga et Respiration">
+                                    <div class="click-indicator">💡 Cliquer</div>
+                                </div>
+                                <h4 class="service-title">Yoga et Respiration</h4>
+                            </div>
+                            <div class="flip-card-back yoga">
+                                <div class="price-content">
+                                    <h4>Yoga et Respiration</h4>
+                                    <ul class="price-list">
+                                        <li>Séance de yoga privée de 1h : CHF 40</li>
+                                        <li>Séance de yoga de 1h pour groupes : CHF 25/personne</li>
+                                    </ul>
+                                </div>
+                                <div class="flip-back-hint">Cliquer pour retourner</div>
+                            </div>
                         </div>
-                        <h4>Yoga et Respiration</h4>
                         <p>Ralentissez, adoucissez et respirez.
                             Le yoga et la respiration sont de puissants alliés sur le chemin de la pleine conscience. Dans ces sessions, nous combinons un mouvement conscient et doux avec des techniques de respiration guidées pour vous aider à libérer le stress, calmer l'esprit et revenir à votre centre intérieur.</p>
                     </div>
                     <div class="service-grid-item">
-                        <div class="service-image">
-                            <img src="../assets/fish02.JPG" alt="Pleine Conscience Sous-Marine">
+                        <div class="flip-card" onclick="flipCard(this)">
+                            <div class="flip-card-front">
+                                <div class="service-image">
+                                    <img src="../assets/fish02.JPG" alt="Pleine Conscience Sous-Marine">
+                                    <div class="click-indicator">💡 Cliquer</div>
+                                </div>
+                                <h4 class="service-title">Pleine Conscience Sous-Marine</h4>
+                            </div>
+                            <div class="flip-card-back underwater">
+                                <div class="price-content">
+                                    <h4>Pleine Conscience Sous-Marine</h4>
+                                    <div class="price-amount">Prix sur demande</div>
+                                    <div class="price-description">Service en collaboration avec <i>Athelas Diving</i></div>
+                                </div>
+                                <div class="flip-back-hint">Cliquer pour retourner</div>
+                            </div>
                         </div>
-                        <h4>Pleine Conscience Sous-Marine</h4>
                         <p>Expérimentez la pleine conscience dans un environnement sous-marin unique.
                             Connectez-vous avec le monde sous-marin serein tout en pratiquant des techniques de pleine conscience. Cette approche innovante combine les effets apaisants de l'eau avec les pratiques traditionnelles de pleine conscience, créant une expérience véritablement immersive et transformative. <strong>En collaboration avec <a href="athelas-diving.html" style="color: var(--main); text-decoration: underline;">Athelas Diving</a>.</strong></p>
                     </div>
                     <div class="service-grid-item">
-                        <div class="service-image">
-                            <img src="../assets/fafa02.jpg" alt="Ayurveda">
+                        <div class="flip-card" onclick="flipCard(this)">
+                            <div class="flip-card-front">
+                                <div class="service-image">
+                                    <img src="../assets/fafa04 - Copy.jpg" alt="Ayurveda">
+                                    <div class="click-indicator">💡 Cliquer</div>
+                                </div>
+                                <h4 class="service-title">Ayurveda</h4>
+                            </div>
+                            <div class="flip-card-back ayurveda">
+                                <div class="price-content">
+                                    <h4>Ayurveda</h4>
+                                    <div class="price-amount">Bientôt Disponible</div>
+                                    <div class="price-description">Les prix seront annoncés lors du lancement des services</div>
+                                </div>
+                                <div class="flip-back-hint">Cliquer pour retourner</div>
+                            </div>
                         </div>
-                        <div class="coming-soon-tag">Bientôt Disponible</div>
-                        <h4>Ayurveda</h4>
                         <p>Découvrez la sagesse ancienne de la guérison ayurvédique.
                             Bientôt disponible ! Explorez l'approche holistique du bien-être à travers l'Ayurveda, le système traditionnel indien de médecine. Apprenez votre constitution unique et comment équilibrer l'esprit, le corps et l'âme grâce à des pratiques naturelles et des ajustements de mode de vie.</p>
+                        <div class="coming-soon-tag">Bientôt Disponible</div>
                     </div>
                 </div>
             </div>
