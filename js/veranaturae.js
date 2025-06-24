@@ -148,41 +148,18 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Initialize when DOM is loaded
+// Add touch event support for mobile flip cards
 document.addEventListener('DOMContentLoaded', function() {
     // Run language detection
     detectAndRedirectLanguage();
     
-    // Add touch event support for flip cards on mobile
+    // Add click event support for flip cards (works on both desktop and mobile)
     const flipCards = document.querySelectorAll('.flip-card');
     flipCards.forEach(card => {
-        let touchStartTime = 0;
-        let touchEndTime = 0;
-        
-        // Handle touch start
-        card.addEventListener('touchstart', function(e) {
-            touchStartTime = new Date().getTime();
-        }, { passive: true });
-        
-        // Handle touch end
-        card.addEventListener('touchend', function(e) {
-            touchEndTime = new Date().getTime();
-            const touchDuration = touchEndTime - touchStartTime;
-            
-            // Only trigger flip if it's a quick tap (less than 300ms)
-            if (touchDuration < 300) {
-                e.preventDefault();
-                flipCard(this);
-            }
-        }, { passive: false });
-        
-        // Ensure click events work properly on desktop
         card.addEventListener('click', function(e) {
-            // Only handle click if it's not a touch device
-            if (!('ontouchstart' in window)) {
-                e.preventDefault();
-                flipCard(this);
-            }
+            e.preventDefault();
+            e.stopPropagation();
+            flipCard(this);
         });
     });
     
