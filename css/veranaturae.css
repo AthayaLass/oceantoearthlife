@@ -1030,6 +1030,9 @@ footer {
 
 .flip-card-front {
     background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .flip-card-back {
@@ -1101,8 +1104,8 @@ footer {
 }
 
 .service-title {
-    padding: 15px;
-    margin: 0 0 15px 0;
+    padding: 0;
+    margin: 0;
     font-size: 18px;
     font-weight: 600;
     color: #333;
@@ -1119,7 +1122,7 @@ footer {
 .service-title::after {
     content: "💡 Click for pricing";
     position: absolute;
-    bottom: -20px;
+    bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 11px;
@@ -1262,7 +1265,11 @@ footer {
 @media (max-width: 768px) {
     .flip-card {
         height: auto;
-        min-height: 300px;
+        min-height: 320px;
+    }
+    
+    .flip-card-front {
+        min-height: 320px;
     }
     
     .flip-card-back {
@@ -1297,7 +1304,11 @@ footer {
 
 @media (max-width: 600px) {
     .flip-card {
-        min-height: 280px;
+        min-height: 300px;
+    }
+    
+    .flip-card-front {
+        min-height: 300px;
     }
     
     .flip-card-back {
