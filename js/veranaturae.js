@@ -153,6 +153,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Run language detection
     detectAndRedirectLanguage();
     
+    // Add touch event support for flip cards on mobile
+    const flipCards = document.querySelectorAll('.flip-card');
+    flipCards.forEach(card => {
+        // Add touch event listeners for mobile
+        card.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            flipCard(this);
+        }, { passive: false });
+        
+        // Ensure click events work properly on mobile
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            flipCard(this);
+        });
+    });
+    
     // Add scroll effect to floating services
     const floatingServices = document.querySelector('.floating-services');
     let isScrolling = false;

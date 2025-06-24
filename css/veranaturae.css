@@ -1101,13 +1101,19 @@ footer {
 }
 
 .service-title {
-    padding: 0px 15px 15px 15px;
-    margin: 0;
+    padding: 15px;
+    margin: 0 0 15px 0;
     font-size: 18px;
     font-weight: 600;
     color: #333;
     text-align: center;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .service-title::after {
@@ -1177,6 +1183,7 @@ footer {
     line-height: 1.3;
     opacity: 0.7;
     margin-top: 8px;
+    margin-bottom: 25px;
     font-style: italic;
 }
 
@@ -1211,6 +1218,7 @@ footer {
     transform: translateX(-50%);
     font-size: 11px;
     opacity: 0.8;
+    z-index: 5;
 }
 
 .services-info {
@@ -1248,4 +1256,83 @@ footer {
 .info-item span {
     font-weight: 500;
     line-height: 1.4;
+}
+
+/* Mobile-specific fixes for flip cards */
+@media (max-width: 768px) {
+    .flip-card {
+        height: auto;
+        min-height: 300px;
+    }
+    
+    .flip-card-back {
+        padding: 15px;
+        justify-content: flex-start;
+        overflow-y: auto;
+    }
+    
+    .price-content {
+        margin-bottom: 30px;
+    }
+    
+    .price-disclaimer {
+        margin-bottom: 30px;
+    }
+    
+    .flip-back-hint {
+        bottom: 5px;
+        font-size: 10px;
+    }
+    
+    .service-title {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    
+    .service-title::after {
+        font-size: 10px;
+        bottom: -18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .flip-card {
+        min-height: 280px;
+    }
+    
+    .flip-card-back {
+        padding: 12px;
+    }
+    
+    .price-content h4 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .price-amount {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+    
+    .price-list li {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    
+    .price-description {
+        font-size: 13px;
+    }
+    
+    .price-disclaimer {
+        font-size: 10px;
+        margin-bottom: 25px;
+    }
+    
+    .price-note {
+        font-size: 11px;
+    }
+    
+    .service-title {
+        font-size: 15px;
+    }
 } 
