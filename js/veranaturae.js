@@ -69,6 +69,11 @@ function openServicesModal() {
     const modal = document.getElementById('servicesModal');
     modal.classList.add('active');
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    
+    // Add event listeners to flip cards after modal is opened
+    setTimeout(() => {
+        addFlipCardListeners();
+    }, 100);
 }
 
 function closeServicesModal() {
@@ -77,10 +82,37 @@ function closeServicesModal() {
     document.body.style.overflow = ''; // Restore scrolling
 }
 
+// Function to add flip card event listeners
+function addFlipCardListeners() {
+    const flipCards = document.querySelectorAll('.flip-card');
+    console.log('Found flip cards:', flipCards.length); // Debug log
+    
+    flipCards.forEach((card, index) => {
+        // Remove any existing listeners to prevent duplicates
+        card.removeEventListener('click', handleFlipCardClick);
+        
+        // Add new click listener
+        card.addEventListener('click', handleFlipCardClick);
+        
+        console.log(`Added listener to card ${index + 1}`); // Debug log
+    });
+}
+
+// Separate function to handle flip card clicks
+function handleFlipCardClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Card clicked!'); // Debug log
+    flipCard(this);
+}
+
 // Flip card function for services
 function flipCard(card) {
+    console.log('flipCard function called'); // Debug log
+    
     // Prevent rapid clicking that could cause lag
     if (card.classList.contains('flipping')) {
+        console.log('Card is already flipping, ignoring click');
         return;
     }
     
@@ -94,6 +126,8 @@ function flipCard(card) {
     
     card.classList.add('flipping');
     card.classList.toggle('flipped');
+    
+    console.log('Card flipped, flipped class:', card.classList.contains('flipped')); // Debug log
     
     // Remove flipping class after animation completes
     setTimeout(() => {
@@ -148,20 +182,10 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Add touch event support for mobile flip cards
+// Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Run language detection
     detectAndRedirectLanguage();
-    
-    // Add click event support for flip cards (works on both desktop and mobile)
-    const flipCards = document.querySelectorAll('.flip-card');
-    flipCards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            flipCard(this);
-        });
-    });
     
     // Add scroll effect to floating services
     const floatingServices = document.querySelector('.floating-services');
