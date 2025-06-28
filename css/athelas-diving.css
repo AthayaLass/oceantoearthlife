@@ -258,15 +258,242 @@ body.menu-open {
 }
 
 .subtitle {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     color: var(--white);
-    opacity: 0.95;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 300;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 4px rgba(2, 20, 21.6, 0.8);
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 400;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+    animation: fadeInUp 1s ease 0.5s both;
+}
+
+/* Name Explanation Section */
+.name-explanation {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, rgba(2, 20, 21.6, 0.05) 0%, rgba(3, 30, 32, 0.05) 50%, rgba(4, 40, 43, 0.05) 100%);
     position: relative;
-    z-index: 2;
+    overflow: hidden;
+}
+
+.name-explanation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 20%, rgba(2, 20, 21.6, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(3, 30, 32, 0.03) 0%, transparent 50%);
+    z-index: -1;
+}
+
+.explanation-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.explanation-content h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: var(--main);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+.explanation-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--main), var(--accent));
+    border-radius: 2px;
+}
+
+.explanation-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.explanation-text em {
+    color: var(--main);
+    font-style: italic;
+    font-weight: 600;
+}
+
+.explanation-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Better grid layout for larger screens */
+@media (min-width: 1200px) {
+    .explanation-points {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1100px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .explanation-points {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+    }
+    
+    /* Center the third card when there are only 2 columns */
+    .explanation-points .point:nth-child(3) {
+        grid-column: 1 / -1;
+        max-width: 400px;
+        justify-self: center;
+    }
+}
+
+.point {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(2, 20, 21.6, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(2, 20, 21.6, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.point::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--main), var(--accent), var(--highlight));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.point:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(2, 20, 21.6, 0.15);
+    border-color: rgba(2, 20, 21.6, 0.2);
+}
+
+.point:hover::before {
+    transform: scaleX(1);
+}
+
+.point h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    color: var(--main);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.point h3 i {
+    font-size: 1.2rem;
+    color: var(--accent);
+    transition: all 0.3s ease;
+}
+
+.point:hover h3 i {
+    transform: scale(1.1);
+    color: var(--highlight);
+}
+
+.point p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 0;
+    text-align: justify;
+}
+
+.explanation-closing {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text);
+    text-align: justify;
+    font-style: italic;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    border-left: 4px solid var(--accent);
+}
+
+/* Responsive design for name explanation */
+@media (max-width: 768px) {
+    .name-explanation {
+        padding: 3rem 0;
+    }
+    
+    .explanation-content h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .explanation-text p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .explanation-points {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .point {
+        padding: 1.5rem;
+    }
+    
+    .point h3 {
+        font-size: 1.2rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .point p {
+        text-align: center;
+    }
+    
+    .explanation-closing {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .explanation-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .point {
+        padding: 1rem;
+    }
+    
+    .point h3 {
+        font-size: 1.1rem;
+    }
 }
 
 /* Services section */
@@ -303,18 +530,18 @@ body.menu-open {
     margin: 0 auto;
 }
 
+/* Service Cards - Simplified for Modal System */
 .service-card {
-    background: var(--white);
-    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(2, 20, 21.6, 0.1);
-    transition: all 0.5s ease;
+    padding: 0;
+    box-shadow: 0 10px 30px rgba(2, 20, 21.6, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(2, 20, 21.6, 0.1);
     position: relative;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
 }
 
 .service-card::before {
@@ -322,89 +549,409 @@ body.menu-open {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--main), var(--accent));
-    transform: scaleX(0);
-    transition: transform 0.5s ease;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(2, 20, 21.6, 0.05) 0%, rgba(3, 30, 32, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
 }
 
 .service-card:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 8px 30px rgba(2, 20, 21.6, 0.15);
+    box-shadow: 0 20px 50px rgba(2, 20, 21.6, 0.2);
+    border-color: rgba(2, 20, 21.6, 0.3);
 }
 
 .service-card:hover::before {
-    transform: scaleX(1);
+    opacity: 1;
 }
 
-.service-card h3 {
-    color: var(--text);
-    margin: 1.5rem 0 1rem 0;
-    font-family: 'Cinzel', serif;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-}
-
-.service-teaser {
-    color: var(--text);
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    flex-grow: 1;
-}
-
-.partner-link {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border-bottom: 1px solid transparent;
-}
-
-.partner-link:hover {
-    color: var(--main);
-    border-bottom-color: var(--main);
-}
-
-.service-status {
-    margin-top: auto;
-}
-
-.coming-soon {
-    background: linear-gradient(45deg, var(--accent), var(--highlight));
-    color: var(--white);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    display: inline-block;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
-}
-
-/* Service image styles */
 .service-image {
-    border-radius: 12px;
-    overflow: hidden;
     position: relative;
-    box-shadow: 0 4px 15px rgba(2, 20, 21.6, 0.1);
-    order: -1;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
 }
 
 .service-img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .service-card:hover .service-img {
     transform: scale(1.1);
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(2, 20, 21.6, 0.7) 0%, rgba(3, 30, 32, 0.7) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-overlay {
+    opacity: 1;
+}
+
+.expand-icon {
+    color: var(--white);
+    font-size: 2.5rem;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .expand-icon {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.service-content {
+    padding: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.service-content h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    color: var(--main);
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.service-teaser {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text);
+    text-align: center;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.service-status {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.coming-soon {
+    background: linear-gradient(135deg, var(--accent), var(--highlight));
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    animation: pulse 2s infinite;
+    display: inline-block;
+}
+
+/* Service Modal Styles */
+.service-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.service-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 20, 21.6, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 245, 245, 0.95) 100%);
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(2, 20, 21.6, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.service-modal.active .modal-content {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: rgba(2, 20, 21.6, 0.8);
+    color: var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: var(--main);
+    transform: scale(1.1);
+}
+
+.modal-body {
+    padding: 3rem 2rem 2rem;
+    max-height: calc(90vh - 100px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) transparent;
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 3px;
+}
+
+/* Modal Content Styles */
+.modal-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: var(--main);
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.modal-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text);
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.modal-pricing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.pricing-item {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(2, 20, 21.6, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--main), var(--accent));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.pricing-item:hover::before {
+    transform: scaleX(1);
+}
+
+.pricing-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(2, 20, 21.6, 0.15);
+    border-color: rgba(2, 20, 21.6, 0.2);
+}
+
+.pricing-item h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    color: var(--main);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.pricing-item h5 i {
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+.pricing-item p {
+    font-size: 0.95rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+.pricing-item .price {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--main);
+    background: linear-gradient(135deg, rgba(2, 20, 21.6, 0.1), rgba(3, 30, 32, 0.1));
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+}
+
+.modal-features {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    border-left: 4px solid var(--accent);
+}
+
+.modal-features h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    color: var(--main);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.modal-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    color: var(--text);
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.modal-features li:hover {
+    background: rgba(2, 20, 21.6, 0.05);
+    transform: translateX(5px);
+}
+
+.modal-features li i {
+    color: var(--accent);
+    font-size: 0.9rem;
+    min-width: 16px;
+}
+
+.modal-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        max-height: 95vh;
+    }
+    
+    .modal-body {
+        padding: 2rem 1.5rem 1.5rem;
+        max-height: calc(95vh - 80px);
+    }
+    
+    .modal-title {
+        font-size: 1.6rem;
+    }
+    
+    .modal-description {
+        font-size: 1rem;
+    }
+    
+    .modal-pricing {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .pricing-item {
+        padding: 1rem;
+    }
+    
+    .modal-features {
+        padding: 1rem;
+    }
+    
+    .modal-close {
+        top: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-body {
+        padding: 1.5rem 1rem 1rem;
+    }
+    
+    .modal-title {
+        font-size: 1.4rem;
+    }
+    
+    .pricing-item h5 {
+        font-size: 1.1rem;
+    }
+    
+    .pricing-item .price {
+        font-size: 1.2rem;
+        padding: 0.6rem 1rem;
+    }
 }
 
 /* Experience section */
