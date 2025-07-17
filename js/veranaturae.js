@@ -117,7 +117,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Progress tracking'
                 ],
                 buttonText: 'Book Your Session',
-                buttonAction: 'mailto:veronica@oceantoearth.life?subject=1:1 Coaching Inquiry'
+                buttonAction: 'mailto:veronica@oceantoearth.life?subject=1:1 Coaching Inquiry',
+                flyerDownload: '../assets/Flyer_MindfulnessPaths.png'
             },
             'retreat': {
                 title: 'Mindfulness Retreats',
@@ -144,7 +145,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Nature walks and activities'
                 ],
                 buttonText: 'Book Your Retreat',
-                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Retreat Booking'
+                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Retreat Booking',
+                flyerDownload: '../assets/Flyer_Retreat.png'
             },
             'work': {
                 title: 'Mindfulness at Work',
@@ -171,7 +173,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Ongoing support'
                 ],
                 buttonText: 'Contact for Details',
-                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Workplace Mindfulness'
+                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Workplace Mindfulness',
+                flyerDownload: '../assets/Flyer_MindfulnessAtWork.png'
             },
             'yoga': {
                 title: 'Yoga and Breathwork',
@@ -275,7 +278,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Suivi des progrès'
                 ],
                 buttonText: 'Réserver Votre Séance',
-                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Demande Coaching 1:1'
+                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Demande Coaching 1:1',
+                flyerDownload: '../assets/Flyer_ParcoursMindfulness.png'
             },
             'retreat': {
                 title: 'Retraites de Pleine Conscience',
@@ -302,7 +306,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Promenades et activités dans la nature'
                 ],
                 buttonText: 'Réserver Votre Retraite',
-                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Réservation Retraite'
+                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Réservation Retraite',
+                flyerDownload: '../assets/Flyer_Retraite.png'
             },
             'work': {
                 title: 'Pleine Conscience au Travail',
@@ -329,7 +334,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Soutien continu'
                 ],
                 buttonText: 'Contact pour Détails',
-                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Pleine Conscience en Entreprise'
+                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Pleine Conscience en Entreprise',
+                flyerDownload: '../assets/Flyer_MindfulnessAuTravail.png'
             },
             'yoga': {
                 title: 'Yoga et Respiration',
@@ -433,7 +439,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Monitoraggio dei progressi'
                 ],
                 buttonText: 'Prenota la Tua Sessione',
-                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Richiesta Coaching 1:1'
+                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Richiesta Coaching 1:1',
+                flyerDownload: '../assets/Flyer_PercorsiMindfulness.png'
             },
             'retreat': {
                 title: 'Ritiri di Consapevolezza',
@@ -460,7 +467,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Passeggiate e attività nella natura'
                 ],
                 buttonText: 'Prenota il Tuo Ritiro',
-                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Prenotazione Ritiro'
+                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Prenotazione Ritiro',
+                flyerDownload: '../assets/Flyer_Ritiro.png'
             },
             'work': {
                 title: 'Mindfulness al Lavoro',
@@ -487,7 +495,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Supporto continuo'
                 ],
                 buttonText: 'Contatto per Dettagli',
-                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Mindfulness in Azienda'
+                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Mindfulness in Azienda',
+                flyerDownload: '../assets/Flyer_MindfulnessAlLavoro.png'
             },
             'yoga': {
                 title: 'Yoga e Respirazione',
@@ -591,7 +600,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Fortschrittsverfolgung'
                 ],
                 buttonText: 'Ihre Sitzung Buchen',
-                buttonAction: 'mailto:veronica@oceantoearth.life?subject=1:1 Coaching Anfrage'
+                buttonAction: 'mailto:veronica@oceantoearth.life?subject=1:1 Coaching Anfrage',
+                flyerDownload: '../assets/Flyer_MindfulnessPaths.png'
             },
             'retreat': {
                 title: 'Achtsamkeits-Retreats',
@@ -618,7 +628,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Naturwanderungen und Aktivitäten'
                 ],
                 buttonText: 'Ihr Retreat Buchen',
-                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Retreat Buchung'
+                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Retreat Buchung',
+                flyerDownload: '../assets/Flyer_Retreat.png'
             },
             'work': {
                 title: 'Achtsamkeit bei der Arbeit',
@@ -645,7 +656,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Laufende Unterstützung'
                 ],
                 buttonText: 'Kontakt für Details',
-                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Achtsamkeit am Arbeitsplatz'
+                buttonAction: 'mailto:veronica@oceantoearth.life?subject=Achtsamkeit am Arbeitsplatz',
+                flyerDownload: '../assets/Flyer_MindfulnessAtWork.png'
             },
             'yoga': {
                 title: 'Yoga und Atemarbeit',
@@ -768,6 +780,23 @@ document.addEventListener('DOMContentLoaded', function() {
             'de': 'Was ist inbegriffen:'
         };
         
+        // Language-specific "Download Flyer" text
+        const downloadText = {
+            'en': 'Download Flyer',
+            'fr': 'Télécharger le Flyer',
+            'it': 'Scarica il Flyer',
+            'de': 'Flyer Herunterladen'
+        };
+        
+        // Generate flyer download section if available
+        const flyerSection = data.flyerDownload ? `
+            <div class="modal-flyer">
+                <a href="${data.flyerDownload}" download class="btn-secondary">
+                    <i class="fas fa-download"></i> ${downloadText[currentLang] || 'Download Flyer'}
+                </a>
+            </div>
+        ` : '';
+        
         return `
             <div class="modal-content-wrapper" style="background: ${serviceColors[serviceType] || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'};">
                 <h2 class="modal-title">${data.title}</h2>
@@ -783,6 +812,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <ul>
                             ${featuresHTML}
                         </ul>
+                        ${flyerSection}
                     </div>
                 </div>
                 
