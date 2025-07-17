@@ -76,6 +76,7 @@
                 <nav>
                     <ul>
                         <li><a href="#mindfulness">Consapevolezza</a></li>
+                        <li><a href="#services">Servizi</a></li>
                         <li><a href="#about">Chi Sono</a></li>
                         <li><a href="#contact">Contatto</a></li>
                     </ul>
@@ -101,6 +102,7 @@
         <div class="mobile-nav" id="mobileNav">
             <ul>
                 <li><a href="#mindfulness" onclick="closeMobileMenu()">Consapevolezza</a></li>
+                <li><a href="#services" onclick="closeMobileMenu()">Servizi</a></li>
                 <li><a href="#about" onclick="closeMobileMenu()">Chi Sono</a></li>
                 <li><a href="#contact" onclick="closeMobileMenu()">Contatto</a></li>
             </ul>
@@ -109,179 +111,45 @@
 
     <!-- Floating Services Button - Positioned in top left below header -->
     <div class="floating-services-container">
-        <div class="floating-services" onclick="openServicesModal()">
-            <i class="fas fa-spa"></i>
-            <span>I Miei Servizi</span>
+        <div class="floating-services" onclick="openNameModal()">
+            <i class="fas fa-leaf"></i>
+            <span>Su Veranaturae</span>
         </div>
     </div>
 
-    <!-- Services Modal -->
-    <div class="modal-overlay" id="servicesModal">
+    <!-- Name Explanation Modal -->
+    <div class="modal-overlay" id="nameModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>I Miei Servizi</h3>
-                <button class="modal-close" onclick="closeServicesModal()">
+                <h3>Perché "<strong>Veranaturae</strong>" ?</h3>
+                <button class="modal-close" onclick="closeNameModal()">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             <div class="modal-body">
-                <div class="services-info">
-                    <div class="info-item">
-                        <i class="fas fa-heart"></i>
-                        <span>Ogni sessione è personalizzata in base alle esigenze dell'individuo o del gruppo!</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-globe"></i>
-                        <span>Lingua delle sessioni: disponibile in italiano, francese e inglese.</span>
-                    </div>
-                </div>
-                <div class="services-grid">
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/mindfulness01.jpg" alt="Coaching 1 a 1">
-                                    <div class="click-indicator">💡 Clicca</div>
-                                </div>
-                                <h4 class="service-title">Coaching 1:1</h4>
-                            </div>
-                            <div class="flip-card-back coaching">
-                                <div class="price-content">
-                                    <h4>Coaching 1:1</h4>
-                                    <ul class="price-list">
-                                        <li>Sessione mindfulness individuale (1h) : CHF 70</li>
-                                        <li>Percorso di 4 sessioni da 1h : CHF 280</li>
-                                        <li>Percorso di 8 sessioni da 1h : CHF 480</li>
-                                    </ul>
-                                    <div class="price-note">Include sessione conoscitiva 30 min + sessione follow-up 30 min gratuite</div>
-                                </div>
-                                <div class="flip-back-hint">Clicca per tornare</div>
-                            </div>
-                        </div>
-                        <p>Accedi a una vita più equilibrata con una guida personalizzata.
-                            Che tu sia nuovo alla mindfulness o che stia approfondendo una pratica esistente, le mie sessioni di coaching individuali sono progettate intorno ai tuoi obiettivi unici e al ritmo della tua vita. Insieme, coltiveremo presenza, resilienza e consapevolezza di sé - un respiro consapevole alla volta.</p>
-                    </div>
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/nature02.jpg" alt="Ritiro">
-                                    <div class="click-indicator">💡 Clicca</div>
-                                </div>
-                                <h4 class="service-title">Ritiro</h4>
-                            </div>
-                            <div class="flip-card-back retreat">
-                                <div class="price-content">
-                                    <h4>Ritiro</h4>
-                                    <ul class="price-list">
-                                        <li>CHF 250 a persona (2 persone)</li>
-                                        <li>CHF 300 a persona (1 persona)</li>
-                                    </ul>
-                                    <div class="price-includes">Incluso: pasti vegetariani, camera, ore di mindfulness e yoga guidate</div>
-                                    <div class="price-excludes">Non incluso: viaggio da e per Schwarzenburg</div>
-                                </div>
-                                <div class="flip-back-hint">Clicca per tornare</div>
-                            </div>
-                        </div>
-                        <p>Fuggi dal rumore e riconnettiti con te stesso.
-                            Unisciti a uno dei miei ritiri di mindfulness in piccoli gruppi negli ambienti tranquilli di Berna. Questi ritiri di fine settimana o di più giorni offrono spazio per un riposo profondo, sessioni di meditazione guidata, movimento consapevole e tempo nella natura, così torni rinfrescato e ispirato.</p>
-                    </div>
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/plants_02.jpeg" alt="Mindfulness al Lavoro">
-                                    <div class="click-indicator">💡 Clicca</div>
-                                </div>
-                                <h4 class="service-title">Mindfulness al Lavoro</h4>
-                            </div>
-                            <div class="flip-card-back work">
-                                <div class="price-content">
-                                    <h4>Mindfulness al Lavoro</h4>
-                                    <ul class="price-list">
-                                        <li>Workshop di 2h per aziende (max. 15 persone)*: CHF 400</li>
-                                        <li>Percorso di 8 sessioni da 1h per aziende (max. 10 persone)*: CHF 2,500</li>
-                                    </ul>
-                                    <div class="price-disclaimer">*Il prezzo può variare in base a luogo e materiali richiesti</div>
-                                </div>
-                                <div class="flip-back-hint">Clicca per tornare</div>
-                            </div>
-                        </div>
-                        <p>Migliora il benessere, la concentrazione e la collaborazione del tuo team.
-                            I miei workshop di mindfulness personalizzati e le sessioni aziendali portano chiarezza e calma sul posto di lavoro. Aiuta il tuo team a ridurre lo stress, gestire il cambiamento e migliorare l'intelligenza emotiva, direttamente nel cuore della tua organizzazione.</p>
-                    </div>
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/creuxDuVan_03.jpg" alt="Yoga e Respirazione">
-                                    <div class="click-indicator">💡 Clicca</div>
-                                </div>
-                                <h4 class="service-title">Yoga e Respirazione</h4>
-                            </div>
-                            <div class="flip-card-back yoga">
-                                <div class="price-content">
-                                    <h4>Yoga e Respirazione</h4>
-                                    <ul class="price-list">
-                                        <li>Sessione privata di yoga (1h): CHF 40</li>
-                                        <li>Sessione di gruppo di 1h (max. 10 persone): CHF 25/persona</li>
-                                    </ul>
-                                </div>
-                                <div class="flip-back-hint">Clicca per tornare</div>
-                            </div>
-                        </div>
-                        <p>Rallenta, ammorbidisci e respira.
-                            Lo yoga e la respirazione sono potenti alleati sul percorso della mindfulness. In queste sessioni, combiniamo movimento consapevole e gentile con tecniche di respirazione guidate per aiutarti a rilasciare lo stress, calmare la mente e tornare al tuo centro interiore.</p>
-                    </div>
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/fish02.JPG" alt="Mindfulness Subacquea">
-                                    <div class="click-indicator">💡 Clicca</div>
-                                </div>
-                                <h4 class="service-title">Mindfulness Subacquea</h4>
-                            </div>
-                            <div class="flip-card-back underwater">
-                                <div class="price-content">
-                                    <h4>Mindfulness Subacquea</h4>
-                                    <div class="price-amount">Prezzo su richiesta</div>
-                                    <div class="price-description">Servizio in collaborazione con <i>Athelas Diving</i></div>
-                                </div>
-                                <div class="flip-back-hint">Clicca per tornare</div>
-                            </div>
-                        </div>
-                        <p>Sperimenta la mindfulness in un ambiente subacqueo unico.
-                            Connettiti con il sereno mondo subacqueo mentre pratichi tecniche di mindfulness. Questo approccio innovativo combina gli effetti calmanti dell'acqua con le pratiche tradizionali di mindfulness, creando un'esperienza veramente immersiva e trasformativa. <strong>In collaborazione con <a href="athelas-diving.html" style="color: var(--main); text-decoration: underline;">Athelas Diving</a>.</strong></p>
-                    </div>
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/fafa04 - Copy.jpg" alt="Ayurveda">
-                                    <div class="click-indicator">💡 Clicca</div>
-                                </div>
-                                <h4 class="service-title">Ayurveda</h4>
-                            </div>
-                            <div class="flip-card-back ayurveda">
-                                <div class="price-content">
-                                    <h4>Ayurveda</h4>
-                                    <div class="price-amount">Prossimamente</div>
-                                    <div class="price-description">I prezzi saranno annunciati al lancio dei servizi</div>
-                                </div>
-                                <div class="flip-back-hint">Clicca per tornare</div>
-                            </div>
-                        </div>
-                        <p>Scopri l'antica saggezza della guarigione ayurvedica.
-                            Prossimamente! Esplora l'approccio olistico al benessere attraverso l'Ayurveda, il sistema tradizionale indiano di medicina. Impara la tua costituzione unica e come bilanciare mente, corpo e spirito attraverso pratiche naturali e aggiustamenti dello stile di vita.</p>
-                        <div class="coming-soon-tag">Prossimamente</div>
-                    </div>
+                <div class="name-explanation-content">
+                    <h3>Perché "<strong>Veranaturae</strong>" ?</h3>
+                    <p><strong>Veranaturae</strong> significa "vera natura" - l'essenza di chi siamo sotto il rumore, la fretta e i ruoli che interpretiamo.</p>
+                    
+                    <p>Con <strong>Veranaturae</strong>, credo che attraverso la consapevolezza, lo yoga e l'Ayurveda, ogni persona possa dolcemente tornare alla propria dimora interiore: un luogo di chiarezza, compassione e serenità.</p>
+                    
+                    <p>Non si tratta di diventare qualcuno di nuovo. Si tratta di ricordare chi sei già. Onorando i tuoi ritmi, i tuoi bisogni e la tua espressione unica, ti allinei con il tuo stato naturale: la tua <em><strong>vera natura</strong></em>.</p>
+                    
+                    <p><strong>Veranaturae</strong> è uno spazio sicuro e nutriente per coloro che desiderano riconnettersi con se stessi. Uno spazio per rallentare, respirare e risvegliarsi alla tua verità più profonda.</p>
                 </div>
             </div>
-            <div class="modal-footer">
-                <h4>Interessato? Contattami!</h4>
-                <p>Non hai bisogno di alcuna esperienza, devi solo essere disposto a presentarti così come sei. Attraverso il movimento consapevole e il ritmo naturale del tuo respiro, creiamo spazio per presenza, equilibrio e profondo ripristino.</p>
-                <a href="mailto:veronica@oceantoearth.life" class="button">Contattami</a>
+        </div>
+    </div>
+
+    <!-- Service Pricing Modal -->
+    <div class="service-modal" id="serviceModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <!-- Modal content will be dynamically loaded here -->
             </div>
         </div>
     </div>
@@ -327,6 +195,104 @@
                         <li>Maggiore senso di pace interiore</li>
                         <li>Relazione più compassionevole con te stesso e gli altri</li>
                         </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>I Miei Servizi</h2>
+                <div class="services-info">
+                    <div class="info-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Ogni sessione è personalizzata in base alle esigenze dell'individuo o del gruppo!</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Lingua delle sessioni: disponibile in italiano, francese e inglese.</span>
+                    </div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card" data-service="coaching">
+                        <div class="service-image">
+                            <img src="../assets/mindfulness01.jpg" alt="Coaching 1 a 1" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Coaching 1:1</h3>
+                            <p class="service-teaser">Accedi a una vita più equilibrata con una guida personalizzata. Che tu sia nuovo alla mindfulness o che stia approfondendo una pratica esistente, le mie sessioni di coaching individuali sono progettate intorno ai tuoi obiettivi unici.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="retreat">
+                        <div class="service-image">
+                            <img src="../assets/nature02.jpg" alt="Ritiro" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Ritiro</h3>
+                            <p class="service-teaser">Fuggi dal rumore e riconnettiti con te stesso. Unisciti a uno dei miei ritiri di mindfulness in piccoli gruppi negli ambienti tranquilli di Berna.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="work">
+                        <div class="service-image">
+                            <img src="../assets/plants_02.jpeg" alt="Mindfulness al Lavoro" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Mindfulness al Lavoro</h3>
+                            <p class="service-teaser">Migliora il benessere, la concentrazione e la collaborazione del tuo team. I miei workshop di mindfulness personalizzati e le sessioni aziendali portano chiarezza e calma sul posto di lavoro.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="yoga">
+                        <div class="service-image">
+                            <img src="../assets/creuxDuVan_03.jpg" alt="Yoga e Respirazione" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Yoga e Respirazione</h3>
+                            <p class="service-teaser">Rallenta, ammorbidisci e respira. Lo yoga e la respirazione sono potenti alleati sul percorso della mindfulness.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="underwater">
+                        <div class="service-image">
+                            <img src="../assets/fish02.JPG" alt="Mindfulness Subacquea" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Mindfulness Subacquea</h3>
+                            <p class="service-teaser">Sperimenta la mindfulness in un ambiente subacqueo unico. Connettiti con il sereno mondo subacqueo mentre pratichi tecniche di mindfulness.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="ayurveda">
+                        <div class="service-image">
+                            <img src="../assets/fafa04 - Copy.jpg" alt="Ayurveda" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Ayurveda</h3>
+                            <p class="service-teaser">Scopri l'antica saggezza della guarigione ayurvedica. Esplora l'approccio olistico al benessere attraverso l'Ayurveda.</p>
+                            <div class="service-status">
+                                <span class="coming-soon">Prossimamente</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

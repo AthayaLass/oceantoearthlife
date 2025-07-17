@@ -76,6 +76,7 @@
                 <nav>
                     <ul>
                         <li><a href="#mindfulness">Achtsamkeit</a></li>
+                        <li><a href="#services">Services</a></li>
                         <li><a href="#about">Über Mich</a></li>
                         <li><a href="#contact">Kontakt</a></li>
                     </ul>
@@ -101,6 +102,7 @@
         <div class="mobile-nav" id="mobileNav">
             <ul>
                 <li><a href="#mindfulness" onclick="closeMobileMenu()">Achtsamkeit</a></li>
+                <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
                 <li><a href="#about" onclick="closeMobileMenu()">Über Mich</a></li>
                 <li><a href="#contact" onclick="closeMobileMenu()">Kontakt</a></li>
             </ul>
@@ -109,179 +111,45 @@
 
     <!-- Floating Services Button - Positioned in top left below header -->
     <div class="floating-services-container">
-        <div class="floating-services" onclick="openServicesModal()">
-            <i class="fas fa-spa"></i>
-            <span>Meine Services</span>
+        <div class="floating-services" onclick="openNameModal()">
+            <i class="fas fa-leaf"></i>
+            <span>Über Veranaturae</span>
         </div>
     </div>
 
-    <!-- Services Modal -->
-    <div class="modal-overlay" id="servicesModal">
+    <!-- Name Explanation Modal -->
+    <div class="modal-overlay" id="nameModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Meine Services</h3>
-                <button class="modal-close" onclick="closeServicesModal()">
+                <h3>Warum "<strong>Veranaturae</strong>" ?</h3>
+                <button class="modal-close" onclick="closeNameModal()">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             <div class="modal-body">
-                <div class="services-info">
-                    <div class="info-item">
-                        <i class="fas fa-heart"></i>
-                        <span>Jede Sitzung ist individuell auf die Bedürfnisse der Person oder Gruppe abgestimmt!</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-globe"></i>
-                        <span>Sitzungssprache: verfügbar auf Deutsch, Italienisch und Englisch.</span>
-                    </div>
-                </div>
-                <div class="services-grid">
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/mindfulness01.jpg" alt="1 zu 1 Coaching">
-                                    <div class="click-indicator">💡 Klicken</div>
-                                </div>
-                                <h4 class="service-title">1:1 Coaching</h4>
-                            </div>
-                            <div class="flip-card-back coaching">
-                                <div class="price-content">
-                                    <h4>1:1 Coaching</h4>
-                                    <ul class="price-list">
-                                        <li>Individuelle Achtsamkeitssitzung (1h) : CHF 70</li>
-                                        <li>Paket mit 4 Sitzungen à 1h : CHF 280</li>
-                                        <li>Paket mit 8 Sitzungen à 1h : CHF 480</li>
-                                    </ul>
-                                    <div class="price-note">Inklusive 30 Min Kennenlern- & 30 Min Follow-up-Sitzung gratis</div>
-                                </div>
-                                <div class="flip-back-hint">Klicken zum Zurückdrehen</div>
-                            </div>
-                        </div>
-                        <p>Betreten Sie ein ausgewogeneres Leben mit persönlicher Begleitung.
-                            Ob Sie neu in der Achtsamkeit sind oder eine bestehende Praxis vertiefen, meine individuellen Coaching-Sitzungen sind auf Ihre einzigartigen Ziele und den Rhythmus Ihres Lebens zugeschnitten. Gemeinsam kultivieren wir Präsenz, Widerstandsfähigkeit und Selbstbewusstsein - einen achtsamen Atemzug nach dem anderen.</p>
-                    </div>
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/nature02.jpg" alt="Retreat">
-                                    <div class="click-indicator">💡 Klicken</div>
-                                </div>
-                                <h4 class="service-title">Retreat</h4>
-                            </div>
-                            <div class="flip-card-back retreat">
-                                <div class="price-content">
-                                    <h4>Retreat</h4>
-                                    <ul class="price-list">
-                                        <li>CHF 250 pro Person (2 Personen)</li>
-                                        <li>CHF 300 pro Person (1 Person)</li>
-                                    </ul>
-                                    <div class="price-includes">Inklusive: vegetarische Mahlzeiten, Zimmer, geführte Achtsamkeits- & Yoga-Stunden</div>
-                                    <div class="price-excludes">Nicht inklusive: An- und Abreise von Schwarzenburg</div>
-                                </div>
-                                <div class="flip-back-hint">Klicken zum Zurückdrehen</div>
-                            </div>
-                        </div>
-                        <p>Entfliehen Sie dem Lärm und verbinden Sie sich wieder mit sich selbst.
-                            Schließen Sie sich einem meiner Achtsamkeits-Retreats in kleinen Gruppen in der friedlichen Umgebung von Bern an. Diese Wochenend- oder mehrtägigen Retreats bieten Raum für tiefe Erholung, geführte Meditation, achtsame Bewegung und Zeit in der Natur, damit Sie erfrischt und inspiriert zurückkehren.</p>
-                    </div>
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/plants_02.jpeg" alt="Achtsamkeit bei der Arbeit">
-                                    <div class="click-indicator">💡 Klicken</div>
-                                </div>
-                                <h4 class="service-title">Achtsamkeit bei der Arbeit</h4>
-                            </div>
-                            <div class="flip-card-back work">
-                                <div class="price-content">
-                                    <h4>Achtsamkeit bei der Arbeit</h4>
-                                    <ul class="price-list">
-                                        <li>2h Workshop für Unternehmen (max. 15 Personen)*: CHF 400</li>
-                                        <li>8 Sitzungen à 1h für Unternehmen (max. 10 Personen)*: CHF 2,500</li>
-                                    </ul>
-                                    <div class="price-disclaimer">*Preis kann je nach Ort & Material variieren</div>
-                                </div>
-                                <div class="flip-back-hint">Klicken zum Zurückdrehen</div>
-                            </div>
-                        </div>
-                        <p>Steigern Sie das Wohlbefinden, die Konzentration und die Zusammenarbeit Ihres Teams.
-                            Meine maßgeschneiderten Achtsamkeits-Workshops und Unternehmenssitzungen bringen Klarheit und Ruhe an den Arbeitsplatz. Helfen Sie Ihrem Team, Stress zu reduzieren, Veränderungen zu bewältigen und die emotionale Intelligenz zu verbessern, direkt im Herzen Ihrer Organisation.</p>
-                    </div>
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/creuxDuVan_03.jpg" alt="Yoga und Atemarbeit">
-                                    <div class="click-indicator">💡 Klicken</div>
-                                </div>
-                                <h4 class="service-title">Yoga und Atemarbeit</h4>
-                            </div>
-                            <div class="flip-card-back yoga">
-                                <div class="price-content">
-                                    <h4>Yoga und Atemarbeit</h4>
-                                    <ul class="price-list">
-                                        <li>Private Yogastunde (1h): CHF 40</li>
-                                        <li>Gruppenstunde (1h, max. 10 Personen): CHF 25/Person</li>
-                                    </ul>
-                                </div>
-                                <div class="flip-back-hint">Klicken zum Zurückdrehen</div>
-                            </div>
-                        </div>
-                        <p>Verlangsamen Sie, werden Sie weicher und atmen Sie.
-                            Yoga und Atemarbeit sind mächtige Verbündete auf dem Weg zur Achtsamkeit. In diesen Sitzungen kombinieren wir sanfte, bewusste Bewegung mit geführten Atemtechniken, um Ihnen zu helfen, Stress abzubauen, den Geist zu beruhigen und zu Ihrem inneren Zentrum zurückzukehren.</p>
-                    </div>
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/fish02.JPG" alt="Unterwasser-Achtsamkeit">
-                                    <div class="click-indicator">💡 Klicken</div>
-                                </div>
-                                <h4 class="service-title">Unterwasser-Achtsamkeit</h4>
-                            </div>
-                            <div class="flip-card-back underwater">
-                                <div class="price-content">
-                                    <h4>Unterwasser-Achtsamkeit</h4>
-                                    <div class="price-amount">Kontaktieren Sie mich für Preise</div>
-                                    <div class="price-description">Service in Zusammenarbeit mit <i>Athelas Diving</i></div>
-                                </div>
-                                <div class="flip-back-hint">Klicken zum Zurückdrehen</div>
-                            </div>
-                        </div>
-                        <p>Erleben Sie Achtsamkeit in einer einzigartigen Unterwasserumgebung.
-                            Verbinden Sie sich mit der friedlichen Unterwasserwelt, während Sie Achtsamkeitstechniken praktizieren. Dieser innovative Ansatz kombiniert die beruhigenden Effekte des Wassers mit traditionellen Achtsamkeitspraktiken und schafft eine wirklich immersive und transformative Erfahrung. <strong>In Zusammenarbeit mit <a href="athelas-diving.html" style="color: var(--main); text-decoration: underline;">Athelas Diving</a>.</strong></p>
-                    </div>
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/fafa04 - Copy.jpg" alt="Ayurveda">
-                                    <div class="click-indicator">💡 Klicken</div>
-                                </div>
-                                <h4 class="service-title">Ayurveda</h4>
-                            </div>
-                            <div class="flip-card-back ayurveda">
-                                <div class="price-content">
-                                    <h4>Ayurveda</h4>
-                                    <div class="price-amount">Demnächst Verfügbar</div>
-                                    <div class="price-description">Preise werden bekannt gegeben bei Einführung der Services</div>
-                                </div>
-                                <div class="flip-back-hint">Klicken zum Zurückdrehen</div>
-                            </div>
-                        </div>
-                        <p>Entdecken Sie die alte Weisheit der ayurvedischen Heilung.
-                            Demnächst verfügbar! Erkunden Sie den ganzheitlichen Ansatz zum Wohlbefinden durch Ayurveda, das traditionelle indische Medizinsystem. Lernen Sie Ihre einzigartige Konstitution kennen und wie Sie Geist, Körper und Seele durch natürliche Praktiken und Lebensstilanpassungen ausbalancieren können.</p>
-                        <div class="coming-soon-tag">Demnächst Verfügbar</div>
-                    </div>
+                <div class="name-explanation-content">
+                    <h3>Warum "<strong>Veranaturae</strong>" ?</h3>
+                    <p><strong>Veranaturae</strong> bedeutet "wahre Natur" - das Wesen dessen, was wir unter dem Lärm, der Hektik und den Rollen, die wir spielen, sind.</p>
+                    
+                    <p>Mit <strong>Veranaturae</strong> glaube ich, dass durch Achtsamkeit, Yoga und Ayurveda jede Person sanft zu ihrem eigenen inneren Zuhause zurückkehren kann: ein Ort der Klarheit, des Mitgefühls und der Gelassenheit.</p>
+                    
+                    <p>Es geht nicht darum, jemand Neues zu werden. Es geht darum, sich daran zu erinnern, wer Sie bereits sind. Indem Sie Ihre Rhythmen, Ihre Bedürfnisse und Ihren einzigartigen Ausdruck ehren, richten Sie sich auf Ihren natürlichen Zustand aus: Ihre <em><strong>vera natura</strong></em>.</p>
+                    
+                    <p><strong>Veranaturae</strong> ist ein sicherer und nährenden Raum für diejenigen, die sich danach sehnen, sich wieder mit sich selbst zu verbinden. Ein Raum, um zu verlangsamen, zu atmen und sich zu Ihrer tiefsten Wahrheit zu erwecken.</p>
                 </div>
             </div>
-            <div class="modal-footer">
-                <h4>Interessiert? Melden Sie sich!</h4>
-                <p>Sie brauchen keine Erfahrung, Sie müssen nur bereit sein, sich so zu zeigen, wie Sie sind. Durch achtsame Bewegung und den natürlichen Rhythmus Ihres Atems schaffen wir Raum für Präsenz, Gleichgewicht und tiefe Wiederherstellung.</p>
-                <a href="mailto:veronica@oceantoearth.life" class="button">Kontaktieren Sie mich</a>
+        </div>
+    </div>
+
+    <!-- Service Pricing Modal -->
+    <div class="service-modal" id="serviceModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <!-- Modal content will be dynamically loaded here -->
             </div>
         </div>
     </div>
@@ -327,6 +195,104 @@
                         <li>Größeres Gefühl inneren Friedens</li>
                         <li>Mitfühlendere Beziehung zu sich selbst und anderen</li>
                         </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Meine Services</h2>
+                <div class="services-info">
+                    <div class="info-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Jede Sitzung ist individuell auf die Bedürfnisse der Person oder Gruppe abgestimmt!</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Sitzungssprache: verfügbar auf Deutsch, Italienisch und Englisch.</span>
+                    </div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card" data-service="coaching">
+                        <div class="service-image">
+                            <img src="../assets/mindfulness01.jpg" alt="1 zu 1 Coaching" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>1:1 Coaching</h3>
+                            <p class="service-teaser">Betreten Sie ein ausgewogeneres Leben mit persönlicher Begleitung. Ob Sie neu in der Achtsamkeit sind oder eine bestehende Praxis vertiefen, meine individuellen Coaching-Sitzungen sind auf Ihre einzigartigen Ziele zugeschnitten.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="retreat">
+                        <div class="service-image">
+                            <img src="../assets/nature02.jpg" alt="Retreat" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Retreat</h3>
+                            <p class="service-teaser">Entfliehen Sie dem Lärm und verbinden Sie sich wieder mit sich selbst. Schließen Sie sich einem meiner Achtsamkeits-Retreats in kleinen Gruppen in der friedlichen Umgebung von Bern an.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="work">
+                        <div class="service-image">
+                            <img src="../assets/plants_02.jpeg" alt="Achtsamkeit bei der Arbeit" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Achtsamkeit bei der Arbeit</h3>
+                            <p class="service-teaser">Steigern Sie das Wohlbefinden, die Konzentration und die Zusammenarbeit Ihres Teams. Meine maßgeschneiderten Achtsamkeits-Workshops und Unternehmenssitzungen bringen Klarheit und Ruhe an den Arbeitsplatz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="yoga">
+                        <div class="service-image">
+                            <img src="../assets/creuxDuVan_03.jpg" alt="Yoga und Atemarbeit" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Yoga und Atemarbeit</h3>
+                            <p class="service-teaser">Verlangsamen Sie, werden Sie weicher und atmen Sie. Yoga und Atemarbeit sind mächtige Verbündete auf dem Weg zur Achtsamkeit.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="underwater">
+                        <div class="service-image">
+                            <img src="../assets/fish02.JPG" alt="Unterwasser-Achtsamkeit" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Unterwasser-Achtsamkeit</h3>
+                            <p class="service-teaser">Erleben Sie Achtsamkeit in einer einzigartigen Unterwasserumgebung. Verbinden Sie sich mit der friedlichen Unterwasserwelt, während Sie Achtsamkeitstechniken praktizieren.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="ayurveda">
+                        <div class="service-image">
+                            <img src="../assets/fafa04 - Copy.jpg" alt="Ayurveda" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Ayurveda</h3>
+                            <p class="service-teaser">Entdecken Sie die alte Weisheit der ayurvedischen Heilung. Erkunden Sie den ganzheitlichen Ansatz zum Wohlbefinden durch Ayurveda.</p>
+                            <div class="service-status">
+                                <span class="coming-soon">Demnächst Verfügbar</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

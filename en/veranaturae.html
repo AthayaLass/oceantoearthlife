@@ -33,6 +33,7 @@
                 <nav>
                     <ul>
                         <li><a href="#mindfulness">Mindfulness</a></li>
+                        <li><a href="#services">Services</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -58,6 +59,7 @@
         <div class="mobile-nav" id="mobileNav">
             <ul>
                 <li><a href="#mindfulness" onclick="closeMobileMenu()">Mindfulness</a></li>
+                <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
                 <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
                 <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
             </ul>
@@ -66,179 +68,45 @@
 
     <!-- Floating Services Button - Positioned in top left below header -->
     <div class="floating-services-container">
-        <div class="floating-services" onclick="openServicesModal()">
-            <i class="fas fa-spa"></i>
-            <span>My Services</span>
+        <div class="floating-services" onclick="openNameModal()">
+            <i class="fas fa-leaf"></i>
+            <span>About Veranaturae</span>
         </div>
     </div>
 
-    <!-- Services Modal -->
-    <div class="modal-overlay" id="servicesModal">
+    <!-- Name Explanation Modal -->
+    <div class="modal-overlay" id="nameModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>My Services</h3>
-                <button class="modal-close" onclick="closeServicesModal()">
+                <h3>The Meaning Behind "Veranaturae"</h3>
+                <button class="modal-close" onclick="closeNameModal()">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             <div class="modal-body">
-                <div class="services-info">
-                    <div class="info-item">
-                        <i class="fas fa-heart"></i>
-                        <span>Every session is personalized according to the requirements of the individual or group!</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-globe"></i>
-                        <span>Session language: available in French, Italian and English.</span>
-                    </div>
-                </div>
-                <div class="services-grid">
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/mindfulness01.jpg" alt="1 to 1 Coaching">
-                                    <div class="click-indicator">💡 Click</div>
-                                </div>
-                                <h4 class="service-title">1:1 Coaching</h4>
-                            </div>
-                            <div class="flip-card-back coaching">
-                                <div class="price-content">
-                                    <h4>1:1 Coaching</h4>
-                                    <ul class="price-list">
-                                        <li>Individual mindfulness session (1h): CHF 70</li>
-                                        <li>4 sessions (1h each): CHF 280</li>
-                                        <li>8 sessions (1h each): CHF 480</li>
-                                    </ul>
-                                    <div class="price-note">Includes 30 min discovery + follow-up session</div>
-                                </div>
-                                <div class="flip-back-hint">Click to flip back</div>
-                            </div>
-                        </div>
-                        <p>Step into a more balanced life with personal guidance.
-                            Whether you're new to mindfulness or deepening an existing practice, my individual coaching sessions are designed around your unique goals and life rhythm. Together, we'll cultivate presence, resilience, and self-awareness - one mindful breath at a time.</p>
-                    </div>
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/nature02.jpg" alt="Retreat">
-                                    <div class="click-indicator">💡 Click</div>
-                                </div>
-                                <h4 class="service-title">Retreat</h4>
-                            </div>
-                            <div class="flip-card-back retreat">
-                                <div class="price-content">
-                                    <h4>Retreat</h4>
-                                    <ul class="price-list">
-                                        <li>CHF 250 per person (2 people)</li>
-                                        <li>CHF 300 per person (1 person)</li>
-                                    </ul>
-                                    <div class="price-includes">Included: vegetarian meals, room, guided sessions</div>
-                                    <div class="price-excludes">Not included: travel to and from Schwarzenburg</div>
-                                </div>
-                                <div class="flip-back-hint">Click to flip back</div>
-                            </div>
-                        </div>
-                        <p>Escape the noise and reconnect with yourself.
-                            Join one of my small-group mindfulness retreats in the tranquil surroundings of Bern. These weekend or multi-day retreats offer space for deep rest, guided meditation, mindful movement, and time in nature, so you return refreshed and inspired.</p>
-                    </div>
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/plants_02.jpeg" alt="Mindfulness at Work">
-                                    <div class="click-indicator">💡 Click</div>
-                                </div>
-                                <h4 class="service-title">Mindfulness at Work</h4>
-                            </div>
-                            <div class="flip-card-back work">
-                                <div class="price-content">
-                                    <h4>Mindfulness at Work</h4>
-                                    <ul class="price-list">
-                                        <li>2h workshop (max. 15 people)*: CHF 400</li>
-                                        <li>8 sessions of 1h (max. 10 people)*: CHF 2,500</li>
-                                    </ul>
-                                    <div class="price-disclaimer">*Price may vary based on location & materials</div>
-                                </div>
-                                <div class="flip-back-hint">Click to flip back</div>
-                            </div>
-                        </div>
-                        <p>Boost your team's well-being, focus, and collaboration.
-                            My tailored mindfulness workshops and corporate sessions bring clarity and calm into the workplace. Help your team reduce stress, manage change, and enhance emotional intelligence, right at the heart of your organization.</p>
-                    </div>
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/creuxDuVan_03.jpg" alt="Yoga and Breathwork">
-                                    <div class="click-indicator">💡 Click</div>
-                                </div>
-                                <h4 class="service-title">Yoga and Breathwork</h4>
-                            </div>
-                            <div class="flip-card-back yoga">
-                                <div class="price-content">
-                                    <h4>Yoga and Breathwork</h4>
-                                    <ul class="price-list">
-                                        <li>Private session (1h): CHF 40</li>
-                                        <li>Group session of 1h (max. 10 people): CHF 25/person</li>
-                                    </ul>
-                                </div>
-                                <div class="flip-back-hint">Click to flip back</div>
-                            </div>
-                        </div>
-                        <p>Slow down, soften, and breathe.
-                            Yoga and breathwork are powerful allies on the path to mindfulness. In these sessions, we combine gentle, conscious movement with guided breathing techniques to help you release stress, calm the mind, and return to your inner center.</p>
-                    </div>
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/fish02.JPG" alt="Underwater Mindfulness">
-                                    <div class="click-indicator">💡 Click</div>
-                                </div>
-                                <h4 class="service-title">Underwater Mindfulness</h4>
-                            </div>
-                            <div class="flip-card-back underwater">
-                                <div class="price-content">
-                                    <h4>Underwater Mindfulness</h4>
-                                    <div class="price-amount">Contact for Pricing</div>
-                                    <div class="price-description">Collaborative service with <i>Athelas Diving</i></div>
-                                </div>
-                                <div class="flip-back-hint">Click to flip back</div>
-                            </div>
-                        </div>
-                        <p>Experience mindfulness in a unique underwater environment.
-                            Connect with the serene underwater world while practicing mindfulness techniques. This innovative approach combines the calming effects of water with traditional mindfulness practices, creating a truly immersive and transformative experience. <strong>In collaboration with <a href="athelas-diving.html" style="color: var(--main); text-decoration: underline;">Athelas Diving</a>.</strong></p>
-                    </div>
-                    <div class="service-grid-item">
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <div class="service-image">
-                                    <img src="../assets/fafa04 - Copy.jpg" alt="Ayurveda">
-                                    <div class="click-indicator">💡 Click</div>
-                                </div>
-                                <h4 class="service-title">Ayurveda</h4>
-                            </div>
-                            <div class="flip-card-back ayurveda">
-                                <div class="price-content">
-                                    <h4>Ayurveda</h4>
-                                    <div class="price-amount">Coming Soon</div>
-                                    <div class="price-description">Pricing will be announced when services launch</div>
-                                </div>
-                                <div class="flip-back-hint">Click to flip back</div>
-                            </div>
-                        </div>
-                        <p>Discover the ancient wisdom of Ayurvedic healing.
-                            Coming soon! Explore the holistic approach to wellness through Ayurveda, the traditional Indian system of medicine. Learn about your unique constitution and how to balance mind, body, and spirit through natural practices and lifestyle adjustments.</p>
-                        <div class="coming-soon-tag">Coming Soon</div>
-                    </div>
+                <div class="name-explanation-content">
+                    <h3>Why "<strong>Veranaturae</strong>"?</h3>
+                    <p><strong>Veranaturae</strong> means "true nature" - the essence of who we are beneath the noise, the rush, and the roles we play.</p>
+                    
+                    <p>With <strong>Veranaturae</strong>, I believe that through mindfulness, yoga, and Ayurveda, each person can gently return to their own inner home : a place of clarity, compassion, and serenity.</p>
+                    
+                    <p>This is not about becoming someone new. It's about remembering who you already are. In honoring your rhythms, your needs, and your unique expression, you align with your natural state : your <em><strong>vera natura</strong></em>.</p>
+                    
+                    <p><strong>Veranaturae</strong> is a safe and nurturing space for those longing to reconnect with themselves. A space to slow down, breathe, and reawaken to your deepest truth.</p>
                 </div>
             </div>
-            <div class="modal-footer">
-                <h4>Interested? Reach out!</h4>
-                <p>You don't need any experience, you just need to be willing to show up as you are. Through mindful movement and the natural rhythm of your breath, we create space for presence, balance, and deep restoration.</p>
-                <a href="mailto:veronica@oceantoearth.life" class="button">Contact Me</a>
+        </div>
+    </div>
+
+    <!-- Service Pricing Modal -->
+    <div class="service-modal" id="serviceModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <!-- Modal content will be dynamically loaded here -->
             </div>
         </div>
     </div>
@@ -284,6 +152,104 @@
                         <li>Greater sense of inner peace</li>
                         <li>More compassionate relationship with yourself and others</li>
                         </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>My Services</h2>
+                <div class="services-info">
+                    <div class="info-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Every session is personalized according to the requirements of the individual or group!</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Session language: available in French, Italian and English.</span>
+                    </div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card" data-service="coaching">
+                        <div class="service-image">
+                            <img src="../assets/mindfulness01.jpg" alt="1 to 1 Coaching" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>1:1 Coaching</h3>
+                            <p class="service-teaser">Step into a more balanced life with personal guidance. Whether you're new to mindfulness or deepening an existing practice, my individual coaching sessions are designed around your unique goals and life rhythm.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="retreat">
+                        <div class="service-image">
+                            <img src="../assets/nature02.jpg" alt="Retreat" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Retreat</h3>
+                            <p class="service-teaser">Escape the noise and reconnect with yourself. Join one of my small-group mindfulness retreats in the tranquil surroundings of Bern.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="work">
+                        <div class="service-image">
+                            <img src="../assets/plants_02.jpeg" alt="Mindfulness at Work" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Mindfulness at Work</h3>
+                            <p class="service-teaser">Boost your team's well-being, focus, and collaboration. My tailored mindfulness workshops and corporate sessions bring clarity and calm into the workplace.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="yoga">
+                        <div class="service-image">
+                            <img src="../assets/creuxDuVan_03.jpg" alt="Yoga and Breathwork" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Yoga and Breathwork</h3>
+                            <p class="service-teaser">Slow down, soften, and breathe. Yoga and breathwork are powerful allies on the path to mindfulness.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="underwater">
+                        <div class="service-image">
+                            <img src="../assets/fish02.JPG" alt="Underwater Mindfulness" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Underwater Mindfulness</h3>
+                            <p class="service-teaser">Experience mindfulness in a unique underwater environment. Connect with the serene underwater world while practicing mindfulness techniques.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="ayurveda">
+                        <div class="service-image">
+                            <img src="../assets/fafa04 - Copy.jpg" alt="Ayurveda" class="service-img">
+                            <div class="service-overlay">
+                                <i class="fas fa-info-circle expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Ayurveda</h3>
+                            <p class="service-teaser">Discover the ancient wisdom of Ayurvedic healing. Explore the holistic approach to wellness through Ayurveda.</p>
+                            <div class="service-status">
+                                <span class="coming-soon">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
