@@ -733,13 +733,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to generate modal content
     function generateModalContent(serviceType) {
-        // Get current language from localStorage or detect from URL
-        let currentLang = localStorage.getItem('userLanguageChoice');
-        if (!currentLang) {
-            // Detect language from URL path
-            const path = window.location.pathname;
-            const langMatch = path.match(/\/([a-z]{2})\//);
-            currentLang = langMatch ? langMatch[1] : 'en';
+        // Get current language from URL path first, then localStorage
+        const path = window.location.pathname;
+        const langMatch = path.match(/\/([a-z]{2})\//);
+        let currentLang = langMatch ? langMatch[1] : 'en';
+        
+        // If no language in URL, check localStorage
+        if (!langMatch) {
+            currentLang = localStorage.getItem('userLanguageChoice') || 'en';
         }
         
         // Fallback to English if language not found

@@ -684,6 +684,41 @@ footer {
     
     .modal-description {
         font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .pricing-item {
+        padding: 1.2rem;
+    }
+    
+    .pricing-item h5 {
+        font-size: 1.1rem;
+    }
+    
+    .pricing-item .price {
+        font-size: 1.2rem;
+        padding: 0.6rem 1rem;
+    }
+    
+    .modal-features {
+        padding: 1.2rem;
+    }
+    
+    .modal-features h5 {
+        font-size: 1rem;
+    }
+    
+    .modal-features li {
+        font-size: 0.9rem;
+        padding: 0.4rem 0;
+    }
+    
+    .modal-title {
+        font-size: 1.6rem;
+    }
+    
+    .modal-description {
+        font-size: 1rem;
     }
     
     .modal-pricing {
@@ -1406,6 +1441,15 @@ footer {
     align-items: start;
 }
 
+@media (max-width: 768px) {
+    .modal-content-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 1.5rem 0;
+    }
+}
+
 .modal-title {
     font-family: 'Cinzel', serif;
     font-size: 2rem;
@@ -1591,6 +1635,146 @@ footer {
     text-align: center;
     padding-top: 1rem;
     border-top: 1px solid rgba(182, 191, 165, 0.2);
+}
+
+/* Mobile Modal Optimizations */
+@media (max-width: 768px) {
+    .service-modal .modal-content {
+        width: 95%;
+        max-height: 90vh;
+        margin: 1rem;
+        border-radius: 20px;
+    }
+    
+    .service-modal .modal-body {
+        padding: 0;
+        max-height: calc(90vh - 60px);
+        overflow-y: auto;
+    }
+    
+    .modal-content-wrapper {
+        padding: 1.5rem 1rem;
+        border-radius: 15px;
+    }
+    
+    .modal-content-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 1.5rem 0;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+    
+    .modal-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    
+    .modal-pricing {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .pricing-item {
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+        border-radius: 12px;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+    
+    .pricing-item:last-child {
+        margin-bottom: 0;
+    }
+    
+    .pricing-item h5 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .pricing-item p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
+        text-align: center;
+    }
+    
+    .pricing-item .price {
+        font-size: 1.2rem;
+        padding: 0.7rem 1rem;
+        border-radius: 10px;
+    }
+    
+    .modal-features {
+        order: 2;
+        padding: 1.2rem;
+        margin: 0 auto;
+        border-radius: 12px;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+    
+    .modal-features h5 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .modal-features ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .modal-features li {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        padding: 0.5rem 0;
+        margin-bottom: 0.3rem;
+    }
+    
+    .modal-features li:last-child {
+        margin-bottom: 0;
+    }
+    
+    .modal-flyer {
+        order: 3;
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+    
+    .btn-secondary {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .modal-cta {
+        order: 4;
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(182, 191, 165, 0.2);
+    }
+    
+    .btn-primary {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 250px;
+    }
 }
 
 .btn-secondary {
