@@ -104,7 +104,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalBody = modal.querySelector('.modal-body');
     const modalClose = document.getElementById('modalClose');
     
-    const lang = document.documentElement.lang || 'en';
+    // Improved language detection
+    let lang = 'en';
+    
+    // Try to detect language from URL path
+    const path = window.location.pathname;
+    if (path.includes('/fr/')) {
+        lang = 'fr';
+    } else if (path.includes('/it/')) {
+        lang = 'it';
+    } else if (path.includes('/de/')) {
+        lang = 'de';
+    } else if (path.includes('/en/')) {
+        lang = 'en';
+    } else {
+        // Fallback to document language or default to English
+        lang = document.documentElement.lang || 'en';
+    }
 
     const serviceData_en = {
         'dive-courses': {
@@ -112,34 +128,28 @@ document.addEventListener('DOMContentLoaded', function() {
             description: 'Comprehensive diving courses designed to take you from complete beginner to professional level. Personalized training with individual attention.',
             pricing: [
                 {
-                    title: 'Discover Scuba Diving (DSD)',
-                    icon: 'fas fa-star',
-                    description: '1 pool session + 1 open water dive. Full gear included. Ideal first experience.',
-                    price: 'CHF 180.–'
-                },
-                {
                     title: 'Open Water Diver',
                     icon: 'fas fa-star',
                     description: 'Full entry-level certification. 5 pool sessions, 4 open water dives, eLearning.',
-                    price: 'CHF 790.–'
+                    price: 'CHF 650.–'
                 },
                 {
                     title: 'Advanced Adventure Diver',
                     icon: 'fas fa-star',
                     description: '5 adventure dives (e.g., deep, navigation, night), gear rental optional.',
-                    price: 'CHF 590.–'
+                    price: 'CHF 450.–'
                 },
                 {
                     title: 'Rescue Diver',
                     icon: 'fas fa-crown',
                     description: 'Safety, stress management, rescue techniques, 2 days, incl. scenarios.',
-                    price: 'CHF 590.–'
+                    price: 'CHF 700.–'
                 },
                 {
                     title: 'Dive Master',
                     icon: 'fas fa-crown',
                     description: 'Leadership-level course. Includes theory, pool work, internships.',
-                    price: 'CHF 1,290.–'
+                    price: 'CHF 1,200.– to 1,800.–'
                 }
             ],
             features: [
@@ -152,39 +162,36 @@ document.addEventListener('DOMContentLoaded', function() {
             buttonText: 'Contact for Details',
             buttonAction: 'mailto:contact@athelas-diving.com?subject=Dive Courses Inquiry'
         },
+        'diving-initiation': {
+            title: 'Diving Initiation',
+            description: 'Perfect introduction to scuba diving for beginners. Experience the underwater world safely with professional guidance.',
+            pricing: [
+                {
+                    title: 'Diving Initiation',
+                    icon: 'fas fa-star',
+                    description: 'Perfect introduction to scuba diving for beginners. Experience the underwater world safely with professional guidance.',
+                    price: 'CHF 150.– per person'
+                }
+            ],
+            features: [
+                'Professional instruction',
+                'All equipment provided',
+                'Safety briefing',
+                'Pool session',
+                'Open water experience'
+            ],
+            buttonText: 'Book Your Initiation',
+            buttonAction: 'mailto:contact@athelas-diving.com?subject=Diving Initiation Booking'
+        },
         'guided-tours': {
             title: 'Expert-Guided Underwater Adventures',
             description: 'Discover the most beautiful underwater locations with personalized guidance. Perfect for certified divers who want to explore new sites safely and learn about local marine life.',
             pricing: [
                 {
-                    title: '1 Dive (Half Day)',
-                    icon: 'fas fa-sun',
-                    description: '1 guided dive at a local lake. Includes weights and tank.',
-                    price: 'CHF 90.–'
-                },
-                {
-                    title: '2 Dives (Full Day)',
-                    icon: 'fas fa-calendar-day',
-                    description: '2 guided dives, surface interval with snacks. Tank & weights incl.',
-                    price: 'CHF 160.–'
-                },
-                {
-                    title: 'Night Dive',
-                    icon: 'fas fa-moon',
-                    description: '1 night dive with torch included. Requires advanced certification.',
-                    price: 'CHF 110.–'
-                },
-                {
-                    title: 'Weekend Package (4 Dives)',
-                    icon: 'fas fa-calendar-week',
-                    description: '2 dives/day over a weekend (Sat & Sun). Equipment extra.',
-                    price: 'CHF 290.–'
-                },
-                {
-                    title: 'Private Dive (1:1)',
-                    icon: 'fas fa-user-friends',
-                    description: 'Fully private guiding session – schedule and site of your choice.',
-                    price: 'CHF 150.–'
+                    title: 'Guided Tours',
+                    icon: 'fas fa-map-marked-alt',
+                    description: 'Customized guided diving tours. Pricing depends on location, duration, and group size.',
+                    price: 'On Request'
                 }
             ],
             features: [
@@ -194,92 +201,44 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Safety briefing',
                 'Underwater photography tips'
             ],
-            buttonText: 'Book Your Tour',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Guided Tour Booking'
+            buttonText: 'Request Quote',
+            buttonAction: 'mailto:contact@athelas-diving.com?subject=Guided Tour Quote Request'
         },
-        'underwater-work': {
-            title: 'Professional Underwater Services',
-            description: 'Specialized underwater work services for commercial and environmental projects. Technical diving expertise ensures safe and efficient completion of underwater tasks.',
+        'underwater-work-ecology': {
+            title: 'Aquatic Ecology & Underwater Work',
+            description: 'Marine science education and professional underwater services. From comprehensive ecology courses covering species identification, research techniques, and environmental conservation to technical diving solutions.',
             pricing: [
                 {
-                    title: 'Site Inspection & Monitoring',
-                    icon: 'fas fa-eye',
-                    description: 'Visual inspections, video/photo documentation, structural assessments.',
-                    price: 'from CHF 150.–/hour'
-                },
-                {
-                    title: 'Underwater Construction Assistance',
+                    title: 'Underwater Work Services',
                     icon: 'fas fa-hard-hat',
-                    description: 'Support for construction, welding, drilling, anchor placement, concrete.',
-                    price: 'from CHF 180.–/hour'
+                    description: 'Professional underwater services including equipment setup, environmental surveillance, and technical diving solutions.',
+                    price: 'On Request'
                 },
                 {
-                    title: 'Equipment Installation',
-                    icon: 'fas fa-tools',
-                    description: 'Buoys, sensors, pumps, piping, underwater systems.',
-                    price: 'from CHF 160.–/hour'
+                    title: 'Group Ecology Courses',
+                    icon: 'fas fa-users',
+                    description: 'Customizable courses for groups. Pricing varies based on course length and content.',
+                    price: 'CHF 100.– to 250.– per person'
                 },
                 {
-                    title: 'Mooring & Anchor Work',
-                    icon: 'fas fa-anchor',
-                    description: 'Installation, maintenance or removal of mooring systems, chains, etc.',
-                    price: 'from CHF 140.–/hour'
-                },
-                {
-                    title: 'Search & Recovery Operations',
-                    icon: 'fas fa-search',
-                    description: 'Lost objects, tools, boats, vehicles, evidence, etc.',
-                    price: 'from CHF 180.–/hour'
-                },
-                {
-                    title: 'Emergency Call-Out',
-                    icon: 'fas fa-exclamation-triangle',
-                    description: 'Fast deployment for urgent underwater tasks (24/7 service).',
-                    price: 'from CHF 250.– flat + hourly'
+                    title: 'Individual Ecology Courses',
+                    icon: 'fas fa-user',
+                    description: 'Personalized ecology courses tailored to individual needs and interests.',
+                    price: 'Contact me'
                 }
             ],
             features: [
                 'Technical diving certification',
                 'Safety protocols',
                 'Environmental compliance',
-                'Detailed reporting',
-                'Insurance coverage'
-            ],
-            buttonText: 'Request Quote',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Underwater Work Quote Request'
-        },
-        'ecology-course': {
-            title: 'Marine Science Education',
-            description: 'Comprehensive course combining classroom learning with hands-on underwater research. Perfect for students, researchers, and anyone passionate about marine conservation.',
-            pricing: [
-                {
-                    title: '1-Day Intro Course',
-                    icon: 'fas fa-microscope',
-                    description: 'Theory session + 1 guided ecology dive. Includes ID training & techniques.',
-                    price: 'CHF 220.–'
-                },
-                {
-                    title: '2-Day Full Course',
-                    icon: 'fas fa-fish',
-                    description: 'In-depth theory + 2 guided dives focusing on species ID and survey skills.',
-                    price: 'CHF 380.–'
-                },
-                {
-                    title: 'Custom Group Workshop (3+ pax)',
-                    icon: 'fas fa-users',
-                    description: 'Customizable session for schools, clubs or organizations.',
-                    price: 'from CHF 150.–/person'
-                }
-            ],
-            features: [
                 '20 hours of classroom instruction',
                 '10 practical diving sessions',
                 'Research equipment provided',
                 'Course materials and certification',
                 'Field trip to marine research station'
             ],
-            buttonText: 'Enroll Now',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Ecology Course Enrollment'
+            buttonText: 'Contact for Details',
+            buttonAction: 'mailto:contact@athelas-diving.com?subject=Underwater Work & Ecology Inquiry'
         },
         'mindfulness': {
             title: 'Underwater Meditation & Wellness',
@@ -354,11 +313,10 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'Formation Professionnelle de Plongée',
             description: 'Cours de plongée complets de débutant à professionnel. Formation personnalisée avec attention individuelle.',
             pricing: [
-                { title: 'Battesimo Subacqueo (DSD)', icon: 'fas fa-star', description: '1 session en piscine + 1 plongée en eau libre. Ausrüstung inklusive. Idéal pour débutants.', price: 'CHF 180.–' },
-                { title: 'Open Water Diver', icon: 'fas fa-star', description: 'Certification de base. 5 sessions en piscine, 4 plongées en eau libre, eLearning.', price: 'CHF 790.–' },
-                { title: 'Advanced Adventure Diver', icon: 'fas fa-star', description: '5 plongées d\'aventure (profonde, navigation, nuit), location d\'équipement optionnelle.', price: 'CHF 590.–' },
-                { title: 'Rescue Diver', icon: 'fas fa-crown', description: 'Sécurité, gestion du stress, techniques de sauvetage, 2 jours, scénarios inclus.', price: 'CHF 590.–' },
-                { title: 'Dive Master', icon: 'fas fa-crown', description: 'Cours de leadership. Théorie, piscine, stage.', price: 'CHF 1,290.–' }
+                { title: 'Plongeur Open Water', icon: 'fas fa-star', description: 'Certification de base. 5 sessions en piscine, 4 plongées en eau libre, eLearning.', price: 'CHF 650.–' },
+                { title: 'Plongeur Advanced Adventure', icon: 'fas fa-star', description: '5 plongées d\'aventure (profonde, navigation, nuit), location d\'équipement optionnelle.', price: 'CHF 450.–' },
+                { title: 'Plongeur Rescue', icon: 'fas fa-crown', description: 'Sécurité, gestion du stress, techniques de sauvetage, 2 jours, scénarios inclus.', price: 'CHF 700.–' },
+                { title: 'Divemaster', icon: 'fas fa-crown', description: 'Cours de leadership. Théorie, piscine, stage.', price: 'CHF 1,200.– à 1,800.–' }
             ],
             features: [
                 'Instruction professionnelle',
@@ -370,15 +328,27 @@ document.addEventListener('DOMContentLoaded', function() {
             buttonText: 'Contactez-nous pour les détails',
             buttonAction: 'mailto:contact@athelas-diving.com?subject=Demande de Formation Sub'
         },
+        'diving-initiation': {
+            title: 'Initiation à la Plongée',
+            description: 'Introduction parfaite à la plongée sous-marine pour les débutants. Découvrez le monde sous-marin en toute sécurité avec un guide professionnel.',
+            pricing: [
+                { title: 'Initiation à la Plongée', icon: 'fas fa-star', description: 'Introduction parfaite à la plongée sous-marine pour les débutants. Découvrez le monde sous-marin en toute sécurité avec un guide professionnel.', price: 'CHF 150.– par personne' }
+            ],
+            features: [
+                'Instruction professionnelle',
+                'Équipement complet fourni',
+                'Briefing de sécurité',
+                'Session en piscine',
+                'Expérience en eau libre'
+            ],
+            buttonText: 'Réservez votre initiation',
+            buttonAction: 'mailto:contact@athelas-diving.com?subject=Réservation Initiation Plongée'
+        },
         'guided-tours': {
             title: 'Aventures Sous-Marines Guidées',
             description: 'Découvrez les sites sous-marins les plus beaux avec une guilde experte. Parfait pour les plongeurs certifiés qui souhaitent explorer de nouveaux sites en toute sécurité et découvrir la faune locale.',
             pricing: [
-                { title: '1 Plongée (Demi-Journée)', icon: 'fas fa-sun', description: '1 plongée guidée dans un lac local. Bombola et poids inclus.', price: 'CHF 90.–' },
-                { title: '2 Plongées (Journée Complexe)', icon: 'fas fa-calendar-day', description: '2 plongées guidées, pause avec collation. Bombola & poids inclus.', price: 'CHF 160.–' },
-                { title: 'Plongée de Nuit', icon: 'fas fa-moon', description: '1 plongée de nuit avec torche incluse. Certificat avancé requis.', price: 'CHF 110.–' },
-                { title: 'Pack Week-End (4 Plongées)', icon: 'fas fa-calendar-week', description: '2 plongées/jour le week-end (samedi & dimanche). Équipement extra.', price: 'CHF 290.–' },
-                { title: 'Plongée Privée (1:1)', icon: 'fas fa-user-friends', description: 'Session de plongée privée – horaire et site à votre choix.', price: 'CHF 150.–' }
+                { title: 'Tours Guidés', icon: 'fas fa-map-marked-alt', description: 'Tours de plongée guidés personnalisés. Le prix dépend de l\'emplacement, de la durée et de la taille du groupe.', price: 'Sur demande' }
             ],
             features: [
                 'Guide professionnel',
@@ -390,44 +360,26 @@ document.addEventListener('DOMContentLoaded', function() {
             buttonText: 'Réservez votre tour',
             buttonAction: 'mailto:contact@athelas-diving.com?subject=Réservation de Tour Guidé'
         },
-        'underwater-work': {
-            title: 'Services Sous-Marins Professionnels',
-            description: 'Services spécialisés pour des projets commerciaux et environnementaux. Expertise technique pour des interventions sous-marines sûres et efficaces.',
+        'underwater-work-ecology': {
+            title: 'Écologie Aquatique & Travaux Sous-Marins',
+            description: 'Formation en sciences marines et services sous-marins professionnels. Des cours complets d\'écologie couvrant l\'identification des espèces, les techniques de recherche et la conservation environnementale aux solutions de plongée technique.',
             pricing: [
-                { title: 'Inspection & Surveillance', icon: 'fas fa-eye', description: 'Inspections visuelles, documentation vidéo/photo, évaluations structurales.', price: 'à partir de CHF 150.–/heure' },
-                { title: 'Assistance en Construction Sous-Marine', icon: 'fas fa-hard-hat', description: 'Assistance pour la construction, soudure, perçage, ancrage, bétonnage.', price: 'à partir de CHF 180.–/heure' },
-                { title: 'Installation d\'Équipement', icon: 'fas fa-tools', description: 'Bouées, capteurs, pompes, tuyaux, systèmes sous-marins.', price: 'à partir de CHF 160.–/heure' },
-                { title: 'Travaux d\'Ancrage', icon: 'fas fa-anchor', description: 'Installation, maintenance ou suppression de systèmes d\'ancrage, chaînes, etc.', price: 'à partir de CHF 140.–/heure' },
-                { title: 'Recherche & Récupération', icon: 'fas fa-search', description: 'Objets perdus, outils, bateaux, véhicules, preuves, etc.', price: 'à partir de CHF 180.–/heure' },
-                { title: 'Appel d\'Urgence', icon: 'fas fa-exclamation-triangle', description: 'Déploiement rapide pour des tâches urgentes (service 24/7).', price: 'à partir de CHF 250.– forfait + heure' }
+                { title: 'Services de Travaux Sous-Marins', icon: 'fas fa-hard-hat', description: 'Services sous-marins professionnels incluant la configuration d\'équipement, la surveillance environnementale et les solutions de plongée technique.', price: 'Sur demande' },
+                { title: 'Cours d\'Écologie de Groupe', icon: 'fas fa-users', description: 'Cours personnalisables pour les groupes. Le prix varie selon la durée et le contenu du cours.', price: 'CHF 100.– à 250.– par personne' },
+                { title: 'Cours d\'Écologie Individuels', icon: 'fas fa-user', description: 'Cours d\'écologie personnalisés adaptés aux besoins et intérêts individuels.', price: 'Contactez-moi' }
             ],
             features: [
                 'Certification technique',
                 'Protocoles de sécurité',
                 'Conformité environnementale',
-                'Rapports détaillés',
-                'Assurance incluse'
-            ],
-            buttonText: 'Demandez un devis',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Demande de Devis Travaux Sous-Marins'
-        },
-        'ecology-course': {
-            title: 'Cours de Sciences Marines',
-            description: 'Cours complet qui combine l\'apprentissage théorique avec la recherche sous-marine pratique. Idéal pour les étudiants, les chercheurs et les passionnés de conservation marine.',
-            pricing: [
-                { title: 'Cours d\'Introduction 1 Jour', icon: 'fas fa-microscope', description: 'Session théorique + 1 plongée guidée. Formation sur l\'identification & techniques.', price: 'CHF 220.–' },
-                { title: 'Cours Complet 2 Jours', icon: 'fas fa-fish', description: 'Théorie approfondie + 2 plongées guidées sur l\'identification et les relevés.', price: 'CHF 380.–' },
-                { title: 'Atelier de Groupe (3+ personnes)', icon: 'fas fa-users', description: 'Session personnalisable pour les écoles, clubs ou organisations.', price: 'à partir de CHF 150.–/personne' }
-            ],
-            features: [
                 '20 heures de théorie',
                 '10 plongées pratiques',
                 'Équipement de recherche fourni',
                 'Matériaux et certification',
                 'Excursion à la station marine'
             ],
-            buttonText: 'Inscrivez-vous maintenant',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Inscription Cours d\'Ecologie'
+            buttonText: 'Contactez-nous pour les détails',
+            buttonAction: 'mailto:contact@athelas-diving.com?subject=Demande Travaux Sous-Marins & Écologie'
         },
         'mindfulness': {
             title: 'Méditation & Bien-Être Sous-Marin',
@@ -472,11 +424,10 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'Formazione Subacquea Professionale',
             description: 'Corsi di immersione completi dal principiante al livello professionale. Formazione personalizzata con attenzione individuale.',
             pricing: [
-                { title: 'Battesimo Subacqueo (DSD)', icon: 'fas fa-star', description: '1 sessione in piscina + 1 immersione in acque libere. Attrezzatura inclusa. Ideale per iniziare.', price: 'CHF 180.–' },
-                { title: 'Open Water Diver', icon: 'fas fa-star', description: 'Certificazione base. 5 sessioni in piscina, 4 immersioni in acque libere, eLearning.', price: 'CHF 790.–' },
-                { title: 'Advanced Adventure Diver', icon: 'fas fa-star', description: '5 immersioni avventura (profonda, navigazione, notturna, ecc.), noleggio attrezzatura opzionale.', price: 'CHF 590.–' },
-                { title: 'Rescue Diver', icon: 'fas fa-crown', description: 'Sicurezza, gestione dello stress, tecniche di salvataggio, 2 giorni, scenari inclusi.', price: 'CHF 590.–' },
-                { title: 'Dive Master', icon: 'fas fa-crown', description: 'Corso di leadership. Teoria, piscina, tirocinio.', price: 'CHF 1,290.–' }
+                { title: 'Subacqueo Open Water', icon: 'fas fa-star', description: 'Certificazione base. 5 sessioni in piscina, 4 immersioni in acque libere, eLearning.', price: 'CHF 650.–' },
+                { title: 'Subacqueo Advanced Adventure', icon: 'fas fa-star', description: '5 immersioni avventura (profonda, navigazione, notturna, ecc.), noleggio attrezzatura opzionale.', price: 'CHF 450.–' },
+                { title: 'Subacqueo Rescue', icon: 'fas fa-crown', description: 'Sicurezza, gestione dello stress, tecniche di salvataggio, 2 giorni, scenari inclusi.', price: 'CHF 700.–' },
+                { title: 'Divemaster', icon: 'fas fa-crown', description: 'Corso di leadership. Teoria, piscina, tirocinio.', price: 'CHF 1,200.– a 1,800.–' }
             ],
             features: [
                 'Istruttore professionale',
@@ -488,15 +439,27 @@ document.addEventListener('DOMContentLoaded', function() {
             buttonText: 'Contattaci per dettagli',
             buttonAction: 'mailto:contact@athelas-diving.com?subject=Richiesta Corso Sub'
         },
+        'diving-initiation': {
+            title: 'Iniziazione Subacquea',
+            description: 'Introduzione perfetta alla subacquea per principianti. Vivi l\'esperienza del mondo sottomarino in sicurezza con una guida professionale.',
+            pricing: [
+                { title: 'Iniziazione Subacquea', icon: 'fas fa-star', description: 'Introduzione perfetta alla subacquea per principianti. Vivi l\'esperienza del mondo sottomarino in sicurezza con una guida professionale.', price: 'CHF 150.– per persona' }
+            ],
+            features: [
+                'Istruttore professionale',
+                'Tutta l\'attrezzatura fornita',
+                'Briefing di sicurezza',
+                'Sessione in piscina',
+                'Esperienza in acque libere'
+            ],
+            buttonText: 'Prenota la tua iniziazione',
+            buttonAction: 'mailto:contact@athelas-diving.com?subject=Prenotazione Iniziazione Subacquea'
+        },
         'guided-tours': {
             title: 'Avventure Subacquee Guidate',
             description: 'Scopri i siti subacquei più belli con una guida esperta. Perfetto per sub certificati che vogliono esplorare nuovi luoghi in sicurezza e conoscere la fauna locale.',
             pricing: [
-                { title: '1 Immersione (Mezza giornata)', icon: 'fas fa-sun', description: '1 immersione guidata in lago locale. Bombola e pesi inclusi.', price: 'CHF 90.–' },
-                { title: '2 Immersioni (Giornata intera)', icon: 'fas fa-calendar-day', description: '2 immersioni guidate, pausa con snack. Bombola & pesi inclusi.', price: 'CHF 160.–' },
-                { title: 'Immersione Notturna', icon: 'fas fa-moon', description: '1 immersione notturna con torcia inclusa. Richiesta certificazione avanzata.', price: 'CHF 110.–' },
-                { title: 'Pacchetto Weekend (4 immersioni)', icon: 'fas fa-calendar-week', description: '2 immersioni/giorno nel weekend (sabato & domenica). Attrezzatura extra.', price: 'CHF 290.–' },
-                { title: 'Immersione Privata (1:1)', icon: 'fas fa-user-friends', description: 'Sessione privata – orario e sito a tua scelta.', price: 'CHF 150.–' }
+                { title: 'Tour Guidati', icon: 'fas fa-map-marked-alt', description: 'Tour di immersione guidati personalizzati. Il prezzo dipende dalla posizione, dalla durata e dalla dimensione del gruppo.', price: 'Su richiesta' }
             ],
             features: [
                 'Guida professionale',
@@ -508,44 +471,26 @@ document.addEventListener('DOMContentLoaded', function() {
             buttonText: 'Prenota il tuo tour',
             buttonAction: 'mailto:contact@athelas-diving.com?subject=Prenotazione Tour Guidato'
         },
-        'underwater-work': {
-            title: 'Servizi Subacquei Professionali',
-            description: 'Servizi specializzati per progetti commerciali e ambientali. Esperienza tecnica per interventi subacquei sicuri ed efficienti.',
+        'underwater-work-ecology': {
+            title: 'Ecologia Acquatica & Lavori Subacquei',
+            description: 'Formazione in scienze marine e servizi subacquei professionali. Dai corsi completi di ecologia che coprono l\'identificazione delle specie, le tecniche di ricerca e la conservazione ambientale alle soluzioni di immersione tecnica.',
             pricing: [
-                { title: 'Ispezione & Monitoraggio', icon: 'fas fa-eye', description: 'Ispezioni visive, documentazione video/foto, valutazioni strutturali.', price: 'da CHF 150.–/ora' },
-                { title: 'Assistenza Costruzioni Subacquee', icon: 'fas fa-hard-hat', description: 'Supporto per costruzioni, saldature, perforazioni, ancoraggi, cemento.', price: 'da CHF 180.–/ora' },
-                { title: 'Installazione Attrezzature', icon: 'fas fa-tools', description: 'Boette, sensori, pompe, tubazioni, sistemi subacquei.', price: 'da CHF 160.–/ora' },
-                { title: 'Lavori di Ancoraggio', icon: 'fas fa-anchor', description: 'Installazione, manutenzione o rimozione di sistemi di ancoraggio, catene, ecc.', price: 'da CHF 140.–/ora' },
-                { title: 'Ricerca & Recupero', icon: 'fas fa-search', description: 'Oggetti smarriti, attrezzi, barche, veicoli, prove, ecc.', price: 'da CHF 180.–/ora' },
-                { title: 'Intervento d’Emergenza', icon: 'fas fa-exclamation-triangle', description: 'Intervento rapido per compiti urgenti (servizio 24/7).', price: 'da CHF 250.– forfait + orario' }
+                { title: 'Servizi di Lavoro Subacqueo', icon: 'fas fa-hard-hat', description: 'Servizi subacquei professionali inclusi configurazione attrezzature, sorveglianza ambientale e soluzioni di immersione tecnica.', price: 'Su richiesta' },
+                { title: 'Corsi di Ecologia di Gruppo', icon: 'fas fa-users', description: 'Corsi personalizzabili per gruppi. Il prezzo varia in base alla durata e al contenuto del corso.', price: 'CHF 100.– a 250.– per persona' },
+                { title: 'Corsi di Ecologia Individuali', icon: 'fas fa-user', description: 'Corsi di ecologia personalizzati adattati alle esigenze e agli interessi individuali.', price: 'Contattami' }
             ],
             features: [
                 'Certificazione tecnica',
                 'Protocolli di sicurezza',
                 'Rispetto ambientale',
-                'Report dettagliati',
-                'Assicurazione inclusa'
-            ],
-            buttonText: 'Richiedi un preventivo',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Preventivo Lavori Subacquei'
-        },
-        'ecology-course': {
-            title: 'Corso di Scienze Marine',
-            description: 'Corso completo che unisce teoria e ricerca subacquea pratica. Ideale per studenti, ricercatori e appassionati di conservazione marina.',
-            pricing: [
-                { title: 'Corso Introduttivo 1 giorno', icon: 'fas fa-microscope', description: 'Sessione teorica + 1 immersione guidata. Formazione su identificazione & tecniche.', price: 'CHF 220.–' },
-                { title: 'Corso Completo 2 giorni', icon: 'fas fa-fish', description: 'Teoria approfondita + 2 immersioni guidate su identificazione e rilievi.', price: 'CHF 380.–' },
-                { title: 'Workshop di Gruppo (3+ persone)', icon: 'fas fa-users', description: 'Sessione personalizzata per scuole, club o organizzazioni.', price: 'da CHF 150.–/persona' }
-            ],
-            features: [
                 '20 ore di teoria',
                 '10 immersioni pratiche',
                 'Attrezzatura di ricerca fornita',
                 'Materiali e certificazione',
                 'Uscita presso stazione marina'
             ],
-            buttonText: 'Iscriviti ora',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Iscrizione Corso Ecologia'
+            buttonText: 'Contattaci per dettagli',
+            buttonAction: 'mailto:contact@athelas-diving.com?subject=Richiesta Lavori Subacquei & Ecologia'
         },
         'mindfulness': {
             title: 'Meditazione & Benessere Subacqueo',
@@ -590,11 +535,10 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'Professionelle Tauchausbildung',
             description: 'Umfassende Tauchkurse vom Anfänger bis zum Profi. Individuelle Betreuung und persönliche Ausbildung.',
             pricing: [
-                { title: 'Schnuppertauchen (DSD)', icon: 'fas fa-star', description: '1 Pool-Session + 1 Freiwassertauchgang. Ausrüstung inklusive. Ideal für Einsteiger.', price: 'CHF 180.–' },
-                { title: 'Open Water Diver', icon: 'fas fa-star', description: 'Einstiegszertifikat. 5 Pool-Sessions, 4 Freiwassertauchgänge, eLearning.', price: 'CHF 790.–' },
-                { title: 'Advanced Adventure Diver', icon: 'fas fa-star', description: '5 Abenteuertauchgänge (z.B. Tiefe, Navigation, Nacht), Ausrüstungsverleih optional.', price: 'CHF 590.–' },
-                { title: 'Rescue Diver', icon: 'fas fa-crown', description: 'Sicherheit, Stressmanagement, Rettungstechniken, 2 Tage, inkl. Szenarien.', price: 'CHF 590.–' },
-                { title: 'Dive Master', icon: 'fas fa-crown', description: 'Führungskurs. Theorie, Pool, Praktikum.', price: 'CHF 1,290.–' }
+                { title: 'Open Water Taucher', icon: 'fas fa-star', description: 'Einstiegszertifikat. 5 Pool-Sessions, 4 Freiwassertauchgänge, eLearning.', price: 'CHF 650.–' },
+                { title: 'Advanced Adventure Taucher', icon: 'fas fa-star', description: '5 Abenteuertauchgänge (z.B. Tiefe, Navigation, Nacht), Ausrüstungsverleih optional.', price: 'CHF 450.–' },
+                { title: 'Rescue Taucher', icon: 'fas fa-crown', description: 'Sicherheit, Stressmanagement, Rettungstechniken, 2 Tage, inkl. Szenarien.', price: 'CHF 700.–' },
+                { title: 'Divemaster', icon: 'fas fa-crown', description: 'Führungskurs. Theorie, Pool, Praktikum.', price: 'CHF 1,200.– bis 1,800.–' }
             ],
             features: [
                 'Professionelle Anleitung',
@@ -606,15 +550,27 @@ document.addEventListener('DOMContentLoaded', function() {
             buttonText: 'Kontakt für Details',
             buttonAction: 'mailto:contact@athelas-diving.com?subject=Anfrage Tauchkurs'
         },
+        'diving-initiation': {
+            title: 'Tauch-Initiation',
+            description: 'Perfekte Einführung ins Tauchen für Anfänger. Erlebe die Unterwasserwelt sicher mit professioneller Anleitung.',
+            pricing: [
+                { title: 'Tauch-Initiation', icon: 'fas fa-star', description: 'Perfekte Einführung ins Tauchen für Anfänger. Erlebe die Unterwasserwelt sicher mit professioneller Anleitung.', price: 'CHF 150.– pro Person' }
+            ],
+            features: [
+                'Professionelle Anleitung',
+                'Komplette Ausrüstung inklusive',
+                'Sicherheitsbriefing',
+                'Pool-Session',
+                'Freiwassererfahrung'
+            ],
+            buttonText: 'Initiation buchen',
+            buttonAction: 'mailto:contact@athelas-diving.com?subject=Buchung Tauch-Initiation'
+        },
         'guided-tours': {
             title: 'Geführte Unterwasser-Abenteuer',
             description: 'Entdecke die schönsten Unterwasserorte mit persönlicher Führung. Perfekt für zertifizierte Taucher, die neue Plätze sicher erkunden und die lokale Fauna kennenlernen möchten.',
             pricing: [
-                { title: '1 Tauchgang (Halber Tag)', icon: 'fas fa-sun', description: '1 geführter Tauchgang im lokalen See. Flasche und Blei inklusive.', price: 'CHF 90.–' },
-                { title: '2 Tauchgänge (Ganzer Tag)', icon: 'fas fa-calendar-day', description: '2 geführte Tauchgänge, Pause mit Snack. Flasche & Blei inklusive.', price: 'CHF 160.–' },
-                { title: 'Nachttauchgang', icon: 'fas fa-moon', description: '1 Nachttauchgang mit Lampe inklusive. Fortgeschrittenenzertifikat erforderlich.', price: 'CHF 110.–' },
-                { title: 'Wochenendpaket (4 Tauchgänge)', icon: 'fas fa-calendar-week', description: '2 Tauchgänge/Tag am Wochenende (Sa & So). Ausrüstung extra.', price: 'CHF 290.–' },
-                { title: 'Privater Tauchgang (1:1)', icon: 'fas fa-user-friends', description: 'Vollständig private Führung – Termin und Ort nach Wahl.', price: 'CHF 150.–' }
+                { title: 'Geführte Touren', icon: 'fas fa-map-marked-alt', description: 'Personalisierte geführte Tauchtouren. Preis hängt von Standort, Dauer und Gruppengröße ab.', price: 'Auf Anfrage' }
             ],
             features: [
                 'Professioneller Guide',
@@ -626,44 +582,26 @@ document.addEventListener('DOMContentLoaded', function() {
             buttonText: 'Tour buchen',
             buttonAction: 'mailto:contact@athelas-diving.com?subject=Buchung Geführte Tour'
         },
-        'underwater-work': {
-            title: 'Professionelle Unterwasser-Dienstleistungen',
-            description: 'Spezialisierte Unterwasserarbeiten für gewerbliche und Umweltprojekte. Technische Expertise für sichere und effiziente Einsätze.',
+        'underwater-work-ecology': {
+            title: 'Aquatische Ökologie & Unterwasserarbeiten',
+            description: 'Meereswissenschaftsausbildung und professionelle Unterwasser-Dienstleistungen. Von umfassenden Ökologiekursen, die Artenidentifikation, Forschungstechniken und Umweltschutz abdecken, bis hin zu technischen Tauchlösungen.',
             pricing: [
-                { title: 'Inspektion & Überwachung', icon: 'fas fa-eye', description: 'Visuelle Inspektionen, Video-/Fotodokumentation, Strukturbeurteilungen.', price: 'ab CHF 150.–/Stunde' },
-                { title: 'Unterstützung bei Unterwasserbau', icon: 'fas fa-hard-hat', description: 'Unterstützung bei Bau, Schweißen, Bohren, Anker setzen, Betonieren.', price: 'ab CHF 180.–/Stunde' },
-                { title: 'Ausrüstungsinstallation', icon: 'fas fa-tools', description: 'Bojen, Sensoren, Pumpen, Rohrleitungen, Unterwassersysteme.', price: 'ab CHF 160.–/Stunde' },
-                { title: 'Mooring & Ankerarbeiten', icon: 'fas fa-anchor', description: 'Installation, Wartung oder Entfernung von Ankersystemen, Ketten, etc.', price: 'ab CHF 140.–/Stunde' },
-                { title: 'Such- & Bergungsaktionen', icon: 'fas fa-search', description: 'Verlorene Gegenstände, Werkzeuge, Boote, Fahrzeuge, Beweismittel, etc.', price: 'ab CHF 180.–/Stunde' },
-                { title: 'Notfalleinsatz', icon: 'fas fa-exclamation-triangle', description: 'Schneller Einsatz für dringende Aufgaben (24/7 Service).', price: 'ab CHF 250.– pauschal + stündlich' }
+                { title: 'Unterwasser-Arbeitsdienste', icon: 'fas fa-hard-hat', description: 'Professionelle Unterwasser-Dienstleistungen einschließlich Ausrüstungseinrichtung, Umweltüberwachung und technische Tauchlösungen.', price: 'Auf Anfrage' },
+                { title: 'Ökologie-Gruppenkurse', icon: 'fas fa-users', description: 'Anpassbare Kurse für Gruppen. Preis variiert je nach Kursdauer und -inhalt.', price: 'CHF 100.– bis 250.– pro Person' },
+                { title: 'Ökologie-Einzelkurse', icon: 'fas fa-user', description: 'Personalisierte Ökologiekurse, die auf individuelle Bedürfnisse und Interessen zugeschnitten sind.', price: 'Kontaktiere mich' }
             ],
             features: [
                 'Technische Zertifizierung',
                 'Sicherheitsprotokolle',
                 'Umweltkonformität',
-                'Detaillierte Berichte',
-                'Versicherung inklusive'
-            ],
-            buttonText: 'Angebot anfordern',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Angebot Unterwasserarbeiten'
-        },
-        'ecology-course': {
-            title: 'Meereswissenschaftlicher Kurs',
-            description: 'Umfassender Kurs mit Theorie und praktischer Unterwasserforschung. Ideal für Studierende, Forscher und Naturschutzbegeisterte.',
-            pricing: [
-                { title: '1-Tages-Introkurs', icon: 'fas fa-microscope', description: 'Theorie + 1 geführter Ökologie-Tauchgang. Bestimmung & Techniken.', price: 'CHF 220.–' },
-                { title: '2-Tages-Kurs', icon: 'fas fa-fish', description: 'Vertiefte Theorie + 2 geführte Tauchgänge zu Bestimmung und Erhebung.', price: 'CHF 380.–' },
-                { title: 'Gruppenworkshop (ab 3 Pers.)', icon: 'fas fa-users', description: 'Individuelle Session für Schulen, Vereine oder Organisationen.', price: 'ab CHF 150.–/Person' }
-            ],
-            features: [
                 '20 Stunden Theorie',
                 '10 Praxistauchgänge',
                 'Forschungsausrüstung gestellt',
                 'Kursmaterial & Zertifikat',
                 'Exkursion zur Meeresstation'
             ],
-            buttonText: 'Jetzt anmelden',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Anmeldung Ökologiekurs'
+            buttonText: 'Kontakt für Details',
+            buttonAction: 'mailto:contact@athelas-diving.com?subject=Anfrage Aquatische Ökologie & Unterwasserarbeiten'
         },
         'mindfulness': {
             title: 'Unterwasser-Meditation & Wellness',
