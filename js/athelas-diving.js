@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Flexible scheduling'
             ],
             buttonText: 'Contact for Details',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Dive Courses Inquiry'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Dive Courses Inquiry'
         },
         'diving-initiation': {
             title: 'Diving Initiation',
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Open water experience'
             ],
             buttonText: 'Book Your Initiation',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Diving Initiation Booking'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Diving Initiation Booking'
         },
         'guided-tours': {
             title: 'Expert-Guided Underwater Adventures',
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Underwater photography tips'
             ],
             buttonText: 'Request Quote',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Guided Tour Quote Request'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Guided Tour Quote Request'
         },
         'underwater-work-ecology': {
             title: 'Aquatic Ecology & Underwater Work',
@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Field trip to marine research station'
             ],
             buttonText: 'Contact for Details',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Underwater Work & Ecology Inquiry'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Underwater Work & Ecology Inquiry'
         },
         'mindfulness': {
             title: 'Underwater Meditation & Wellness',
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Professional meditation guidance'
             ],
             buttonText: 'Contact for Pricing',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Mindfulness Session Booking'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Mindfulness Session Booking'
         },
         'photography': {
             title: 'Professional Underwater Photography',
@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Print-ready files'
             ],
             buttonText: 'Contact for Pricing',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Photography Session Booking'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Photography Session Booking'
         }
     };
     
@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Planning flexible'
             ],
             buttonText: 'Contactez-nous pour les détails',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Demande de Formation Sub'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Demande de Formation Sub'
         },
         'diving-initiation': {
             title: 'Initiation à la Plongée',
@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Expérience en eau libre'
             ],
             buttonText: 'Réservez votre initiation',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Réservation Initiation Plongée'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Réservation Initiation Plongée'
         },
         'guided-tours': {
             title: 'Aventures Sous-Marines Guidées',
@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Conseils en photographie sous-marine'
             ],
             buttonText: 'Réservez votre tour',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Réservation de Tour Guidé'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Réservation de Tour Guidé'
         },
         'underwater-work-ecology': {
             title: 'Écologie Aquatique & Travaux Sous-Marins',
@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Excursion à la station marine'
             ],
             buttonText: 'Contactez-nous pour les détails',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Demande Travaux Sous-Marins & Écologie'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Demande Travaux Sous-Marins & Écologie'
         },
         'mindfulness': {
             title: 'Méditation & Bien-Être Sous-Marin',
@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Guidance professionnelle'
             ],
             buttonText: 'Demandez un devis',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Réservation de Session Mindfulness'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Réservation de Session Mindfulness'
         },
         'photography': {
             title: 'Photographie Sous-Marine Professionnelle',
@@ -415,7 +415,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Fichiers prêts pour l\'impression'
             ],
             buttonText: 'Demandez un devis',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Réservation de Session de Photographie'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Réservation de Session de Photographie'
         }
     };
 
@@ -437,7 +437,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Orari flessibili'
             ],
             buttonText: 'Contattaci per dettagli',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Richiesta Corso Sub'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Richiesta Corso Sub'
         },
         'diving-initiation': {
             title: 'Iniziazione Subacquea',
@@ -453,7 +453,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Esperienza in acque libere'
             ],
             buttonText: 'Prenota la tua iniziazione',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Prenotazione Iniziazione Subacquea'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Prenotazione Iniziazione Subacquea'
         },
         'guided-tours': {
             title: 'Avventure Subacquee Guidate',
@@ -469,7 +469,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Consigli fotografia subacquea'
             ],
             buttonText: 'Prenota il tuo tour',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Prenotazione Tour Guidato'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Prenotazione Tour Guidato'
         },
         'underwater-work-ecology': {
             title: 'Ecologia Acquatica & Lavori Subacquei',
@@ -490,7 +490,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Uscita presso stazione marina'
             ],
             buttonText: 'Contattaci per dettagli',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Richiesta Lavori Subacquei & Ecologia'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Richiesta Lavori Subacquei & Ecologia'
         },
         'mindfulness': {
             title: 'Meditazione & Benessere Subacqueo',
@@ -508,7 +508,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Guida professionale'
             ],
             buttonText: 'Richiedi un preventivo',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Prenotazione Sessione Mindfulness'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Prenotazione Sessione Mindfulness'
         },
         'photography': {
             title: 'Fotografia Subacquea Professionale',
@@ -526,7 +526,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'File pronti per la stampa'
             ],
             buttonText: 'Richiedi un preventivo',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Prenotazione Sessione Foto'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Prenotazione Sessione Foto'
         }
     };
 
@@ -548,7 +548,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Flexible Terminplanung'
             ],
             buttonText: 'Kontakt für Details',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Anfrage Tauchkurs'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Anfrage Tauchkurs'
         },
         'diving-initiation': {
             title: 'Tauch-Initiation',
@@ -564,7 +564,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Freiwassererfahrung'
             ],
             buttonText: 'Initiation buchen',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Buchung Tauch-Initiation'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Buchung Tauch-Initiation'
         },
         'guided-tours': {
             title: 'Geführte Unterwasser-Abenteuer',
@@ -580,7 +580,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Tipps zur Unterwasserfotografie'
             ],
             buttonText: 'Tour buchen',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Buchung Geführte Tour'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Buchung Geführte Tour'
         },
         'underwater-work-ecology': {
             title: 'Aquatische Ökologie & Unterwasserarbeiten',
@@ -601,7 +601,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Exkursion zur Meeresstation'
             ],
             buttonText: 'Kontakt für Details',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Anfrage Aquatische Ökologie & Unterwasserarbeiten'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Anfrage Aquatische Ökologie & Unterwasserarbeiten'
         },
         'mindfulness': {
             title: 'Unterwasser-Meditation & Wellness',
@@ -619,7 +619,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Professionelle Anleitung'
             ],
             buttonText: 'Preis anfragen',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Buchung Mindfulness Session'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Buchung Mindfulness Session'
         },
         'photography': {
             title: 'Professionelle Unterwasserfotografie',
@@ -637,7 +637,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Druckfertige Dateien'
             ],
             buttonText: 'Preis anfragen',
-            buttonAction: 'mailto:contact@athelas-diving.com?subject=Buchung Fotosession'
+            buttonAction: 'mailto:athelas-diving@oceantoearth.life?subject=Buchung Fotosession'
         }
     };
 
