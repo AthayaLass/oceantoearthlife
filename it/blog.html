@@ -107,12 +107,12 @@
         </ul>
         <!-- Language Selector -->
         <div class="language-selector ms-3">
-          <select class="form-select" onchange="changeLanguage(this.value)">
-            <option value="en">English</option>
-            <option value="fr">Français</option>
-            <option value="it" selected>Italiano</option>
-            <option value="de">Deutsch</option>
-          </select>
+          <div class="language-flags">
+            <div class="language-flag en" onclick="changeLanguage('en')" title="English"></div>
+            <div class="language-flag fr" onclick="changeLanguage('fr')" title="Français"></div>
+            <div class="language-flag it active" onclick="changeLanguage('it')" title="Italiano"></div>
+            <div class="language-flag de" onclick="changeLanguage('de')" title="Deutsch"></div>
+          </div>
         </div>
       </div>
     </nav>

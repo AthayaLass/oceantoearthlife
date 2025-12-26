@@ -1087,4 +1087,78 @@ header.shrunk .navbar-nav {
 .partner-link:hover {
   text-decoration: none;
   color: inherit;
+}
+
+/* Language Selector with Flags */
+.language-selector {
+  margin-left: 1.5rem;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.language-flags {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.language-flag {
+  width: 32px;
+  height: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  opacity: 0.7;
+}
+
+.language-flag:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.language-flag.active {
+  opacity: 1;
+  border-color: var(--text);
+  box-shadow: 0 0 10px rgba(35, 49, 58, 0.5);
+}
+
+.language-flag.en {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30"><rect width="60" height="30" fill="%23012169"/><path d="M0 0 L60 30 M60 0 L0 30" stroke="white" stroke-width="4"/><path d="M0 0 L60 30 M60 0 L0 30" stroke="%23C8102E" stroke-width="2.5"/><path d="M30 0 L30 30 M0 15 L60 15" stroke="white" stroke-width="5"/><path d="M30 0 L30 30 M0 15 L60 15" stroke="%23C8102E" stroke-width="3"/></svg>');
+}
+
+.language-flag.fr {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40"><rect width="20" height="40" fill="%2300295D"/><rect x="20" width="20" height="40" fill="white"/><rect x="40" width="20" height="40" fill="%23ED2939"/></svg>');
+}
+
+.language-flag.it {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40"><rect width="20" height="40" fill="%23009246"/><rect x="20" width="20" height="40" fill="white"/><rect x="40" width="20" height="40" fill="%23CE2B37"/></svg>');
+}
+
+.language-flag.de {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40"><rect width="60" height="13.33" fill="%23000000"/><rect y="13.33" width="60" height="13.33" fill="%23DD0000"/><rect y="26.66" width="60" height="13.34" fill="%23FFCC00"/></svg>');
+}
+
+/* Mobile responsive styles for language flags */
+@media (max-width: 768px) {
+  .language-selector {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .language-flags {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .language-flag {
+    width: 40px;
+    height: 30px;
+  }
 } 
